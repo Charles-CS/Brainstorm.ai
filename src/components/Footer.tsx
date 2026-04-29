@@ -114,7 +114,7 @@ export function Footer({ theme }: { theme: "light" | "dark" }) {
             © {new Date().getFullYear()} BrainstormAI. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-sm text-zinc-500">
-            <Link href="#" className={`hover:${isDark ? 'text-white' : 'text-zinc-900'} transition-colors`}>Privacy Policy</Link>
+            <Link href="/privacy" className={`hover:${isDark ? 'text-white' : 'text-zinc-900'} transition-colors`}>Privacy Policy</Link>
             <Link href="#" className={`hover:${isDark ? 'text-white' : 'text-zinc-900'} transition-colors`}>Terms of Service</Link>
           </div>
         </div>
