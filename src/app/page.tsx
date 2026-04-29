@@ -52,9 +52,12 @@ export default function Home() {
             </button>
 
             {/* Sign In Button */}
-            <button className={`hidden md:block text-sm font-semibold tracking-wide uppercase px-4 py-2 rounded-lg transition-all ${theme === "dark" ? "text-zinc-400 hover:text-indigo-50 hover:bg-indigo-500/10" : "text-zinc-600 hover:text-indigo-600 hover:bg-indigo-500/10"}`}>
+            <Link 
+              href="/auth"
+              className={`hidden md:block text-sm font-semibold tracking-wide uppercase px-4 py-2 rounded-lg transition-all ${theme === "dark" ? "text-zinc-400 hover:text-indigo-50 hover:bg-indigo-500/10" : "text-zinc-600 hover:text-indigo-600 hover:bg-indigo-500/10"}`}
+            >
               Sign In
-            </button>
+            </Link>
           </div>
         </div>
       </nav>
