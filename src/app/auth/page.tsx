@@ -2,8 +2,12 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Sun, Moon, ArrowLeft, Github, Mail, Lock, User, Sparkles } from "lucide-react";
+import { Sun, Moon, ArrowLeft, Mail, Lock, User, Sparkles } from "lucide-react";
 import { ParticleBackground } from "@/components/ParticleBackground";
+
+const GithubIcon = ({ className }: { className?: string }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.03c3.18-.38 6.52-1.65 6.52-7.17a5.2 5.2 0 0 0-1.4-3.5 4.8 4.8 0 0 0-.1-3.4s-1.1-.35-3.5 1.3a11.5 11.5 0 0 0-6 0C7.1 2.85 6 3.2 6 3.2a4.8 4.8 0 0 0-.1 3.4A5.2 5.2 0 0 0 4.5 10.1c0 5.5 3.3 6.8 6.5 7.15a4.8 4.8 0 0 0-1 2.85V22"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+);
 
 export default function AuthPage() {
   const [theme, setTheme] = useState<"dark" | "light">("dark");
@@ -136,7 +140,7 @@ export default function AuthPage() {
 
             <div className="grid grid-cols-2 gap-4">
               <button className={`flex items-center justify-center gap-2 py-3.5 rounded-2xl border transition-all ${isDark ? 'bg-white/5 border-white/10 hover:bg-white/10' : 'bg-zinc-50 border-zinc-200 hover:bg-zinc-100'}`}>
-                <Github className="w-5 h-5" />
+                <GithubIcon className="w-5 h-5" />
                 <span className="text-sm font-bold">Github</span>
               </button>
               <button className={`flex items-center justify-center gap-2 py-3.5 rounded-2xl border transition-all ${isDark ? 'bg-white/5 border-white/10 hover:bg-white/10' : 'bg-zinc-50 border-zinc-200 hover:bg-zinc-100'}`}>
