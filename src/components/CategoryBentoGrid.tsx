@@ -122,7 +122,7 @@ const categories = [
     iconHover: "group-hover:text-orange-400",
     textHover: "group-hover:to-orange-200",
     borderGradient: "linear-gradient(to right bottom, #fdba74, #f97316, #ea580c)",
-    href: "#",
+    href: "/domains/game-dev",
     Visual: () => (
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-30 group-hover:opacity-70 transition-opacity duration-500 flex items-center justify-end pr-8">
         <motion.div
