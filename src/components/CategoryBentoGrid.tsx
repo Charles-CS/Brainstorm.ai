@@ -92,7 +92,7 @@ const categories = [
     iconHover: "group-hover:text-emerald-400",
     textHover: "group-hover:to-emerald-200",
     borderGradient: "linear-gradient(to right bottom, #6ee7b7, #10b981, #0d9488)",
-    href: "#",
+    href: "/domains/iot-systems",
     Visual: () => (
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20 group-hover:opacity-50 transition-opacity duration-500 flex items-center justify-end pr-8">
         <div className="relative w-24 h-24 flex items-center justify-center">
