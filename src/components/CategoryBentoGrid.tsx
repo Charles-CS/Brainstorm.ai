@@ -53,7 +53,7 @@ const categories = [
     iconHover: "group-hover:text-blue-400",
     textHover: "group-hover:to-blue-200",
     borderGradient: "linear-gradient(to right bottom, #93c5fd, #3b82f6, #06b6d4)",
-    href: "#",
+    href: "/domains/web-development",
     Visual: () => (
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20 group-hover:opacity-60 transition-opacity duration-500">
         <motion.div 
