@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Brain, Globe, Cpu, Gamepad2, Smartphone } from "lucide-react";
+import Link from "next/link";
 
 const categories = [
   {
@@ -15,6 +16,7 @@ const categories = [
     iconHover: "group-hover:text-fuchsia-400",
     textHover: "group-hover:to-fuchsia-200",
     borderGradient: "linear-gradient(to right bottom, #e879f9, #d946ef, #c084fc)",
+    href: "/domains/machine-learning",
     Visual: () => (
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20 group-hover:opacity-40 transition-opacity duration-700">
         <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-fuchsia-500/10 blur-[100px] rounded-full" />
@@ -51,6 +53,7 @@ const categories = [
     iconHover: "group-hover:text-blue-400",
     textHover: "group-hover:to-blue-200",
     borderGradient: "linear-gradient(to right bottom, #93c5fd, #3b82f6, #06b6d4)",
+    href: "#",
     Visual: () => (
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20 group-hover:opacity-60 transition-opacity duration-500">
         <motion.div 
@@ -89,6 +92,7 @@ const categories = [
     iconHover: "group-hover:text-emerald-400",
     textHover: "group-hover:to-emerald-200",
     borderGradient: "linear-gradient(to right bottom, #6ee7b7, #10b981, #0d9488)",
+    href: "#",
     Visual: () => (
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20 group-hover:opacity-50 transition-opacity duration-500 flex items-center justify-end pr-8">
         <div className="relative w-24 h-24 flex items-center justify-center">
@@ -118,6 +122,7 @@ const categories = [
     iconHover: "group-hover:text-orange-400",
     textHover: "group-hover:to-orange-200",
     borderGradient: "linear-gradient(to right bottom, #fdba74, #f97316, #ea580c)",
+    href: "#",
     Visual: () => (
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-30 group-hover:opacity-70 transition-opacity duration-500 flex items-center justify-end pr-8">
         <motion.div
@@ -153,6 +158,7 @@ const categories = [
     iconHover: "group-hover:text-violet-400",
     textHover: "group-hover:to-violet-200",
     borderGradient: "linear-gradient(to right bottom, #c4b5fd, #8b5cf6, #7c3aed)",
+    href: "#",
     Visual: () => (
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20 group-hover:opacity-60 transition-opacity duration-500 flex items-center justify-end pr-8">
         <motion.div 
@@ -201,49 +207,62 @@ export function CategoryBentoGrid({ theme }: { theme: "light" | "dark" }) {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:auto-rows-[240px]">
-          {categories.map((category, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`group relative rounded-3xl backdrop-blur-md p-8 flex flex-col overflow-hidden ${category.className} ${isDark ? 'bg-white/5' : 'bg-white/40 shadow-xl shadow-zinc-200/50 border border-zinc-100'}`}
-            >
-              {/* Abstract Visuals Layer */}
-              <category.Visual />
+          {categories.map((category, index) => {
+            const isClickable = category.href && category.href !== "#";
+            const Content = (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className={`group relative rounded-3xl backdrop-blur-md p-8 flex flex-col overflow-hidden h-full ${category.className} ${isDark ? 'bg-white/5' : 'bg-white/40 shadow-xl shadow-zinc-200/50 border border-zinc-100'} ${isClickable ? 'cursor-pointer' : ''}`}
+              >
+                {/* Abstract Visuals Layer */}
+                <category.Visual />
 
-              {/* Default Subtle Border */}
-              <div className={`absolute inset-0 border ${isDark ? 'border-white/10' : 'border-zinc-200'} rounded-3xl transition-colors duration-500 z-10 pointer-events-none`} />
-              
-              {/* Dynamic Gradient Glow Border (Hover state) */}
-              <div 
-                className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 pointer-events-none" 
-                style={{ 
-                  padding: '2px', 
-                  background: category.borderGradient, 
-                  WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)', 
-                  WebkitMaskComposite: 'xor', 
-                  maskComposite: 'exclude' 
-                }} 
-              />
-              
-              <div className="relative z-30 flex-1 flex flex-col justify-between">
-                <div className={`rounded-2xl flex items-center justify-center border transition-colors duration-300 shadow-inner ${isDark ? 'bg-white/10 border-white/10 text-zinc-300' : 'bg-white/80 border-zinc-200 text-zinc-500'} ${category.iconHover} ${index === 0 ? 'w-20 h-20 mb-8' : 'w-14 h-14 mb-6'}`}>
-                  <category.icon className={category.iconSize} />
-                </div>
+                {/* Default Subtle Border */}
+                <div className={`absolute inset-0 border ${isDark ? 'border-white/10' : 'border-zinc-200'} rounded-3xl transition-colors duration-500 z-10 pointer-events-none`} />
                 
-                <div className="mt-auto">
-                  <h3 className={`${index === 0 ? 'text-3xl md:text-4xl mb-4' : 'text-xl mb-2'} font-bold transition-all ${isDark ? 'text-white group-hover:from-white' : 'text-zinc-900 group-hover:from-zinc-900'} group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r ${category.textHover}`}>
-                    {category.title}
-                  </h3>
-                  <p className={`${isDark ? 'text-zinc-400 group-hover:text-zinc-300' : 'text-zinc-600 group-hover:text-zinc-700'} leading-relaxed transition-colors ${index === 0 ? 'text-lg max-w-md' : 'text-sm'}`}>
-                    {category.description}
-                  </p>
+                {/* Dynamic Gradient Glow Border (Hover state) */}
+                <div 
+                  className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 pointer-events-none" 
+                  style={{ 
+                    padding: '2px', 
+                    background: category.borderGradient, 
+                    WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)', 
+                    WebkitMaskComposite: 'xor', 
+                    maskComposite: 'exclude' 
+                  }} 
+                />
+                
+                <div className="relative z-30 flex-1 flex flex-col justify-between">
+                  <div className={`rounded-2xl flex items-center justify-center border transition-colors duration-300 shadow-inner ${isDark ? 'bg-white/10 border-white/10 text-zinc-300' : 'bg-white/80 border-zinc-200 text-zinc-500'} ${category.iconHover} ${index === 0 ? 'w-20 h-20 mb-8' : 'w-14 h-14 mb-6'}`}>
+                    <category.icon className={category.iconSize} />
+                  </div>
+                  
+                  <div className="mt-auto">
+                    <h3 className={`${index === 0 ? 'text-3xl md:text-4xl mb-4' : 'text-xl mb-2'} font-bold transition-all ${isDark ? 'text-white group-hover:from-white' : 'text-zinc-900 group-hover:from-zinc-900'} group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r ${category.textHover}`}>
+                      {category.title}
+                    </h3>
+                    <p className={`${isDark ? 'text-zinc-400 group-hover:text-zinc-300' : 'text-zinc-600 group-hover:text-zinc-700'} leading-relaxed transition-colors ${index === 0 ? 'text-lg max-w-md' : 'text-sm'}`}>
+                      {category.description}
+                    </p>
+                  </div>
                 </div>
+              </motion.div>
+            );
+
+            return isClickable ? (
+              <Link key={index} href={category.href!} className={category.className}>
+                {Content}
+              </Link>
+            ) : (
+              <div key={index} className={category.className}>
+                {Content}
               </div>
-            </motion.div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
