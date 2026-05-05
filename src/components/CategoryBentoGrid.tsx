@@ -214,6 +214,7 @@ export function CategoryBentoGrid({ theme }: { theme: "light" | "dark" }) {
                 key={index}
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
+                whileHover={{ scale: 1.02 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`group relative rounded-3xl backdrop-blur-md p-8 flex flex-col overflow-hidden h-full ${category.className} ${isDark ? 'bg-white/5' : 'bg-white/40 shadow-xl shadow-zinc-200/50 border border-zinc-100'} ${isClickable ? 'cursor-pointer' : ''}`}
