@@ -1,4 +1,5 @@
 "use client";
+// BrainstormAI - Advanced Project Blueprint Engine
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
