@@ -69,7 +69,7 @@ export default function Home() {
             {/* Left Column */}
             <div className="max-w-xl">
               <div className={`inline-block px-3 py-1 rounded-full border text-xs font-semibold mb-8 uppercase tracking-wider transition-colors duration-500 ${theme === "dark" ? "bg-white/5 border-white/10 text-zinc-400" : "bg-zinc-100 border-zinc-200 text-zinc-500"}`}>
-                BRAINSTORMAI FOR STUDENTS
+                THE FUTURE OF ACADEMIC ENGINEERING
               </div>
 
               <h1 className="text-5xl lg:text-7xl font-bold tracking-tighter mb-6 leading-[1.1]">

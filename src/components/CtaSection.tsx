@@ -58,7 +58,7 @@ export function CtaSection({ theme }: { theme: "light" | "dark" }) {
           transition={{ duration: 0.5, delay: 0.2 }}
           className={`text-xl md:text-2xl ${isDark ? 'text-zinc-400' : 'text-zinc-600'} max-w-2xl mx-auto mb-12`}
         >
-          Join thousands of researchers and developers using BrainstormAI to accelerate their academic and professional projects.
+          Empowering the next generation of engineers and visionaries. Accelerate your academic breakthrough with BrainstormAI's advanced project synthesis.
         </motion.p>
 
         <motion.div
