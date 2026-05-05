@@ -133,8 +133,8 @@ export function InteractiveRoadmap({ theme }: { theme: "light" | "dark" }) {
                             <p className={`${isDark ? 'text-zinc-400' : 'text-zinc-600'} text-lg leading-relaxed max-w-md`}>
                               {phase.description}
                             </p>
-                            <button className={`mt-6 flex items-center gap-2 text-sm font-semibold ${isDark ? 'text-white/80 hover:text-white' : 'text-zinc-700 hover:text-zinc-900'} transition-colors`}>
-                              View Modules <ArrowRight className="w-4 h-4" />
+                            <button className={`mt-6 flex items-center gap-2 text-sm font-semibold group/btn ${isDark ? 'text-white/80 hover:text-white' : 'text-zinc-700 hover:text-zinc-900'} transition-colors`}>
+                              View Modules <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
                             </button>
                           </motion.div>
                         )}
