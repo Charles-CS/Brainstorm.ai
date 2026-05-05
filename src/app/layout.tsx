@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ThesisGen | Empowering Academic Research",
-  description: "Accelerate your academic journey with ThesisGen - The ultimate tool for researchers and students.",
+  title: "BrainstormAI | Architectural Engineering Blueprint Engine",
+  description: "Unlock the full power of BrainstormAI with AI-driven topic synthesis and dynamic engineering roadmaps for your academic vision.",
 };
 
 export default function RootLayout({
