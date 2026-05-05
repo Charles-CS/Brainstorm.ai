@@ -78,8 +78,8 @@ export function ProjectCard({ project, theme = "dark" }: ProjectCardProps) {
           
           <div className="space-y-3">
             {project.roadmap.slice(0, 3).map((milestone, i) => (
-              <div key={i} className="flex items-center justify-between text-xs">
-                <span className={`${isDark ? 'text-zinc-300' : 'text-zinc-600'}`}>{milestone.step}</span>
+              <div key={i} className={`flex items-center justify-between text-xs transition-colors duration-300 hover:pl-1 ${isDark ? 'text-zinc-300 hover:text-white' : 'text-zinc-600 hover:text-zinc-900'}`}>
+                <span>{milestone.step}</span>
                 <span className={`${isDark ? 'text-zinc-400' : 'text-zinc-500'} font-mono`}>{milestone.date}</span>
               </div>
             ))}
