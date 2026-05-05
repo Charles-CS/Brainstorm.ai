@@ -33,7 +33,7 @@ export function generateProject(
 
     // 3. Generate Roadmap
     // Use a stable start date for SSR to avoid hydration mismatch
-    const startDate = new Date("2024-05-01T00:00:00Z");
+    const startDate = new Date("2026-05-01T00:00:00Z");
     const roadmap = project.baseMilestones.map((milestone, index) => {
       const milestoneDate = new Date(startDate);
       // Increment date: 2 weeks per milestone as a base
