@@ -60,7 +60,7 @@ export function ComplexityLogicGrid({ theme }: { theme: "light" | "dark" }) {
             transition={{ duration: 0.5 }}
             className={`text-4xl md:text-6xl font-bold tracking-tighter mb-6 bg-clip-text text-transparent bg-gradient-to-b ${isDark ? 'from-white to-white/60' : 'from-zinc-900 to-zinc-900/60'}`}
           >
-            Scale Intelligence
+            Architectural Intelligence
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

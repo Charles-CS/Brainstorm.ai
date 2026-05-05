@@ -78,8 +78,8 @@ export default function Home() {
               </h1>
 
               <p className={`text-lg mb-12 leading-relaxed transition-colors duration-500 ${theme === "dark" ? "text-zinc-400" : "text-zinc-600"}`}>
-                Unlock the full power of BrainstormAI with intelligent topic generation,
-                custom roadmaps, and tailored guidance for your team's unique academic goals.
+                Unlock the full power of BrainstormAI with AI-driven topic synthesis,
+                dynamic engineering roadmaps, and tailored architectural guidance for your team's unique vision.
               </p>
 
               {/* Filter Bar (Options / Filter) */}
