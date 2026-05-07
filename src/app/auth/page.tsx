@@ -59,11 +59,11 @@ export default function AuthPage() {
 
           <div className={`relative p-6 md:p-8 rounded-[2rem] border backdrop-blur-2xl transition-all duration-500 ${isDark ? 'bg-white/5 border-white/10 shadow-2xl' : 'bg-white border-zinc-200 shadow-xl'}`}>
             
-            <div className="text-center mb-6">
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-indigo-500/10 text-indigo-500 mb-4 border border-indigo-500/20 shadow-inner">
-                <Sparkles className="w-8 h-8" />
+            <div className={`text-center ${isLogin ? 'mb-8' : 'mb-4'}`}>
+              <div className={`inline-flex items-center justify-center rounded-2xl bg-indigo-500/10 text-indigo-500 border border-indigo-500/20 shadow-inner transition-all duration-500 ${isLogin ? 'w-12 h-12 mb-4' : 'w-10 h-10 mb-2'}`}>
+                <Sparkles className={`${isLogin ? 'w-8 h-8' : 'w-6 h-6'}`} />
               </div>
-              <h1 className="text-3xl font-bold tracking-tight mb-2">
+              <h1 className={`font-bold tracking-tight mb-1 transition-all duration-500 ${isLogin ? 'text-3xl' : 'text-2xl'}`}>
                 {isLogin ? "Welcome back" : "Create account"}
               </h1>
               <p className={`${isDark ? 'text-zinc-400' : 'text-zinc-500'} text-sm`}>
@@ -71,7 +71,7 @@ export default function AuthPage() {
               </p>
             </div>
 
-            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+            <form className={isLogin ? "space-y-4" : "space-y-3"} onSubmit={(e) => e.preventDefault()}>
               {!isLogin && (
                 <div className="space-y-1">
                   <label className={`text-xs font-bold uppercase tracking-widest px-1 ${isDark ? 'text-zinc-500' : 'text-zinc-400'}`}>Full Name</label>
@@ -129,7 +129,7 @@ export default function AuthPage() {
               </button>
             </form>
 
-            <div className="relative my-6">
+            <div className={`relative ${isLogin ? 'my-6' : 'my-4'}`}>
               <div className={`absolute inset-0 flex items-center ${isDark ? 'opacity-10' : 'opacity-20'}`}>
                 <div className="w-full border-t border-current"></div>
               </div>
@@ -154,7 +154,7 @@ export default function AuthPage() {
               </button>
             </div>
 
-            <div className="mt-6 text-center">
+            <div className={`${isLogin ? 'mt-6' : 'mt-4'} text-center`}>
               <p className="text-sm text-zinc-500">
                 {isLogin ? "Don&apos;t have an account?" : "Already have an account?"}{" "}
                 <button 
