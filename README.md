@@ -3,6 +3,8 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 ## Project Overview
 BrainstormAI is a custom complexity scaling engine designed to provide students with a full project blueprint, from core algorithms to distributed systems.
 
+**Update (May 7, 2026):** Resolved startup configuration issues and optimized Auth UI for compact viewports.
+
 ## Features
 - **Intelligent Topic Synthesis**: AI-driven generation of unique engineering projects.
 - **Architectural Intelligence**: Dynamic roadmaps tailored to team size and complexity.
