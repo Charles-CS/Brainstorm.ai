@@ -61,7 +61,7 @@ export function FilterBar({
                       key={cat}
                       type="button"
                       onClick={() => {
-                        onCategoryChange(cat as any);
+                        onCategoryChange(cat as Category | "All");
                         setIsDropdownOpen(false);
                       }}
                       className={`w-full text-left px-4 py-2.5 text-sm font-medium transition-colors mx-1.5 rounded-xl flex items-center justify-between ${selectedCategory === cat ? 'text-indigo-400 bg-indigo-500/10' : isDark ? 'text-zinc-300 hover:bg-white/10' : 'text-zinc-700 hover:bg-zinc-100'}`}

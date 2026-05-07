@@ -12,7 +12,7 @@ export function generateProject(
   memberCount: number
 ): GeneratedProject[] {
   // 1. Filter by category
-  let filtered = category === "All" 
+  const filtered = category === "All" 
     ? [...projects] 
     : projects.filter(p => p.category === category);
 
@@ -44,7 +44,8 @@ export function generateProject(
         date: milestoneDate.toLocaleDateString("en-US", {
           month: "short",
           day: "numeric",
-          year: "numeric"
+          year: "numeric",
+          timeZone: "UTC"
         })
       };
     });
