@@ -3,7 +3,7 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
-import { Sun, Monitor, Moon } from "lucide-react";
+import { Sun, Moon } from "lucide-react";
 import { Category } from "@/data/projects";
 import { generateProject } from "@/lib/generator";
 import { FilterBar } from "@/components/FilterBar";
@@ -80,7 +80,7 @@ export default function Home() {
 
               <p className={`text-lg mb-12 leading-relaxed transition-colors duration-500 ${theme === "dark" ? "text-zinc-400" : "text-zinc-600"}`}>
                 Unlock the full power of BrainstormAI with AI-driven topic synthesis,
-                dynamic engineering roadmaps, and tailored architectural guidance for your team's unique vision.
+                dynamic engineering roadmaps, and tailored architectural guidance for your team&apos;s unique vision.
               </p>
 
               {/* Filter Bar (Options / Filter) */}

@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { FileText, ArrowLeft, Sun, Moon, Scale, ShieldCheck, UserCheck, Zap, Sparkles, Code2, Gavel } from "lucide-react";
+import { ArrowLeft, Sun, Moon, Scale, ShieldCheck, UserCheck, Zap, Gavel } from "lucide-react";
 import { ParticleBackground } from "@/components/ParticleBackground";
 import { Footer } from "@/components/Footer";
 

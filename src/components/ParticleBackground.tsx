@@ -18,11 +18,6 @@ export function ParticleBackground({ theme }: { theme: "light" | "dark" }) {
 
   const options: ISourceOptions = useMemo(() => {
     const isDark = theme === "dark";
-    // Adjust colors based on theme to ensure visibility
-    const particleColor = isDark ? "#818cf8" : "#4f46e5"; // Indigo accents
-    const linkColor = isDark ? "#c084fc" : "#6366f1"; // Purple/Indigo links
-    
-    // Fallback to simpler colors if we want pure kumpirma style
     // Kumpirma usually uses white/grey dots on dark background.
     const baseColor = isDark ? "#ffffff" : "#000000";
 
