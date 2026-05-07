@@ -15,7 +15,7 @@ export default function AuthPage() {
   const isDark = theme === "dark";
 
   return (
-    <div className={`flex flex-col min-h-screen transition-colors duration-500 ${isDark ? "bg-[#0A0A0A] text-white" : "bg-[#f8fafc] text-zinc-900"}`}>
+    <div className={`flex flex-col h-screen overflow-hidden transition-colors duration-500 ${isDark ? "bg-[#0A0A0A] text-white" : "bg-[#f8fafc] text-zinc-900"}`}>
       <ParticleBackground theme={theme} />
       
       {/* Navigation */}
@@ -50,7 +50,7 @@ export default function AuthPage() {
         </div>
       </nav>
 
-      <main className="flex-grow flex items-center justify-center px-6 py-24 relative z-10">
+      <main className="flex-grow flex items-center justify-center px-6 relative z-10">
         <div className="w-full max-w-[440px] relative">
           
           {/* Decorative glows */}
@@ -170,7 +170,7 @@ export default function AuthPage() {
         </div>
       </main>
 
-      <footer className="w-full py-8 px-6 text-center z-10">
+      <footer className="absolute bottom-0 w-full py-6 px-6 text-center z-10">
         <p className={`text-xs ${isDark ? 'text-zinc-600' : 'text-zinc-400'} uppercase tracking-[0.2em] font-bold`}>
           © {new Date().getFullYear()} BrainstormAI. Secure Authentication Platform.
         </p>
