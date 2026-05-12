@@ -196,32 +196,55 @@ export default function ProjectDetailsPage({ params, searchParams }: ProjectDeta
                             </div>
                           </div>
 
-                          <p className="text-zinc-400 text-sm leading-relaxed max-w-3xl mb-8">
+                          <p className="text-zinc-400 text-sm leading-relaxed max-w-3xl mb-10 border-l-2 border-indigo-500/20 pl-6 py-2 italic bg-indigo-500/5 rounded-r-2xl">
                             {step.step.includes("Data") || step.step.includes("Collection") ? 
-                              "Establish robust data ingestion pipelines and normalization protocols. Focus on high-fidelity data acquisition and secure storage architectures to ensure maximum integrity for downstream processing." :
+                              "This foundational stage involves deep research into existing datasets and the creation of custom scrapers or sensor arrays. Personnel must focus on raw data sanitization, bias detection, and the architectural setup of high-throughput ingestion pipelines." :
                             step.step.includes("Architecture") || step.step.includes("Design") ?
-                              "Defining the core structural logic and microservices interaction layers. We prioritize modularity and low-latency communication between system components using industry-standard design patterns." :
+                              "The logic core is defined here. Programmers and Architects must map out the internal microservices, define the communication protocols (gRPC/REST), and establish the schema for data persistence layers to ensure long-term scalability." :
                             step.step.includes("Training") || step.step.includes("Logic") ?
                               "Implementation of core algorithmic logic and performance optimization. Includes extensive stress testing under simulated high-load environments to ensure system stability and reliability." :
                             step.step.includes("API") || step.step.includes("Integration") ?
-                              "Bridge construction between backend services and the presentation layer. Focus on GraphQL/REST endpoint optimization and secure authentication handshake protocols." :
-                            "Final deployment and end-to-end system validation. This phase includes comprehensive UAT, performance benchmarking against initial KPIs, and final documentation for production readiness."}
+                              "Building the interface layer that connects the logic core to the end-user. Designers and Front-end engineers must collaborate to ensure low-latency responses and intuitive state management across the application." :
+                            "Comprehensive system validation, security auditing, and deployment. Researchers must conduct final user testing while DevOps engineers establish the CI/CD pipeline and monitor initial production traffic for anomalies."}
                           </p>
 
-                          <div className="grid sm:grid-cols-3 gap-4">
-                            {[
-                              { label: "Stability", value: "99.9%", icon: ShieldCheck },
-                              { label: "Velocity", value: "High", icon: Zap },
-                              { label: "Security", value: "AES-256", icon: Rocket }
-                            ].map((item, idx) => (
-                              <div key={idx} className="bg-black/40 border border-white/5 rounded-2xl p-4 flex items-center gap-3">
-                                <item.icon className="w-4 h-4 text-zinc-600" />
-                                <div className="flex flex-col">
-                                  <span className="text-[8px] font-black text-zinc-500 uppercase tracking-widest">{item.label}</span>
-                                  <span className="text-xs font-bold text-zinc-300">{item.value}</span>
-                                </div>
+                          <div className="grid md:grid-cols-2 gap-10">
+                            {/* Action Items */}
+                            <div>
+                              <h4 className="text-[10px] font-black text-white uppercase tracking-[0.2em] mb-4 flex items-center gap-2">
+                                <Rocket className="w-3 h-3 text-indigo-400" />
+                                Action Items
+                              </h4>
+                              <ul className="space-y-3">
+                                {(step.step.includes("Data") ? ["Scraping Setup", "Bias Mitigation", "Pipeline Stress-Test"] : 
+                                  step.step.includes("Design") ? ["UML Modeling", "Service Discovery", "Schema Definition"] :
+                                  step.step.includes("Integration") ? ["Route Guarding", "State Sync", "UI Polish"] :
+                                  ["Unit Testing", "Cloud Deployment", "Documentation"]).map((task, tidx) => (
+                                  <li key={tidx} className="flex items-center gap-3 text-xs text-zinc-500">
+                                    <CheckCircle2 className="w-3.5 h-3.5 text-indigo-500/40" />
+                                    {task}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+
+                            {/* Personnel Roles */}
+                            <div>
+                              <h4 className="text-[10px] font-black text-white uppercase tracking-[0.2em] mb-4 flex items-center gap-2">
+                                <Users className="w-3 h-3 text-purple-400" />
+                                Assigned Personnel
+                              </h4>
+                              <div className="flex flex-wrap gap-2">
+                                {(step.step.includes("Data") ? ["Data Scientist", "Lead Researcher"] : 
+                                  step.step.includes("Design") ? ["System Architect", "Backend Dev"] :
+                                  step.step.includes("Integration") ? ["UI Designer", "Frontend Dev"] :
+                                  ["DevOps Engineer", "QA Tester", "Researcher"]).map((role, ridx) => (
+                                  <span key={ridx} className="px-3 py-1 rounded-lg bg-zinc-800 text-[9px] font-black text-zinc-400 border border-white/5 uppercase tracking-widest">
+                                    {role}
+                                  </span>
+                                ))}
                               </div>
-                            ))}
+                            </div>
                           </div>
                         </div>
                       </div>

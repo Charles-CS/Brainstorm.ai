@@ -25,12 +25,13 @@ export function enhanceProject(
   }
 
   // 3. Generate Roadmap
-  // Use a stable start date for SSR to avoid hydration mismatch
+  // Scale duration based on complexity
+  const daysPerPhase = project.baseComplexity === "Expert" ? 30 : project.baseComplexity === "High" ? 21 : 14;
+  
   const startDate = new Date("2026-05-01T00:00:00Z");
   const roadmap = project.baseMilestones.map((milestone, index) => {
     const milestoneDate = new Date(startDate);
-    // Increment date: 2 weeks per milestone as a base
-    milestoneDate.setDate(startDate.getDate() + (index + 1) * 14);
+    milestoneDate.setDate(startDate.getDate() + (index + 1) * daysPerPhase);
     
     return {
       step: milestone,
