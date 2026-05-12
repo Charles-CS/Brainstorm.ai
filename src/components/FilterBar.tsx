@@ -5,6 +5,7 @@ import { ChevronDown, Users, Sparkles } from "lucide-react";
 interface FilterBarProps {
   onCategoryChange: (category: Category | "All") => void;
   onMembersChange: (count: number) => void;
+  onRefresh: () => void;
   selectedCategory: Category | "All";
   selectedMembers: number;
   className?: string;
@@ -14,13 +15,21 @@ interface FilterBarProps {
 export function FilterBar({
   onCategoryChange,
   onMembersChange,
+  onRefresh,
   selectedCategory,
   selectedMembers,
   className = "",
   theme = "dark"
 }: FilterBarProps) {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isRefreshing, setIsRefreshing] = useState(false);
   const isDark = theme === "dark";
+
+  const handleRefresh = () => {
+    setIsRefreshing(true);
+    onRefresh();
+    setTimeout(() => setIsRefreshing(false), 600);
+  };
 
   const categories: (Category | "All")[] = [
     "All",
@@ -104,11 +113,17 @@ export function FilterBar({
       </div>
 
       {/* Generate Button */}
-      <button className="relative group md:w-auto w-full flex-shrink-0 transition-transform active:scale-95 z-0">
+      <button 
+        onClick={handleRefresh}
+        disabled={isRefreshing}
+        className="relative group md:w-auto w-full flex-shrink-0 transition-transform active:scale-95 z-0 disabled:opacity-80"
+      >
         <div className="absolute inset-0 bg-indigo-500 rounded-2xl opacity-40 group-hover:opacity-70 blur-md transition-opacity duration-300"></div>
         <div className="relative flex items-center justify-center gap-2 bg-indigo-600 border border-indigo-400/30 px-6 h-full min-h-[44px] rounded-2xl transition-all shadow-xl shadow-indigo-500/20 group-hover:bg-indigo-500">
-          <Sparkles className="w-4 h-4 text-white" />
-          <span className="font-bold text-sm text-white">Refresh Ideas</span>
+          <Sparkles className={`w-4 h-4 text-white transition-transform duration-500 ${isRefreshing ? 'rotate-[360deg] scale-125' : ''}`} />
+          <span className="font-bold text-sm text-white">
+            {isRefreshing ? "Generating..." : "Refresh Ideas"}
+          </span>
         </div>
       </button>
 

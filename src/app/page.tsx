@@ -18,10 +18,17 @@ export default function Home() {
   const [category, setCategory] = useState<Category | "All">("All");
   const [members, setMembers] = useState(3);
   const [theme, setTheme] = useState<"dark" | "light">("dark");
+  const [refreshKey, setRefreshKey] = useState(0);
 
   const filteredProjects = useMemo(() => {
-    return generateProject(category, members);
-  }, [category, members]);
+    const projects = generateProject(category, members);
+    // Shuffle the array to provide different ideas on refresh
+    return [...projects].sort(() => Math.random() - 0.5);
+  }, [category, members, refreshKey]);
+
+  const handleRefresh = () => {
+    setRefreshKey(prev => prev + 1);
+  };
 
   return (
     <div className={`flex flex-col min-h-screen transition-colors duration-500 ${theme === "dark" ? "bg-[#0A0A0A] text-white" : "bg-[#f8fafc] text-zinc-900"}`}>
@@ -89,11 +96,13 @@ export default function Home() {
                   selectedMembers={members}
                   onCategoryChange={setCategory}
                   onMembersChange={setMembers}
+                  onRefresh={handleRefresh}
                   className="mb-0"
                   theme={theme}
                 />
               </div>
             </div>
+
 
             {/* Right Column - Project Card (Title Info) */}
             <div className="relative group">

@@ -85,5 +85,81 @@ export const projects: Project[] = [
       "Cloud Functions Setup",
       "Push Notifications"
     ]
+  },
+  {
+    id: "6",
+    title: "Autonomous Warehouse Drone Swarm",
+    category: "Machine Learning",
+    baseComplexity: "Expert",
+    description: "Coordinated drone fleet for real-time inventory management and obstacle avoidance in large warehouses.",
+    techStack: ["ROS 2", "Python", "OpenCV", "C++", "NVIDIA Jetson"],
+    baseMilestones: [
+      "Swarm Coordination Logic",
+      "Computer Vision Training",
+      "SLAM Integration",
+      "Inventory Management System",
+      "Fault-Tolerant Communication"
+    ]
+  },
+  {
+    id: "7",
+    title: "NFT Ticketing & Event Management",
+    category: "Blockchain",
+    baseComplexity: "High",
+    description: "A secure platform for event organizers to issue fraud-proof tickets as NFTs with secondary market royalty support.",
+    techStack: ["Solidity", "Polygon", "The Graph", "Tailwind CSS", "IPFS"],
+    baseMilestones: [
+      "ERC-721/1155 Implementation",
+      "Ticketing Logic & Metadata",
+      "Subgraph Indexing",
+      "Attendee Mobile App",
+      "Organizer Dashboard"
+    ]
+  },
+  {
+    id: "8",
+    title: "Serverless E-Commerce Headless CMS",
+    category: "Web Development",
+    baseComplexity: "High",
+    description: "A blazing-fast, API-first content management system optimized for high-traffic commerce applications.",
+    techStack: ["Next.js", "AWS Lambda", "DynamoDB", "Stripe API", "Vercel"],
+    baseMilestones: [
+      "API Design & Schema",
+      "Authentication Service",
+      "Media CDN Integration",
+      "Checkout Flow Engine",
+      "Webhook Processing"
+    ]
+  },
+  {
+    id: "9",
+    title: "Predictive Industrial Maintenance IoT",
+    category: "Internet of Things",
+    baseComplexity: "Expert",
+    description: "Monitoring industrial machinery vibrations and heat to predict failures before they happen using edge computing.",
+    techStack: ["Azure IoT Hub", "Raspberry Pi", "C#", "TimeSeries Insights", "PowerBI"],
+    baseMilestones: [
+      "Sensor Deployment",
+      "Edge Processing Logic",
+      "Anomaly Detection Model",
+      "Alerting System",
+      "Predictive Analytics Dashboard"
+    ]
+  },
+  {
+    id: "10",
+    title: "Augmented Reality Furniture Placer",
+    category: "Mobile App",
+    baseComplexity: "High",
+    description: "An AR application that lets users visualize how furniture items look in their actual living space using 3D models.",
+    techStack: ["Unity", "ARKit", "ARCore", "C#", "Blender"],
+    baseMilestones: [
+      "Plane Detection Setup",
+      "3D Model Optimization",
+      "UI Overlay Interaction",
+      "Lighting Estimation",
+      "Photo Capture & Sharing"
+    ]
   }
 ];
+
