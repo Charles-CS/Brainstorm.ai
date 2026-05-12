@@ -201,7 +201,6 @@ export default function ProjectDetailsPage({ params, searchParams }: ProjectDeta
                   * Simplified architectural diagram representing the core data flow and service interaction layers.
                 </p>
               </section>
-            </div>
 
               {/* User Persona Section */}
               <section className="bg-white/5 border border-white/10 rounded-[2.5rem] p-8 md:p-12">
@@ -275,6 +274,7 @@ export default function ProjectDetailsPage({ params, searchParams }: ProjectDeta
                   </div>
                 </div>
               </div>
+
               {/* Tech Stack Card */}
               <div className="bg-white/5 border border-white/10 rounded-[2.5rem] p-8">
                 <div className="flex items-center gap-3 mb-8">
