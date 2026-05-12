@@ -200,28 +200,70 @@ export default function ProjectDetailsPage({ params, searchParams }: ProjectDeta
 
                 <div className="grid gap-8">
                   {/* Visual Schema */}
-                  <div className="bg-zinc-900/20 border border-white/5 rounded-[2.5rem] p-8 md:p-16 relative overflow-hidden group/arch">
+                  <div className="bg-zinc-900/40 border border-white/5 rounded-[2.5rem] p-8 md:p-16 relative overflow-hidden group/arch">
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,_var(--tw-gradient-stops))] from-indigo-500/5 via-transparent to-transparent" />
-                    <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-12">
-                      <div className="text-center group/node">
-                        <div className="w-24 h-24 rounded-3xl bg-zinc-900 border border-white/10 flex items-center justify-center mb-4 group-hover/node:border-indigo-500/50 transition-all">
+                    
+                    {/* Background Grid Lines */}
+                    <div className="absolute inset-0 opacity-[0.03] pointer-events-none" 
+                         style={{ backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+
+                    <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-12 lg:gap-20">
+                      {/* Node 1: Client */}
+                      <div className="text-center group/node relative">
+                        <div className="w-24 h-24 rounded-3xl bg-zinc-900 border border-white/10 flex items-center justify-center mb-4 group-hover/node:border-indigo-500/50 group-hover/node:bg-indigo-500/5 transition-all relative z-10">
                           <LayoutDashboard className="w-8 h-8 text-indigo-400" />
+                          <div className="absolute -top-1 -right-1 w-3 h-3 bg-indigo-500 rounded-full animate-pulse" />
                         </div>
                         <span className="text-xs font-bold text-zinc-400">Frontend Layer</span>
+                        <div className="absolute top-1/2 -right-12 hidden md:block group-hover/arch:animate-pulse">
+                          <span className="text-[8px] font-mono text-indigo-500/50 uppercase">HTTPS</span>
+                        </div>
                       </div>
-                      <ChevronRight className="hidden md:block w-6 h-6 text-zinc-800" />
-                      <div className="text-center group/node">
-                        <div className="w-28 h-28 rounded-3xl bg-zinc-900 border border-white/10 flex items-center justify-center mb-4 group-hover/node:border-purple-500/50 transition-all shadow-2xl shadow-purple-500/10">
-                          <Settings className="w-10 h-10 text-purple-400" />
+
+                      {/* Connection 1 */}
+                      <div className="hidden md:flex flex-col items-center gap-2">
+                        <div className="w-16 lg:w-24 h-px bg-gradient-to-r from-indigo-500/50 to-purple-500/50 relative">
+                          <div className="absolute top-0 left-0 h-full w-4 bg-white animate-[pulse-right_2s_infinite]" />
+                        </div>
+                      </div>
+
+                      {/* Node 2: Logic */}
+                      <div className="text-center group/node relative">
+                        <div className="w-32 h-32 rounded-3xl bg-zinc-950 border border-white/10 flex items-center justify-center mb-4 group-hover/node:border-purple-500/50 group-hover/node:bg-purple-500/5 transition-all shadow-2xl shadow-purple-500/5 relative z-10 scale-110">
+                          <Settings className="w-12 h-12 text-purple-400" />
+                          <div className="absolute inset-0 rounded-3xl border border-purple-500/20 animate-ping opacity-20" />
                         </div>
                         <span className="text-xs font-bold text-zinc-400">Processing Engine</span>
                       </div>
-                      <ChevronRight className="hidden md:block w-6 h-6 text-zinc-800" />
-                      <div className="text-center group/node">
-                        <div className="w-24 h-24 rounded-3xl bg-zinc-900 border border-white/10 flex items-center justify-center mb-4 group-hover/node:border-pink-500/50 transition-all">
+
+                      {/* Connection 2 */}
+                      <div className="hidden md:flex flex-col items-center gap-2">
+                        <div className="w-16 lg:w-24 h-px bg-gradient-to-r from-purple-500/50 to-pink-500/50 relative">
+                          <div className="absolute top-0 left-0 h-full w-4 bg-white animate-[pulse-right_2s_infinite_0.5s]" />
+                        </div>
+                      </div>
+
+                      {/* Node 3: Database */}
+                      <div className="text-center group/node relative">
+                        <div className="w-24 h-24 rounded-3xl bg-zinc-900 border border-white/10 flex items-center justify-center mb-4 group-hover/node:border-pink-500/50 group-hover/node:bg-pink-500/5 transition-all relative z-10">
                           <Layers className="w-8 h-8 text-pink-400" />
                         </div>
                         <span className="text-xs font-bold text-zinc-400">Data Persistence</span>
+                        <div className="absolute top-1/2 -left-12 hidden md:block">
+                          <span className="text-[8px] font-mono text-pink-500/50 uppercase">SQL</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Secondary Node Below (Auth/Security) */}
+                    <div className="mt-16 flex justify-center">
+                      <div className="text-center group/node relative">
+                        <div className="px-6 py-3 rounded-2xl bg-zinc-900/80 border border-emerald-500/20 flex items-center gap-3 group-hover/node:border-emerald-500/50 transition-all">
+                          <ShieldCheck className="w-4 h-4 text-emerald-400" />
+                          <span className="text-[10px] font-bold text-zinc-300 uppercase tracking-widest">Auth Service</span>
+                        </div>
+                        {/* Vertical connection line */}
+                        <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-px h-8 bg-zinc-800" />
                       </div>
                     </div>
                   </div>
@@ -328,30 +370,34 @@ export default function ProjectDetailsPage({ params, searchParams }: ProjectDeta
             {/* Sticky Sidebar Right */}
             <div className="lg:col-span-4">
               <div className="sticky top-32 space-y-8">
-                {/* Score Card */}
-                <div className="bg-white text-black p-8 rounded-[2.5rem] shadow-2xl shadow-white/5">
-                  <h3 className="text-xs font-black uppercase tracking-[0.2em] mb-8 text-zinc-400">Blueprint Score</h3>
+                {/* Score Card - DARKENED */}
+                <div className="bg-zinc-900 border border-white/10 text-white p-8 rounded-[2.5rem] shadow-2xl shadow-black/40 relative overflow-hidden group/score">
+                  <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent pointer-events-none" />
+                  
+                  <h3 className="text-xs font-black uppercase tracking-[0.2em] mb-8 text-zinc-500">Blueprint Score</h3>
                   <div className="flex items-end gap-2 mb-8">
-                    <span className="text-6xl font-black tracking-tighter">9.8</span>
-                    <span className="text-xl font-bold text-zinc-400 mb-2">/10</span>
+                    <span className="text-6xl font-black tracking-tighter text-white group-hover/score:text-indigo-400 transition-colors">9.8</span>
+                    <span className="text-xl font-bold text-zinc-600 mb-2">/10</span>
                   </div>
+                  
                   <div className="space-y-4 mb-8">
                     <div className="flex justify-between items-center text-sm font-bold">
                       <span className="text-zinc-500">Innovation</span>
-                      <span>High</span>
+                      <span className="text-indigo-400">High</span>
                     </div>
-                    <div className="h-1 w-full bg-zinc-100 rounded-full">
-                      <div className="h-full bg-indigo-600 w-[95%]" />
+                    <div className="h-1 w-full bg-white/5 rounded-full overflow-hidden">
+                      <div className="h-full bg-indigo-500 w-[95%] shadow-[0_0_10px_rgba(99,102,241,0.5)]" />
                     </div>
                     <div className="flex justify-between items-center text-sm font-bold">
                       <span className="text-zinc-500">Feasibility</span>
-                      <span>Expert</span>
+                      <span className="text-purple-400">Expert</span>
                     </div>
-                    <div className="h-1 w-full bg-zinc-100 rounded-full">
-                      <div className="h-full bg-indigo-600 w-[88%]" />
+                    <div className="h-1 w-full bg-white/5 rounded-full overflow-hidden">
+                      <div className="h-full bg-purple-500 w-[88%] shadow-[0_0_10px_rgba(168,85,247,0.5)]" />
                     </div>
                   </div>
-                  <button className="w-full bg-black text-white font-black py-5 rounded-2xl hover:bg-zinc-800 transition-all text-sm uppercase tracking-widest shadow-xl shadow-black/20">
+                  
+                  <button className="w-full bg-white text-black font-black py-5 rounded-2xl hover:bg-zinc-200 transition-all text-sm uppercase tracking-widest shadow-xl shadow-white/5 active:scale-[0.98]">
                     Acquire Full Rights
                   </button>
                 </div>
