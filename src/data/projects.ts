@@ -235,6 +235,21 @@ export const projects: Project[] = [
       "Predictive Trend Dashboard",
       "Alert Notification System"
     ]
+  },
+  {
+    id: "16",
+    title: "AI-Powered Customer Support Bot",
+    category: "Machine Learning",
+    baseComplexity: "Medium",
+    description: "An advanced chatbot using LLMs to provide context-aware support and automate ticket resolution.",
+    techStack: ["OpenAI API", "LangChain", "FastAPI", "React", "Pinecone"],
+    baseMilestones: [
+      "Knowledge Base Ingestion",
+      "RAG Pipeline Implementation",
+      "Conversation Flow Logic",
+      "Feedback Loop Integration",
+      "Live Chat Widget UI"
+    ]
   }
 ];
 
