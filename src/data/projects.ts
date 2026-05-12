@@ -310,6 +310,81 @@ export const projects: Project[] = [
       "Interactive Result Visualization",
       "Human-in-the-loop Correction UI"
     ]
+  },
+  {
+    id: "21",
+    title: "AI-Driven Personal Stylist",
+    category: "Machine Learning",
+    baseComplexity: "Medium",
+    description: "A recommendation system that suggests outfits based on body type, skin tone, and current fashion trends.",
+    techStack: ["Python", "TensorFlow", "React Native", "OpenCV", "FastAPI"],
+    baseMilestones: [
+      "Image Segmentation for Clothing",
+      "Style Preference Modeling",
+      "Trend Data Scraping",
+      "Outfit Generation Algorithm",
+      "Mobile App UI Implementation"
+    ]
+  },
+  {
+    id: "22",
+    title: "Real-time Wildfire Detection System",
+    category: "Machine Learning",
+    baseComplexity: "High",
+    description: "Using infrared satellite data and weather patterns to predict and detect wildfires with high accuracy.",
+    techStack: ["Python", "PyTorch", "AWS Sagemaker", "MQTT", "Grafana"],
+    baseMilestones: [
+      "Satellite IR Data Ingestion",
+      "Smoke/Heat Detection Training",
+      "Risk Prediction Modeling",
+      "Alert Notification Pipeline",
+      "Geospatial Dashboard"
+    ]
+  },
+  {
+    id: "23",
+    title: "Autonomous Delivery Robot Path Planner",
+    category: "Machine Learning",
+    baseComplexity: "Expert",
+    description: "Path planning algorithms for sidewalk robots to navigate around pedestrians and obstacles in urban environments.",
+    techStack: ["ROS 2", "Python", "C++", "Deep Reinforcement Learning", "Gazebo"],
+    baseMilestones: [
+      "Urban Environment Simulation",
+      "Obstacle Avoidance Logic",
+      "Dynamic Path Replanning",
+      "Sensor Fusion (Lidar/Camera)",
+      "Real-world Testing Suite"
+    ]
+  },
+  {
+    id: "24",
+    title: "Music Genre Classifier & Mood Generator",
+    category: "Machine Learning",
+    baseComplexity: "Medium",
+    description: "Analyzing audio waveforms to classify genres and generate playlists based on the user's emotional state.",
+    techStack: ["Python", "Librosa", "Scikit-learn", "Next.js", "Spotify API"],
+    baseMilestones: [
+      "Audio Feature Extraction",
+      "Genre Classification Training",
+      "Mood Mapping Logic",
+      "Playlist Generation API",
+      "Web Player Integration"
+    ]
+  },
+  {
+    id: "25",
+    title: "AI Legal Document Summarizer",
+    category: "Machine Learning",
+    baseComplexity: "High",
+    description: "Extracting key terms, obligations, and risks from complex legal contracts using NLP transformers.",
+    techStack: ["Python", "Hugging Face", "FastAPI", "React", "PostgreSQL"],
+    baseMilestones: [
+      "Legal Text Corpus Preprocessing",
+      "Key Phrase Extraction Training",
+      "Abstractive Summarization Setup",
+      "Risk Scoring Engine",
+      "Document Upload & Analysis UI"
+    ]
   }
 ];
 
