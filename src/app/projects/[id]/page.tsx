@@ -203,8 +203,78 @@ export default function ProjectDetailsPage({ params, searchParams }: ProjectDeta
               </section>
             </div>
 
+              {/* User Persona Section */}
+              <section className="bg-white/5 border border-white/10 rounded-[2.5rem] p-8 md:p-12">
+                <div className="flex items-center gap-3 mb-8">
+                  <div className="w-10 h-10 rounded-2xl bg-orange-500/20 flex items-center justify-center border border-orange-500/30">
+                    <Users className="w-5 h-5 text-orange-400" />
+                  </div>
+                  <h2 className="text-2xl font-bold text-white">Target Personas</h2>
+                </div>
+                
+                <div className="grid sm:grid-cols-2 gap-6">
+                  <div className="p-6 rounded-2xl bg-white/5 border border-white/5">
+                    <h3 className="font-bold text-indigo-400 mb-2 italic">The Primary User</h3>
+                    <p className="text-sm text-zinc-400">Individual seeking streamlined access to complex data without technical overhead. Needs intuitive visualization and real-time alerts.</p>
+                  </div>
+                  <div className="p-6 rounded-2xl bg-white/5 border border-white/5">
+                    <h3 className="font-bold text-purple-400 mb-2 italic">The Administrator</h3>
+                    <p className="text-sm text-zinc-400">Responsible for system health, data integrity, and user permissions. Requires a robust dashboard and audit trails.</p>
+                  </div>
+                </div>
+              </section>
+
+              {/* Feature Matrix */}
+              <section className="bg-white/5 border border-white/10 rounded-[2.5rem] p-8 md:p-12">
+                <h2 className="text-2xl font-bold text-white mb-8">Feature Matrix</h2>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                  {[
+                    { label: "Offline Mode", icon: Zap },
+                    { label: "Data Encryption", icon: ShieldCheck },
+                    { label: "Cloud Sync", icon: Rocket },
+                    { label: "AI Insights", icon: Cpu },
+                    { label: "RESTful API", icon: Code2 },
+                    { label: "Custom Themes", icon: Layers }
+                  ].map((feat, i) => (
+                    <div key={i} className="flex flex-col items-center justify-center p-6 rounded-2xl bg-[#050505] border border-white/5 hover:border-indigo-500/50 transition-colors text-center gap-3">
+                      <feat.icon className="w-6 h-6 text-indigo-500" />
+                      <span className="text-xs font-bold text-zinc-300">{feat.label}</span>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            </div>
+
             {/* Right Column - Tech & Stats */}
             <div className="space-y-8">
+              {/* Hardware Requirements Card */}
+              <div className="bg-white/5 border border-white/10 rounded-[2.5rem] p-8">
+                <div className="flex items-center gap-3 mb-8">
+                  <div className="w-10 h-10 rounded-2xl bg-green-500/20 flex items-center justify-center border border-green-500/30">
+                    <Cpu className="w-5 h-5 text-green-400" />
+                  </div>
+                  <h2 className="text-xl font-bold text-white">Hardware</h2>
+                </div>
+                
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center text-sm">
+                    <span className="text-zinc-500">Minimum RAM</span>
+                    <span className="text-zinc-300 font-mono">8GB DDR4</span>
+                  </div>
+                  <div className="flex justify-between items-center text-sm">
+                    <span className="text-zinc-500">Processor</span>
+                    <span className="text-zinc-300 font-mono">Quad-Core 2.5GHz</span>
+                  </div>
+                  <div className="flex justify-between items-center text-sm">
+                    <span className="text-zinc-500">Storage</span>
+                    <span className="text-zinc-300 font-mono">256GB SSD</span>
+                  </div>
+                  <div className="flex justify-between items-center text-sm">
+                    <span className="text-zinc-500">Network</span>
+                    <span className="text-zinc-300 font-mono">Low-Latency Fiber</span>
+                  </div>
+                </div>
+              </div>
               {/* Tech Stack Card */}
               <div className="bg-white/5 border border-white/10 rounded-[2.5rem] p-8">
                 <div className="flex items-center gap-3 mb-8">
