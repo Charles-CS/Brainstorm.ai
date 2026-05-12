@@ -385,6 +385,81 @@ export const projects: Project[] = [
       "Risk Scoring Engine",
       "Document Upload & Analysis UI"
     ]
+  },
+  {
+    id: "26",
+    title: "Decentralized Identity Verification Platform",
+    category: "Blockchain",
+    baseComplexity: "Expert",
+    description: "A self-sovereign identity system that lets users control verified credentials and share them selectively across services.",
+    techStack: ["Solidity", "Polygon", "Next.js", "DID/VC", "IPFS"],
+    baseMilestones: [
+      "Identity Schema Design",
+      "Credential Issuance Contracts",
+      "Selective Disclosure Flow",
+      "Verification Dashboard",
+      "Audit and Recovery Layer"
+    ]
+  },
+  {
+    id: "27",
+    title: "On-Chain Carbon Credit Marketplace",
+    category: "Blockchain",
+    baseComplexity: "High",
+    description: "A marketplace for minting, trading, and retiring tokenized carbon credits with transparent provenance tracking.",
+    techStack: ["Solidity", "Ethereum", "Hardhat", "The Graph", "Tailwind CSS"],
+    baseMilestones: [
+      "Token Standard Selection",
+      "Credit Minting Workflow",
+      "Marketplace Listing Engine",
+      "Retirement and Reporting",
+      "Compliance Dashboard"
+    ]
+  },
+  {
+    id: "28",
+    title: "Multi-Signature Treasury Controller",
+    category: "Blockchain",
+    baseComplexity: "High",
+    description: "A secure treasury management tool that routes approvals through configurable multi-signature governance rules.",
+    techStack: ["Solidity", "Safe", "Next.js", "Ethers.js", "PostgreSQL"],
+    baseMilestones: [
+      "Treasury Policy Engine",
+      "Signature Threshold Logic",
+      "Transaction Queue UI",
+      "Role-Based Access Control",
+      "Execution Audit Log"
+    ]
+  },
+  {
+    id: "29",
+    title: "Web3 Loyalty Rewards Hub",
+    category: "Blockchain",
+    baseComplexity: "Medium",
+    description: "A customer rewards platform that issues interoperable loyalty points and unlocks partner perks across brands.",
+    techStack: ["Solidity", "Base", "Next.js", "RainbowKit", "MongoDB"],
+    baseMilestones: [
+      "Rewards Token Design",
+      "Partner Enrollment Flow",
+      "Wallet Connection UX",
+      "Redemption Marketplace",
+      "Analytics and Retention Dashboard"
+    ]
+  },
+  {
+    id: "30",
+    title: "Decentralized File Timestamp Notary",
+    category: "Blockchain",
+    baseComplexity: "Medium",
+    description: "A document notarization service that anchors file hashes on-chain for tamper-evident proof of existence.",
+    techStack: ["Solidity", "IPFS", "Next.js", "Node.js", "Ethers.js"],
+    baseMilestones: [
+      "Hashing and Upload Flow",
+      "Timestamp Contract Setup",
+      "Proof Verification Screen",
+      "Document History Viewer",
+      "Public Validation Endpoint"
+    ]
   }
 ];
 
