@@ -15,7 +15,7 @@ export function ProjectCard({ project, theme = "dark" }: ProjectCardProps) {
       href={`/projects/${project.id}?members=${project.recommendedMembers}`}
       className="block group relative"
     >
-      <div className={`overflow-hidden rounded-[2rem] border transition-all duration-500 group-hover:-translate-y-2 group-hover:border-indigo-500/80 group-hover:shadow-2xl group-hover:shadow-indigo-500/20 backdrop-blur-xl ${isDark ? 'bg-zinc-900/40 border-white/10' : 'bg-white border-zinc-200'}`}>
+      <div className={`overflow-hidden rounded-[2rem] border transition-all duration-500 group-hover:-translate-y-2 group-hover:border-indigo-500/80 group-hover:shadow-2xl group-hover:shadow-indigo-500/20 backdrop-blur-xl h-[500px] flex flex-col ${isDark ? 'bg-zinc-900/40 border-white/10' : 'bg-white border-zinc-200'}`}>
         {/* Content */}
         <div className="relative p-8 flex flex-col h-full">
           <div className="flex justify-between items-start mb-6">
@@ -32,7 +32,7 @@ export function ProjectCard({ project, theme = "dark" }: ProjectCardProps) {
             {project.title}
           </h3>
           
-          <p className={`mb-8 flex-grow leading-relaxed transition-colors ${isDark ? 'text-zinc-400' : 'text-zinc-600'}`}>
+          <p className={`mb-8 flex-grow leading-relaxed transition-colors line-clamp-2 ${isDark ? 'text-zinc-400' : 'text-zinc-600'}`}>
             {project.description}
           </p>
 
@@ -52,22 +52,7 @@ export function ProjectCard({ project, theme = "dark" }: ProjectCardProps) {
           </div>
 
           {/* Advanced Modules if any */}
-          {project.advancedModules && (
-            <div className={`mb-8 p-4 rounded-xl border ${isDark ? 'bg-indigo-500/5 border-indigo-500/10' : 'bg-indigo-50 border-indigo-500/20'}`}>
-              <div className="flex items-center gap-2 mb-2 text-xs font-bold text-indigo-500">
-                <Layers className="w-4 h-4" />
-                <span>ADVANCED MODULES INJECTED</span>
-              </div>
-              <ul className={`text-xs space-y-1 ${isDark ? 'text-zinc-400' : 'text-zinc-600'}`}>
-                {project.advancedModules.map((mod, i) => (
-                  <li key={i} className="flex items-center gap-2">
-                    <div className="w-1 h-1 rounded-full bg-indigo-500" />
-                    {mod}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
+
 
           {/* Roadmap Preview */}
           <div className={`mt-auto pt-6 border-t ${isDark ? 'border-white/10' : 'border-zinc-100'}`}>
