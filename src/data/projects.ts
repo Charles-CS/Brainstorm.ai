@@ -265,6 +265,21 @@ export const projects: Project[] = [
       "Geospatial Visualization",
       "Automated Reporting System"
     ]
+  },
+  {
+    id: "18",
+    title: "Reinforcement Learning for Game AI",
+    category: "Machine Learning",
+    baseComplexity: "High",
+    description: "Training agents to master complex strategy games using deep reinforcement learning techniques.",
+    techStack: ["Stable Baselines3", "Gymnasium", "Python", "Unity ML-Agents", "TensorBoard"],
+    baseMilestones: [
+      "Environment Wrapper Design",
+      "Reward Function Engineering",
+      "PPO/DQN Agent Training",
+      "Model Evaluation & Tuning",
+      "In-game Agent Integration"
+    ]
   }
 ];
 
