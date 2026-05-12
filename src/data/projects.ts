@@ -160,6 +160,81 @@ export const projects: Project[] = [
       "Lighting Estimation",
       "Photo Capture & Sharing"
     ]
+  },
+  {
+    id: "11",
+    title: "AI Financial Fraud Detection System",
+    category: "Machine Learning",
+    baseComplexity: "High",
+    description: "Real-time analysis of banking transactions to detect fraudulent behavior using anomaly detection algorithms.",
+    techStack: ["Python", "Scikit-learn", "Kafka", "React", "MongoDB"],
+    baseMilestones: [
+      "Dataset Labeling & Balancing",
+      "Feature Engineering",
+      "Anomaly Detection Training",
+      "Streaming Pipeline Setup",
+      "Admin Alert Dashboard"
+    ]
+  },
+  {
+    id: "12",
+    title: "Multilingual Speech-to-Text Translator",
+    category: "Machine Learning",
+    baseComplexity: "High",
+    description: "A neural network based system for transcribing and translating speech in real-time across 50+ languages.",
+    techStack: ["PyTorch", "Hugging Face", "FastAPI", "WebSockets", "React"],
+    baseMilestones: [
+      "ASR Model Fine-tuning",
+      "Translation Engine Integration",
+      "Low-Latency Streaming API",
+      "Frontend Waveform UI",
+      "Multi-language Support Validation"
+    ]
+  },
+  {
+    id: "13",
+    title: "Personalized Recommendation Engine for Retail",
+    category: "Machine Learning",
+    baseComplexity: "Medium",
+    description: "Hybrid filtering system that predicts user preferences based on browsing history and collaborative patterns.",
+    techStack: ["Python", "Surprise Library", "Redis", "Node.js", "Vue.js"],
+    baseMilestones: [
+      "User Behavior Data Analysis",
+      "Collaborative Filtering Implementation",
+      "Content-Based Scoring",
+      "Real-time Cache Integration",
+      "A/B Testing Framework"
+    ]
+  },
+  {
+    id: "14",
+    title: "Autonomous Traffic Flow Optimizer",
+    category: "Machine Learning",
+    baseComplexity: "Expert",
+    description: "Reinforcement learning model that coordinates city traffic lights to minimize congestion and emissions.",
+    techStack: ["SUMO", "Python", "Ray RLlib", "Docker", "Go"],
+    baseMilestones: [
+      "Traffic Simulation Environment Setup",
+      "RL Agent Observation Space Design",
+      "Multi-Agent Coordination Training",
+      "City-scale Deployment Simulation",
+      "Performance Analytics Suite"
+    ]
+  },
+  {
+    id: "15",
+    title: "Sentiment Analysis & Market Trend Predictor",
+    category: "Machine Learning",
+    baseComplexity: "Medium",
+    description: "NLP tool that scrapes social media and news to predict stock market trends based on public sentiment.",
+    techStack: ["Python", "BeautifulSoup", "NLTK", "Next.js", "Alpha Vantage API"],
+    baseMilestones: [
+      "Data Scraper Development",
+      "Sentiment Scoring Algorithm",
+      "Correlation Analysis",
+      "Predictive Trend Dashboard",
+      "Alert Notification System"
+    ]
   }
 ];
 
