@@ -1,7 +1,7 @@
 "use client";
 // BrainstormAI - Advanced Project Blueprint Engine
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
 import { Sun, Moon } from "lucide-react";
 import { Category } from "@/data/projects";
@@ -19,12 +19,19 @@ export default function Home() {
   const [members, setMembers] = useState(3);
   const [theme, setTheme] = useState<"dark" | "light">("dark");
   const [refreshKey, setRefreshKey] = useState(0);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const filteredProjects = useMemo(() => {
     const projects = generateProject(category, members);
-    // Shuffle the array to provide different ideas on refresh
+    // During SSR and initial hydration, we must return a stable result
+    if (!isMounted) return projects;
+    // Once mounted on the client, we can shuffle
     return [...projects].sort(() => Math.random() - 0.5);
-  }, [category, members, refreshKey]);
+  }, [category, members, refreshKey, isMounted]);
 
   const handleRefresh = () => {
     setRefreshKey(prev => prev + 1);
@@ -110,7 +117,10 @@ export default function Home() {
               <div className="absolute inset-0 bg-indigo-500/10 blur-[100px] rounded-full -z-10 group-hover:bg-indigo-500/20 transition-all duration-700"></div>
 
               {filteredProjects.length > 0 ? (
-                <div className="relative">
+                <div 
+                  key={`${category}-${members}-${refreshKey}`}
+                  className="relative animate-slide-up-fade"
+                >
                   <ProjectCard project={filteredProjects[0]} theme={theme} />
                 </div>
               ) : (
