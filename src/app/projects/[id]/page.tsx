@@ -164,26 +164,65 @@ export default function ProjectDetailsPage({ params, searchParams }: ProjectDeta
                   </div>
                 </div>
 
-                <div className="space-y-4">
+                <div className="space-y-6">
                   {project.roadmap.map((step, i) => (
-                    <div key={i} className="group relative bg-zinc-900/30 border border-white/5 rounded-3xl p-6 md:p-8 hover:bg-zinc-900/50 hover:border-indigo-500/30 transition-all">
-                      <div className="flex items-start gap-6">
-                        <div className="w-12 h-12 rounded-2xl bg-zinc-900 border border-white/10 flex items-center justify-center text-lg font-black text-zinc-600 group-hover:text-indigo-400 group-hover:border-indigo-500/50 transition-all shrink-0">
-                          {String(i + 1).padStart(2, '0')}
-                        </div>
-                        <div className="flex-grow">
-                          <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-3">
-                            <h3 className="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">
-                              {step.step}
-                            </h3>
-                            <span className="text-xs font-mono text-zinc-500 bg-black px-3 py-1 rounded-full border border-white/5">
-                              {step.date}
-                            </span>
+                    <div key={i} className="group relative bg-zinc-900/30 border border-white/5 rounded-[2.5rem] p-8 md:p-10 hover:bg-zinc-900/50 hover:border-indigo-500/30 transition-all">
+                      <div className="flex flex-col md:flex-row gap-8">
+                        <div className="flex flex-col items-center shrink-0">
+                          <div className="w-14 h-14 rounded-2xl bg-zinc-900 border border-white/10 flex items-center justify-center text-xl font-black text-zinc-600 group-hover:text-indigo-400 group-hover:border-indigo-500/50 transition-all shadow-xl">
+                            {String(i + 1).padStart(2, '0')}
                           </div>
-                          <p className="text-zinc-500 text-sm leading-relaxed max-w-2xl">
-                            A critical phase focusing on the structural foundation and integration of core services. 
-                            Includes extensive validation of all module dependencies and performance metrics.
+                          <div className="hidden md:block w-px h-full bg-white/5 mt-4 group-last:hidden" />
+                        </div>
+                        
+                        <div className="flex-grow">
+                          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+                            <div>
+                              <h3 className="text-2xl font-bold text-white group-hover:text-indigo-400 transition-colors mb-1">
+                                {step.step}
+                              </h3>
+                              <div className="flex items-center gap-3">
+                                <span className="text-[10px] font-black text-indigo-500/60 uppercase tracking-widest">Phase Objective</span>
+                                <div className="w-1 h-1 rounded-full bg-zinc-700" />
+                                <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest">{step.date}</span>
+                              </div>
+                            </div>
+                            <div className="flex -space-x-2">
+                              {[1, 2, 3].map((m) => (
+                                <div key={m} className="w-7 h-7 rounded-full border-2 border-zinc-900 bg-zinc-800 flex items-center justify-center text-[8px] font-bold text-zinc-500">
+                                  {String.fromCharCode(64 + m)}
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+
+                          <p className="text-zinc-400 text-sm leading-relaxed max-w-3xl mb-8">
+                            {step.step.includes("Data") || step.step.includes("Collection") ? 
+                              "Establish robust data ingestion pipelines and normalization protocols. Focus on high-fidelity data acquisition and secure storage architectures to ensure maximum integrity for downstream processing." :
+                            step.step.includes("Architecture") || step.step.includes("Design") ?
+                              "Defining the core structural logic and microservices interaction layers. We prioritize modularity and low-latency communication between system components using industry-standard design patterns." :
+                            step.step.includes("Training") || step.step.includes("Logic") ?
+                              "Implementation of core algorithmic logic and performance optimization. Includes extensive stress testing under simulated high-load environments to ensure system stability and reliability." :
+                            step.step.includes("API") || step.step.includes("Integration") ?
+                              "Bridge construction between backend services and the presentation layer. Focus on GraphQL/REST endpoint optimization and secure authentication handshake protocols." :
+                            "Final deployment and end-to-end system validation. This phase includes comprehensive UAT, performance benchmarking against initial KPIs, and final documentation for production readiness."}
                           </p>
+
+                          <div className="grid sm:grid-cols-3 gap-4">
+                            {[
+                              { label: "Stability", value: "99.9%", icon: ShieldCheck },
+                              { label: "Velocity", value: "High", icon: Zap },
+                              { label: "Security", value: "AES-256", icon: Rocket }
+                            ].map((item, idx) => (
+                              <div key={idx} className="bg-black/40 border border-white/5 rounded-2xl p-4 flex items-center gap-3">
+                                <item.icon className="w-4 h-4 text-zinc-600" />
+                                <div className="flex flex-col">
+                                  <span className="text-[8px] font-black text-zinc-500 uppercase tracking-widest">{item.label}</span>
+                                  <span className="text-xs font-bold text-zinc-300">{item.value}</span>
+                                </div>
+                              </div>
+                            ))}
+                          </div>
                         </div>
                       </div>
                     </div>
