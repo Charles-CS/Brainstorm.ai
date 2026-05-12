@@ -280,6 +280,21 @@ export const projects: Project[] = [
       "Model Evaluation & Tuning",
       "In-game Agent Integration"
     ]
+  },
+  {
+    id: "19",
+    title: "Predictive Maintenance for Aircraft Engines",
+    category: "Machine Learning",
+    baseComplexity: "Expert",
+    description: "Using sensor telemetry to predict Remaining Useful Life (RUL) of jet engines to optimize maintenance schedules.",
+    techStack: ["Python", "LSTM Networks", "Keras", "Azure ML", "D3.js"],
+    baseMilestones: [
+      "Sensor Data Preprocessing",
+      "RNN/LSTM Architecture Design",
+      "RUL Estimation Training",
+      "Reliability Analysis",
+      "Predictive Maintenance Dashboard"
+    ]
   }
 ];
 
