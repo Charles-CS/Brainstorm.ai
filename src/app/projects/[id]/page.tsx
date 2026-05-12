@@ -200,107 +200,145 @@ export default function ProjectDetailsPage({ params, searchParams }: ProjectDeta
 
                 <div className="grid gap-8">
                   {/* Visual Schema */}
-                  <div className="bg-zinc-900/40 border border-white/5 rounded-[2.5rem] p-8 md:p-16 relative overflow-hidden group/arch">
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,_var(--tw-gradient-stops))] from-indigo-500/5 via-transparent to-transparent" />
+                  <div className="bg-zinc-900/40 border border-white/5 rounded-[2.5rem] p-8 md:p-20 relative overflow-hidden group/arch shadow-2xl shadow-black/20">
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,_var(--tw-gradient-stops))] from-indigo-500/10 via-transparent to-transparent" />
                     
                     {/* Background Grid Lines */}
-                    <div className="absolute inset-0 opacity-[0.03] pointer-events-none" 
-                         style={{ backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+                    <div className="absolute inset-0 opacity-[0.05] pointer-events-none" 
+                         style={{ backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
 
-                    <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-12 lg:gap-20">
-                      {/* Node 1: Client */}
-                      <div className="text-center group/node relative">
-                        <div className="w-24 h-24 rounded-3xl bg-zinc-900 border border-white/10 flex items-center justify-center mb-4 group-hover/node:border-indigo-500/50 group-hover/node:bg-indigo-500/5 transition-all relative z-10">
-                          <LayoutDashboard className="w-8 h-8 text-indigo-400" />
-                          <div className="absolute -top-1 -right-1 w-3 h-3 bg-indigo-500 rounded-full animate-pulse" />
-                        </div>
-                        <span className="text-xs font-bold text-zinc-400">Frontend Layer</span>
-                        <div className="absolute top-1/2 -right-12 hidden md:block group-hover/arch:animate-pulse">
-                          <span className="text-[8px] font-mono text-indigo-500/50 uppercase">HTTPS</span>
-                        </div>
-                      </div>
+                    <div className="relative z-10 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]">
+                      <div className="flex items-center w-max animate-marquee hover:[animation-play-state:paused] py-4">
+                        {/* Repeating 2 identical sets for a perfectly seamless loop at -50% */}
+                        {[1, 2].map((set) => (
+                          <div key={set} className="flex items-center">
+                            {/* Node 1: Client */}
+                            <div className="text-center group/node relative flex flex-col items-center w-[120px] shrink-0">
+                              <div className="w-28 h-28 rounded-[2rem] bg-zinc-900 border border-white/10 flex flex-col items-center justify-center mb-5 group-hover/node:border-indigo-500/50 group-hover/node:bg-indigo-500/5 transition-all duration-500 relative z-10 shadow-xl">
+                                <LayoutDashboard className="w-10 h-10 text-indigo-400 mb-2" />
+                                <span className="text-[10px] font-black text-indigo-500/80 uppercase tracking-tighter">UI Layer</span>
+                                <div className="absolute -top-1 -right-1 w-4 h-4 bg-indigo-500 rounded-full animate-pulse blur-[2px]" />
+                              </div>
+                              <div className="flex flex-col gap-1">
+                                <span className="text-xs font-bold text-white tracking-tight truncate w-full px-2">
+                                  {project.techStack[project.techStack.length - 2] || "Frontend"}
+                                </span>
+                                <span className="text-[8px] font-mono text-zinc-500 uppercase tracking-widest">Presentation</span>
+                              </div>
+                            </div>
 
-                      {/* Connection 1 */}
-                      <div className="hidden md:flex flex-col items-center gap-2">
-                        <div className="w-16 lg:w-24 h-px bg-gradient-to-r from-indigo-500/50 to-purple-500/50 relative">
-                          <div className="absolute top-0 left-0 h-full w-4 bg-white animate-[pulse-right_2s_infinite]" />
-                        </div>
-                      </div>
+                            {/* Connection 1 */}
+                            <div className="w-24 h-px mx-10 bg-gradient-to-r from-indigo-500/50 via-purple-500/50 to-purple-500/50 relative overflow-hidden shrink-0">
+                              <div className="absolute top-0 h-full w-8 bg-white/40 blur-sm animate-pulse-right" />
+                            </div>
 
-                      {/* Node 2: Logic */}
-                      <div className="text-center group/node relative">
-                        <div className="w-32 h-32 rounded-3xl bg-zinc-950 border border-white/10 flex items-center justify-center mb-4 group-hover/node:border-purple-500/50 group-hover/node:bg-purple-500/5 transition-all shadow-2xl shadow-purple-500/5 relative z-10 scale-110">
-                          <Settings className="w-12 h-12 text-purple-400" />
-                          <div className="absolute inset-0 rounded-3xl border border-purple-500/20 animate-ping opacity-20" />
-                        </div>
-                        <span className="text-xs font-bold text-zinc-400">Processing Engine</span>
-                      </div>
+                            {/* Node 2: Logic */}
+                            <div className="text-center group/node relative flex flex-col items-center w-[150px] shrink-0">
+                              <div className="w-36 h-36 rounded-[2.5rem] bg-zinc-950 border border-white/10 flex flex-col items-center justify-center mb-5 group-hover/node:border-purple-500/50 group-hover/node:bg-purple-500/5 transition-all duration-500 shadow-2xl shadow-purple-500/10 relative z-10 scale-110">
+                                <Settings className="w-14 h-14 text-purple-400 mb-2 animate-[spin_10s_linear_infinite]" />
+                                <span className="text-[10px] font-black text-purple-500/80 uppercase tracking-tighter">Logic Core</span>
+                              </div>
+                              <div className="flex flex-col gap-1">
+                                <span className="text-xs font-bold text-white tracking-tight truncate w-full px-2">
+                                  {project.techStack[0] || "Backend"}
+                                </span>
+                                <span className="text-[8px] font-mono text-zinc-500 uppercase tracking-widest">Processing</span>
+                              </div>
+                            </div>
 
-                      {/* Connection 2 */}
-                      <div className="hidden md:flex flex-col items-center gap-2">
-                        <div className="w-16 lg:w-24 h-px bg-gradient-to-r from-purple-500/50 to-pink-500/50 relative">
-                          <div className="absolute top-0 left-0 h-full w-4 bg-white animate-[pulse-right_2s_infinite_0.5s]" />
-                        </div>
-                      </div>
+                            {/* Connection 2 */}
+                            <div className="w-24 h-px mx-10 bg-gradient-to-r from-purple-500/50 via-pink-500/50 to-pink-500/50 relative overflow-hidden shrink-0">
+                              <div className="absolute top-0 h-full w-8 bg-white/40 blur-sm animate-pulse-right [animation-delay:1.5s]" />
+                            </div>
 
-                      {/* Node 3: Database */}
-                      <div className="text-center group/node relative">
-                        <div className="w-24 h-24 rounded-3xl bg-zinc-900 border border-white/10 flex items-center justify-center mb-4 group-hover/node:border-pink-500/50 group-hover/node:bg-pink-500/5 transition-all relative z-10">
-                          <Layers className="w-8 h-8 text-pink-400" />
-                        </div>
-                        <span className="text-xs font-bold text-zinc-400">Data Persistence</span>
-                        <div className="absolute top-1/2 -left-12 hidden md:block">
-                          <span className="text-[8px] font-mono text-pink-500/50 uppercase">SQL</span>
-                        </div>
+                            {/* Node 3: Database */}
+                            <div className="text-center group/node relative flex flex-col items-center w-[120px] shrink-0">
+                              <div className="w-28 h-28 rounded-[2rem] bg-zinc-900 border border-white/10 flex flex-col items-center justify-center mb-5 group-hover/node:border-pink-500/50 group-hover/node:bg-pink-500/5 transition-all duration-500 relative z-10 shadow-xl">
+                                <Layers className="w-10 h-10 text-pink-400 mb-2" />
+                                <span className="text-[10px] font-black text-pink-500/80 uppercase tracking-tighter">Data Hub</span>
+                              </div>
+                              <div className="flex flex-col gap-1">
+                                <span className="text-xs font-bold text-white tracking-tight truncate w-full px-2">
+                                  {project.techStack[project.techStack.length - 1] || "Storage"}
+                                </span>
+                                <span className="text-[8px] font-mono text-zinc-500 uppercase tracking-widest">Persistence</span>
+                              </div>
+                            </div>
+
+                            {/* Connection for Loop */}
+                            <div className="w-24 h-px mx-10 bg-gradient-to-r from-pink-500/50 via-indigo-500/50 to-indigo-500/50 relative overflow-hidden shrink-0">
+                              <div className="absolute top-0 h-full w-8 bg-white/40 blur-sm animate-pulse-right [animation-delay:3s]" />
+                            </div>
+                          </div>
+                        ))}
                       </div>
                     </div>
 
-                    {/* Secondary Node Below (Auth/Security) */}
-                    <div className="mt-16 flex justify-center">
-                      <div className="text-center group/node relative">
-                        <div className="px-6 py-3 rounded-2xl bg-zinc-900/80 border border-emerald-500/20 flex items-center gap-3 group-hover/node:border-emerald-500/50 transition-all">
-                          <ShieldCheck className="w-4 h-4 text-emerald-400" />
-                          <span className="text-[10px] font-bold text-zinc-300 uppercase tracking-widest">Auth Service</span>
+
+
+
+                    {/* Security Overlay / Flow Details */}
+                    <div className="mt-20 flex flex-col md:flex-row items-center justify-center gap-8 border-t border-white/5 pt-12">
+                      <div className="flex items-center gap-3 px-6 py-3 rounded-2xl bg-zinc-900/80 border border-emerald-500/20 group hover:border-emerald-500/50 transition-all">
+                        <ShieldCheck className="w-5 h-5 text-emerald-400" />
+                        <div className="flex flex-col">
+                          <span className="text-[9px] font-black text-emerald-500/60 uppercase tracking-widest">Protocol</span>
+                          <span className="text-xs font-bold text-zinc-300">End-to-End Encryption</span>
                         </div>
-                        {/* Vertical connection line */}
-                        <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-px h-8 bg-zinc-800" />
+                      </div>
+                      
+                      <div className="hidden md:block w-8 h-px bg-white/5" />
+
+                      <div className="flex items-center gap-3 px-6 py-3 rounded-2xl bg-zinc-900/80 border border-indigo-500/20 group hover:border-indigo-500/50 transition-all">
+                        <Rocket className="w-5 h-5 text-indigo-400" />
+                        <div className="flex flex-col">
+                          <span className="text-[9px] font-black text-indigo-500/60 uppercase tracking-widest">Delivery</span>
+                          <span className="text-xs font-bold text-zinc-300">CD/CI Optimized Pipeline</span>
+                        </div>
                       </div>
                     </div>
                   </div>
 
+
                   <div className="grid sm:grid-cols-2 gap-8">
-                    <div className="p-8 rounded-[2rem] bg-zinc-900/30 border border-white/5">
-                      <h3 className="font-bold text-white mb-6 flex items-center gap-2">
-                        <Code2 className="w-4 h-4 text-indigo-400" />
-                        Tech Stack
+                    <div className="p-10 rounded-[2.5rem] bg-zinc-900/20 border border-white/5 hover:border-indigo-500/20 transition-all group/tech">
+                      <h3 className="font-bold text-white mb-8 flex items-center gap-3">
+                        <div className="w-8 h-8 rounded-xl bg-indigo-500/10 flex items-center justify-center border border-indigo-500/20">
+                          <Code2 className="w-4 h-4 text-indigo-400" />
+                        </div>
+                        Technical Stack
                       </h3>
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-3">
                         {project.techStack.map((tech, i) => (
-                          <span key={i} className="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs text-zinc-400 font-medium">
+                          <div key={i} className="px-4 py-2 rounded-xl bg-zinc-900 border border-white/5 text-[11px] text-zinc-300 font-bold uppercase tracking-wider hover:border-indigo-500/30 transition-all flex items-center gap-2">
+                            <div className="w-1 h-1 rounded-full bg-indigo-500" />
                             {tech}
-                          </span>
+                          </div>
                         ))}
                       </div>
                     </div>
-                    <div className="p-8 rounded-[2rem] bg-zinc-900/30 border border-white/5">
-                      <h3 className="font-bold text-white mb-6 flex items-center gap-2">
-                        <Cpu className="w-4 h-4 text-emerald-400" />
-                        Hardware Spec
+                    <div className="p-10 rounded-[2.5rem] bg-zinc-900/20 border border-white/5 hover:border-emerald-500/20 transition-all group/hw">
+                      <h3 className="font-bold text-white mb-8 flex items-center gap-3">
+                        <div className="w-8 h-8 rounded-xl bg-emerald-500/10 flex items-center justify-center border border-emerald-500/20">
+                          <Cpu className="w-4 h-4 text-emerald-400" />
+                        </div>
+                        System Infrastructure
                       </h3>
-                      <ul className="space-y-3 text-xs text-zinc-500 font-medium">
-                        <li className="flex justify-between border-b border-white/5 pb-2">
-                          <span>RAM</span>
-                          <span className="text-zinc-300">16GB Unified Memory</span>
-                        </li>
-                        <li className="flex justify-between border-b border-white/5 pb-2">
-                          <span>Compute</span>
-                          <span className="text-zinc-300">M2/M3 Chip or RTX 3060</span>
-                        </li>
-                        <li className="flex justify-between">
-                          <span>Storage</span>
-                          <span className="text-zinc-300">NVMe SSD 500GB</span>
-                        </li>
-                      </ul>
+                      <div className="space-y-4">
+                        {[
+                          { label: "Memory Unit", value: "32GB High-Bandwidth RAM", icon: Layers },
+                          { label: "Compute Engine", value: "NVIDIA RTX 40-Series / M3 Max", icon: Zap },
+                          { label: "Storage Layer", value: "2TB NVMe Gen4 SSD", icon: Rocket }
+                        ].map((spec, i) => (
+                          <div key={i} className="flex items-center justify-between p-4 rounded-2xl bg-black/40 border border-white/5 group-hover/hw:border-emerald-500/10 transition-all">
+                            <div className="flex items-center gap-3">
+                              <spec.icon className="w-3.5 h-3.5 text-zinc-500" />
+                              <span className="text-[10px] font-black text-zinc-500 uppercase tracking-widest">{spec.label}</span>
+                            </div>
+                            <span className="text-xs font-bold text-zinc-200">{spec.value}</span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
