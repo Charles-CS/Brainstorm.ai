@@ -187,13 +187,6 @@ export default function ProjectDetailsPage({ params, searchParams }: ProjectDeta
                                 <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest">{step.date}</span>
                               </div>
                             </div>
-                            <div className="flex -space-x-2">
-                              {[1, 2, 3].map((m) => (
-                                <div key={m} className="w-7 h-7 rounded-full border-2 border-zinc-900 bg-zinc-800 flex items-center justify-center text-[8px] font-bold text-zinc-500">
-                                  {String.fromCharCode(64 + m)}
-                                </div>
-                              ))}
-                            </div>
                           </div>
 
                           <p className="text-zinc-400 text-sm leading-relaxed max-w-3xl mb-10 border-l-2 border-indigo-500/20 pl-6 py-2 italic bg-indigo-500/5 rounded-r-2xl">
