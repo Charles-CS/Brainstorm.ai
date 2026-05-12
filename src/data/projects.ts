@@ -295,6 +295,21 @@ export const projects: Project[] = [
       "Reliability Analysis",
       "Predictive Maintenance Dashboard"
     ]
+  },
+  {
+    id: "20",
+    title: "Natural Language Interface for Databases",
+    category: "Machine Learning",
+    baseComplexity: "High",
+    description: "A system that converts natural language queries into SQL for non-technical users to query databases.",
+    techStack: ["Python", "SQLAlchemy", "OpenAI API", "React", "PostgreSQL"],
+    baseMilestones: [
+      "Database Schema Embedding",
+      "Text-to-SQL Model Setup",
+      "Query Validation & Security",
+      "Interactive Result Visualization",
+      "Human-in-the-loop Correction UI"
+    ]
   }
 ];
 
