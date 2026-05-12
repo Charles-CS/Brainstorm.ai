@@ -12,7 +12,6 @@ import { ComplexityLogicGrid } from "@/components/ComplexityLogicGrid";
 import { CategoryBentoGrid } from "@/components/CategoryBentoGrid";
 import { InteractiveRoadmap } from "@/components/InteractiveRoadmap";
 import { Footer } from "@/components/Footer";
-import { CtaSection } from "@/components/CtaSection";
 import { ParticleBackground } from "@/components/ParticleBackground";
 
 export default function Home() {
@@ -119,7 +118,6 @@ export default function Home() {
       <InteractiveRoadmap theme={theme} />
       <ComplexityLogicGrid theme={theme} />
       <CategoryBentoGrid theme={theme} />
-      <CtaSection theme={theme} />
 
       <Footer theme={theme} />
     </div>

@@ -12,14 +12,14 @@ export function CtaSection({ theme }: { theme: "light" | "dark" }) {
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <div className={`absolute w-[800px] h-[800px] rounded-full blur-[120px] transition-opacity duration-500 ${isDark ? 'bg-indigo-500/10 opacity-100' : 'bg-transparent opacity-0'}`} />
         <div className={`absolute w-[600px] h-[600px] rounded-full blur-[100px] -translate-y-1/4 translate-x-1/4 transition-opacity duration-500 ${isDark ? 'bg-purple-500/10 opacity-100' : 'bg-transparent opacity-0'}`} />
-        
+
         {/* Animated concentric rings */}
-        <motion.div 
+        <motion.div
           animate={{ scale: [1, 1.5, 1], opacity: isDark ? [0.1, 0.3, 0.1] : 0 }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
           className={`absolute w-[400px] h-[400px] border ${isDark ? 'border-indigo-500/20' : 'border-transparent'} rounded-full`}
         />
-        <motion.div 
+        <motion.div
           animate={{ scale: [1, 2, 1], opacity: isDark ? [0.05, 0.2, 0.05] : 0 }}
           transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 1 }}
           className={`absolute w-[600px] h-[600px] border ${isDark ? 'border-purple-500/20' : 'border-transparent'} rounded-full`}
