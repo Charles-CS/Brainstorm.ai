@@ -142,6 +142,65 @@ export default function ProjectDetailsPage({ params, searchParams }: ProjectDeta
                   </div>
                 </section>
               )}
+
+              {/* Research & Methodology Section */}
+              <section className="grid sm:grid-cols-2 gap-8">
+                <div className="bg-white/5 border border-white/10 rounded-[2.5rem] p-8">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-10 h-10 rounded-2xl bg-purple-500/20 flex items-center justify-center border border-purple-500/30">
+                      <Zap className="w-5 h-5 text-purple-400" />
+                    </div>
+                    <h2 className="text-xl font-bold text-white">Research Focus</h2>
+                  </div>
+                  <ul className="space-y-4">
+                    {[
+                      "Performance optimization under varying load",
+                      "Security protocols for decentralized data",
+                      "User experience impact on adoption rates"
+                    ].map((q, i) => (
+                      <li key={i} className="flex gap-3 text-sm text-zinc-400 leading-relaxed">
+                        <span className="text-indigo-500 font-bold">•</span>
+                        {q}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="bg-white/5 border border-white/10 rounded-[2.5rem] p-8">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-10 h-10 rounded-2xl bg-pink-500/20 flex items-center justify-center border border-pink-500/30">
+                      <Layers className="w-5 h-5 text-pink-400" />
+                    </div>
+                    <h2 className="text-xl font-bold text-white">Methodology</h2>
+                  </div>
+                  <p className="text-sm text-zinc-400 leading-relaxed mb-4">
+                    Utilizing the <strong>Agile Scrum</strong> framework with 2-week sprint cycles, ensuring continuous integration and stakeholder feedback loops.
+                  </p>
+                  <div className="flex gap-2">
+                    <span className="text-[10px] px-2 py-1 bg-white/5 rounded-md border border-white/10 text-zinc-500">Agile</span>
+                    <span className="text-[10px] px-2 py-1 bg-white/5 rounded-md border border-white/10 text-zinc-500">IEEE 830</span>
+                    <span className="text-[10px] px-2 py-1 bg-white/5 rounded-md border border-white/10 text-zinc-500">SDLC</span>
+                  </div>
+                </div>
+              </section>
+
+              {/* System Architecture (Visual Simulation) */}
+              <section className="bg-white/5 border border-white/10 rounded-[2.5rem] p-8 md:p-12">
+                <h2 className="text-2xl font-bold text-white mb-8">System Architecture Overview</h2>
+                <div className="relative p-8 bg-[#050505] rounded-3xl border border-white/5 overflow-hidden">
+                  <div className="flex flex-col md:flex-row items-center justify-center gap-8 relative z-10">
+                    <div className="w-32 h-20 rounded-xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-xs font-bold text-indigo-400 text-center p-2">Client<br/>Interface</div>
+                    <div className="w-8 h-px bg-zinc-800 hidden md:block" />
+                    <div className="w-32 h-24 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-xs font-bold text-purple-400 text-center p-2">API Gateway /<br/>Logic Engine</div>
+                    <div className="w-8 h-px bg-zinc-800 hidden md:block" />
+                    <div className="w-32 h-20 rounded-xl bg-pink-500/10 border border-pink-500/30 flex items-center justify-center text-xs font-bold text-pink-400 text-center p-2">Database /<br/>Storage</div>
+                  </div>
+                  <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-indigo-500 via-transparent to-transparent" />
+                </div>
+                <p className="mt-6 text-sm text-zinc-500 text-center italic">
+                  * Simplified architectural diagram representing the core data flow and service interaction layers.
+                </p>
+              </section>
             </div>
 
             {/* Right Column - Tech & Stats */}
