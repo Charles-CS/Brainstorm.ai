@@ -250,6 +250,21 @@ export const projects: Project[] = [
       "Feedback Loop Integration",
       "Live Chat Widget UI"
     ]
+  },
+  {
+    id: "17",
+    title: "Deep Learning for Satellite Imagery Analysis",
+    category: "Machine Learning",
+    baseComplexity: "High",
+    description: "Automated identification of land use changes and deforestation patterns using CNNs on satellite data.",
+    techStack: ["PyTorch", "Rasterio", "Google Earth Engine", "Python", "Flask"],
+    baseMilestones: [
+      "Satellite Data Ingestion",
+      "Semantic Segmentation Model",
+      "Change Detection Logic",
+      "Geospatial Visualization",
+      "Automated Reporting System"
+    ]
   }
 ];
 
