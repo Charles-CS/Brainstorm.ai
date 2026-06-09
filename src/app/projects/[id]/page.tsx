@@ -106,9 +106,10 @@ export default function ProjectDetailsPage({ params, searchParams }: ProjectDeta
       `
       : "";
 
-    const printWindow = window.open("", "_blank", "noopener,noreferrer,width=1200,height=900");
+    const printWindow = window.open("", "_blank", "width=1200,height=900");
     if (!printWindow) return;
 
+    printWindow.document.open();
     printWindow.document.write(`
       <!doctype html>
       <html>
@@ -279,20 +280,18 @@ export default function ProjectDetailsPage({ params, searchParams }: ProjectDeta
               ${moduleList}
             </div>
           </div>
-          <script>
-            window.addEventListener('load', () => {
-              window.print();
-            });
-
-            window.addEventListener('afterprint', () => {
-              window.close();
-            });
-          </script>
         </body>
       </html>
     `);
     printWindow.document.close();
     printWindow.focus();
+
+    setTimeout(() => {
+      printWindow.print();
+      printWindow.addEventListener("afterprint", () => {
+        printWindow.close();
+      }, { once: true });
+    }, 250);
   };
 
   return (
