@@ -461,5 +461,21 @@ export const projects: Project[] = [
       "Public Validation Endpoint"
     ]
   }
+  ,
+  {
+    id: "31",
+    title: "Personal AI Assistant (Solo Developer)",
+    category: "Machine Learning",
+    baseComplexity: "Medium",
+    description: "A lightweight, on-device personal AI assistant that helps manage notes, reminders, and simple automations — designed to be built and maintained by a single developer.",
+    techStack: ["Python", "TensorFlow Lite", "FastAPI", "React", "SQLite"],
+    baseMilestones: [
+      "MVP Intent & Slot Design",
+      "On-device Model Training & Quantization",
+      "Local API for Syncing",
+      "Frontend Interaction UI",
+      "Personalization & Persistence"
+    ]
+  }
 ];
 
