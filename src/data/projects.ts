@@ -476,6 +476,21 @@ export const projects: Project[] = [
       "Frontend Interaction UI",
       "Personalization & Persistence"
     ]
+  },
+  {
+    id: "32",
+    title: "Explainable AI for Early Disease Detection",
+    category: "Machine Learning",
+    baseComplexity: "High",
+    description: "A thesis-focused predictive system that combines interpretable machine learning with clinical or sensor data to surface early warning signals and explain the model's decisions.",
+    techStack: ["Python", "Scikit-learn", "SHAP", "FastAPI", "PostgreSQL"],
+    baseMilestones: [
+      "Data Collection & Cleaning",
+      "Baseline Model Training",
+      "Explainability Layer Integration",
+      "Risk Scoring Dashboard",
+      "Evaluation and Validation"
+    ]
   }
 ];
 
