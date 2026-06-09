@@ -746,6 +746,21 @@ export const projects: Project[] = [
       "Operator Dashboard and Alerts",
       "System Testing and Field Validation"
     ]
+  },
+  {
+    id: "50",
+    title: "IoT-Powered Smart Waste Collection Optimization System",
+    category: "Internet of Things",
+    baseComplexity: "Medium",
+    description: "A thesis-capstone project for a 4-5 member team that uses smart bin sensors, GPS-enabled collection routing, and cloud analytics to reduce pickup delays and optimize municipal waste operations.",
+    techStack: ["ESP32", "LoRaWAN", "MQTT", "Node.js", "PostgreSQL"],
+    baseMilestones: [
+      "Smart Bin Sensor Prototype",
+      "Telemetry and Gateway Integration",
+      "Route Optimization Algorithm",
+      "Operations Dashboard and Alerts",
+      "Pilot Testing and Performance Review"
+    ]
   }
 ];
 
