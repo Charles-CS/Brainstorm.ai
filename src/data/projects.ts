@@ -521,6 +521,21 @@ export const projects: Project[] = [
       "Review Dashboard Development",
       "False Positive Tuning"
     ]
+  },
+  {
+    id: "35",
+    title: "Adaptive Student Performance Predictor",
+    category: "Machine Learning",
+    baseComplexity: "Medium",
+    description: "A thesis project that analyzes coursework, engagement, and assessment patterns to predict student performance and recommend interventions early.",
+    techStack: ["Python", "Scikit-learn", "Pandas", "FastAPI", "Next.js"],
+    baseMilestones: [
+      "Student Data Collection",
+      "Feature Selection and Cleaning",
+      "Performance Prediction Modeling",
+      "Intervention Recommendation Logic",
+      "Advisor Dashboard UI"
+    ]
   }
 ];
 
