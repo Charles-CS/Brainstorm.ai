@@ -506,6 +506,21 @@ export const projects: Project[] = [
       "Yield Forecast Dashboard",
       "Model Evaluation and Reporting"
     ]
+  },
+  {
+    id: "34",
+    title: "Smart Exam Proctoring Anomaly Detector",
+    category: "Machine Learning",
+    baseComplexity: "High",
+    description: "A computer vision and behavior analytics system that flags suspicious activity during online exams while keeping the review process explainable.",
+    techStack: ["Python", "OpenCV", "PyTorch", "FastAPI", "React"],
+    baseMilestones: [
+      "Video Stream Ingestion",
+      "Behavior Feature Extraction",
+      "Anomaly Detection Model Training",
+      "Review Dashboard Development",
+      "False Positive Tuning"
+    ]
   }
 ];
 
