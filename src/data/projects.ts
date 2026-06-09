@@ -611,6 +611,21 @@ export const projects: Project[] = [
       "Transaction History Dashboard",
       "Dispute Resolution Logging"
     ]
+  },
+  {
+    id: "41",
+    title: "On-Chain Intellectual Property Registry",
+    category: "Blockchain",
+    baseComplexity: "High",
+    description: "A blockchain registry for timestamping creative works, tracking ownership history, and simplifying proof of authorship.",
+    techStack: ["Solidity", "Polygon", "Next.js", "Ethers.js", "IPFS"],
+    baseMilestones: [
+      "IP Metadata Schema",
+      "Ownership Registration Contracts",
+      "Timestamp and Proof Flow",
+      "Public Registry Search UI",
+      "Transfer and Licensing Log"
+    ]
   }
 ];
 
