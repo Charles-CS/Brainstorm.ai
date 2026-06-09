@@ -641,6 +641,21 @@ export const projects: Project[] = [
       "Dashboard UI Development",
       "Notifications and Permissions"
     ]
+  },
+  {
+    id: "43",
+    title: "Thesis Research Portfolio Platform",
+    category: "Web Development",
+    baseComplexity: "Medium",
+    description: "A thesis-focused web application for showcasing research progress, storing chapter drafts, and sharing advisor feedback in one place.",
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Vercel"],
+    baseMilestones: [
+      "Research Profile Setup",
+      "Chapter Draft Management",
+      "Advisor Feedback Workflow",
+      "Progress Timeline Interface",
+      "Publication and Citation Tools"
+    ]
   }
 ];
 
