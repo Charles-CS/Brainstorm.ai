@@ -626,6 +626,21 @@ export const projects: Project[] = [
       "Public Registry Search UI",
       "Transfer and Licensing Log"
     ]
+  },
+  {
+    id: "42",
+    title: "Realtime Team Collaboration Dashboard",
+    category: "Web Development",
+    baseComplexity: "Medium",
+    description: "A modern web platform for teams to share updates, assign tasks, and track project status in real time with collaborative editing.",
+    techStack: ["Next.js", "TypeScript", "Socket.io", "Prisma", "PostgreSQL"],
+    baseMilestones: [
+      "Authentication and Workspace Setup",
+      "Realtime Task Sync",
+      "Collaborative Activity Feed",
+      "Dashboard UI Development",
+      "Notifications and Permissions"
+    ]
   }
 ];
 
