@@ -536,6 +536,21 @@ export const projects: Project[] = [
       "Intervention Recommendation Logic",
       "Advisor Dashboard UI"
     ]
+  },
+  {
+    id: "36",
+    title: "Blockchain-Based Academic Credential Registry",
+    category: "Blockchain",
+    baseComplexity: "High",
+    description: "A decentralized registry for issuing, verifying, and revoking academic credentials with tamper-evident provenance.",
+    techStack: ["Solidity", "Ethereum", "Next.js", "Ethers.js", "IPFS"],
+    baseMilestones: [
+      "Credential Schema Design",
+      "Smart Contract Development",
+      "Issuer Verification Workflow",
+      "Public Credential Lookup UI",
+      "Revocation and Audit Trail"
+    ]
   }
 ];
 
