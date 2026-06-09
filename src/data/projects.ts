@@ -686,6 +686,21 @@ export const projects: Project[] = [
       "Defense Scheduling Interface",
       "Final Submission and Archive"
     ]
+  },
+  {
+    id: "46",
+    title: "Student Capstone Collaboration and Review Suite",
+    category: "Web Development",
+    baseComplexity: "High",
+    description: "A thesis and capstone web platform for computer science and information technology students to plan projects, manage documents, track progress, and coordinate advisor reviews.",
+    techStack: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Tailwind CSS"],
+    baseMilestones: [
+      "Project Proposal and Scope Definition",
+      "Team and Role Management",
+      "Document Submission and Versioning",
+      "Advisor Review and Approval Workflow",
+      "Final Defense Preparation Dashboard"
+    ]
   }
 ];
 
