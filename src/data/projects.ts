@@ -731,6 +731,21 @@ export const projects: Project[] = [
       "Crop Advisory Recommendation Engine",
       "Yield Forecast and Reporting"
     ]
+  },
+  {
+    id: "49",
+    title: "IoT-Based Smart Greenhouse Climate and Irrigation Control System",
+    category: "Internet of Things",
+    baseComplexity: "Medium",
+    description: "A thesis-capstone project for a 4-5 member team that monitors greenhouse temperature, humidity, soil moisture, and light levels, then automates irrigation and ventilation using edge-connected controllers.",
+    techStack: ["ESP32", "MQTT", "Node-RED", "InfluxDB", "Next.js"],
+    baseMilestones: [
+      "Sensor Node Design and Calibration",
+      "MQTT Data Pipeline Setup",
+      "Climate Rule Engine and Automation Logic",
+      "Operator Dashboard and Alerts",
+      "System Testing and Field Validation"
+    ]
   }
 ];
 
