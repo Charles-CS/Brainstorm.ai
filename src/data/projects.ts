@@ -551,6 +551,21 @@ export const projects: Project[] = [
       "Public Credential Lookup UI",
       "Revocation and Audit Trail"
     ]
+  },
+  {
+    id: "37",
+    title: "Decentralized Carbon Offset Verification Platform",
+    category: "Blockchain",
+    baseComplexity: "High",
+    description: "A blockchain system for tracking carbon offset projects, verifying claims, and preventing duplicate credit issuance.",
+    techStack: ["Solidity", "Polygon", "The Graph", "Next.js", "IPFS"],
+    baseMilestones: [
+      "Offset Project Registry Design",
+      "Verification Smart Contracts",
+      "Credit Minting and Retirement Logic",
+      "Transparency Dashboard",
+      "Audit and Compliance Reports"
+    ]
   }
 ];
 
