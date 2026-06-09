@@ -491,6 +491,21 @@ export const projects: Project[] = [
       "Risk Scoring Dashboard",
       "Evaluation and Validation"
     ]
+  },
+  {
+    id: "33",
+    title: "AI-Powered Crop Yield Predictor",
+    category: "Machine Learning",
+    baseComplexity: "High",
+    description: "A thesis-oriented forecasting system that blends weather, soil, and satellite data to predict crop yields and support agricultural planning.",
+    techStack: ["Python", "XGBoost", "Pandas", "FastAPI", "React"],
+    baseMilestones: [
+      "Agricultural Data Gathering",
+      "Feature Engineering for Climate Factors",
+      "Predictive Model Training",
+      "Yield Forecast Dashboard",
+      "Model Evaluation and Reporting"
+    ]
   }
 ];
 
