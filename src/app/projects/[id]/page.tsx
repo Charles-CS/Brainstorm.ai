@@ -6,7 +6,7 @@ import {
   ArrowLeft, Calendar, Users, Cpu, Layers, CheckCircle2, 
   Rocket, Code2, ShieldCheck, Zap, Download, Share2, 
   Target, Settings, BookOpen, Activity, LayoutDashboard,
-  ChevronRight, Clock, Award
+  Clock, Award
 } from "lucide-react";
 import { projects } from "@/data/projects";
 import { enhanceProject } from "@/lib/generator";
@@ -72,6 +72,229 @@ export default function ProjectDetailsPage({ params, searchParams }: ProjectDeta
     { id: "academic", label: "Research Frame", icon: BookOpen },
   ];
 
+  const handleExportPdf = () => {
+    if (typeof window === "undefined") return;
+
+    const escapeHtml = (value: string) =>
+      value
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/\"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+
+    const roadmapRows = project.roadmap
+      .map(
+        (step, index) => `
+          <tr>
+            <td>${String(index + 1).padStart(2, "0")}</td>
+            <td>${escapeHtml(step.step)}</td>
+            <td>${escapeHtml(step.date)}</td>
+          </tr>
+        `
+      )
+      .join("");
+
+    const moduleList = project.advancedModules?.length
+      ? `
+        <section>
+          <h2>Advanced Modules</h2>
+          <ul>
+            ${project.advancedModules.map((module) => `<li>${escapeHtml(module)}</li>`).join("")}
+          </ul>
+        </section>
+      `
+      : "";
+
+    const printWindow = window.open("", "_blank", "noopener,noreferrer,width=1200,height=900");
+    if (!printWindow) return;
+
+    printWindow.document.write(`
+      <!doctype html>
+      <html>
+        <head>
+          <title>${escapeHtml(project.title)} - Thesis Plan</title>
+          <style>
+            @page {
+              size: A4;
+              margin: 18mm;
+            }
+
+            :root {
+              color-scheme: light;
+            }
+
+            html, body {
+              margin: 0;
+              padding: 0;
+              background: #ffffff;
+              color: #111827;
+              font-family: Arial, Helvetica, sans-serif;
+              -webkit-print-color-adjust: exact;
+              print-color-adjust: exact;
+            }
+
+            body {
+              padding: 24px;
+            }
+
+            .page {
+              max-width: 800px;
+              margin: 0 auto;
+            }
+
+            .eyebrow {
+              text-transform: uppercase;
+              letter-spacing: 0.18em;
+              font-size: 11px;
+              font-weight: 700;
+              color: #4f46e5;
+            }
+
+            h1 {
+              margin: 12px 0 16px;
+              font-size: 30px;
+              line-height: 1.15;
+            }
+
+            .summary {
+              font-size: 13px;
+              line-height: 1.7;
+              color: #374151;
+              margin-bottom: 24px;
+            }
+
+            .meta {
+              display: grid;
+              grid-template-columns: repeat(2, minmax(0, 1fr));
+              gap: 12px;
+              margin-bottom: 28px;
+            }
+
+            .meta-card, section {
+              border: 1px solid #e5e7eb;
+              border-radius: 14px;
+              padding: 16px;
+              background: #fafafa;
+            }
+
+            .meta-card h3, section h2 {
+              margin: 0 0 8px;
+              font-size: 12px;
+              text-transform: uppercase;
+              letter-spacing: 0.14em;
+              color: #6b7280;
+            }
+
+            .meta-card p {
+              margin: 0;
+              font-size: 14px;
+              color: #111827;
+              line-height: 1.5;
+            }
+
+            table {
+              width: 100%;
+              border-collapse: collapse;
+              margin-top: 8px;
+            }
+
+            th, td {
+              border-bottom: 1px solid #e5e7eb;
+              padding: 10px 8px;
+              font-size: 12px;
+              text-align: left;
+              vertical-align: top;
+            }
+
+            th {
+              color: #6b7280;
+              text-transform: uppercase;
+              letter-spacing: 0.1em;
+              font-size: 10px;
+            }
+
+            ul {
+              margin: 0;
+              padding-left: 18px;
+            }
+
+            li + li {
+              margin-top: 8px;
+            }
+
+            .section-grid {
+              display: grid;
+              gap: 16px;
+            }
+
+            .no-break {
+              break-inside: avoid;
+              page-break-inside: avoid;
+            }
+          </style>
+        </head>
+        <body>
+          <div class="page">
+            <div class="eyebrow">Thesis Title and Plan</div>
+            <h1>${escapeHtml(project.title)}</h1>
+            <div class="summary">${escapeHtml(project.description)}</div>
+
+            <div class="meta">
+              <div class="meta-card">
+                <h3>Project ID</h3>
+                <p>${escapeHtml(project.id.toUpperCase())}</p>
+              </div>
+              <div class="meta-card">
+                <h3>Category</h3>
+                <p>${escapeHtml(project.category)}</p>
+              </div>
+              <div class="meta-card">
+                <h3>Team Size</h3>
+                <p>${escapeHtml(`${project.recommendedMembers} Members`)}</p>
+              </div>
+              <div class="meta-card">
+                <h3>Complexity</h3>
+                <p>${escapeHtml(project.complexityLabel)}</p>
+              </div>
+            </div>
+
+            <div class="section-grid">
+              <section class="no-break">
+                <h2>Project Plan</h2>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Milestone</th>
+                      <th>Target Date</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    ${roadmapRows}
+                  </tbody>
+                </table>
+              </section>
+
+              ${moduleList}
+            </div>
+          </div>
+          <script>
+            window.addEventListener('load', () => {
+              window.print();
+            });
+
+            window.addEventListener('afterprint', () => {
+              window.close();
+            });
+          </script>
+        </body>
+      </html>
+    `);
+    printWindow.document.close();
+    printWindow.focus();
+  };
+
   return (
     <div className="min-h-screen bg-[#080808] text-zinc-100 font-sans selection:bg-indigo-500/30">
       <ParticleBackground theme="dark" />
@@ -105,7 +328,11 @@ export default function ProjectDetailsPage({ params, searchParams }: ProjectDeta
               <Share2 className="w-3.5 h-3.5 text-zinc-400" />
               Share
             </button>
-            <button className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-indigo-600 text-xs font-bold hover:bg-indigo-500 transition-all shadow-lg shadow-indigo-500/20 active:scale-[0.98]">
+            <button
+              type="button"
+              onClick={handleExportPdf}
+              className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-indigo-600 text-xs font-bold hover:bg-indigo-500 transition-all shadow-lg shadow-indigo-500/20 active:scale-[0.98]"
+            >
               <Download className="w-3.5 h-3.5" />
               Export PDF
             </button>
