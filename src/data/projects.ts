@@ -581,6 +581,21 @@ export const projects: Project[] = [
       "Claims Tracking Portal",
       "Audit Log and Reporting"
     ]
+  },
+  {
+    id: "39",
+    title: "Web3 Supply Chain Provenance Dashboard",
+    category: "Blockchain",
+    baseComplexity: "High",
+    description: "A blockchain dashboard that records product provenance, verifies custody transfers, and improves transparency across suppliers.",
+    techStack: ["Solidity", "Next.js", "Ethers.js", "The Graph", "IPFS"],
+    baseMilestones: [
+      "Provenance Data Model",
+      "Custody Transfer Contracts",
+      "Supplier Verification Flow",
+      "Traceability Dashboard",
+      "Audit and Reporting Layer"
+    ]
   }
 ];
 
