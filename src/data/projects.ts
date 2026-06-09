@@ -656,6 +656,21 @@ export const projects: Project[] = [
       "Progress Timeline Interface",
       "Publication and Citation Tools"
     ]
+  },
+  {
+    id: "44",
+    title: "Adaptive Thesis Collaboration and Review Hub",
+    category: "Web Development",
+    baseComplexity: "High",
+    description: "A thesis-grade web platform for managing drafts, annotations, version history, and advisor review cycles with real-time collaboration.",
+    techStack: ["Next.js", "TypeScript", "Socket.io", "Prisma", "PostgreSQL"],
+    baseMilestones: [
+      "Authenticated Workspace Architecture",
+      "Real-time Draft Editing",
+      "Review and Annotation Engine",
+      "Version History and Rollback",
+      "Advisor Dashboard and Notifications"
+    ]
   }
 ];
 
