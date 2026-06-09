@@ -596,6 +596,21 @@ export const projects: Project[] = [
       "Traceability Dashboard",
       "Audit and Reporting Layer"
     ]
+  },
+  {
+    id: "40",
+    title: "Decentralized Vendor Payment Escrow System",
+    category: "Blockchain",
+    baseComplexity: "High",
+    description: "A smart contract-based escrow platform that automates milestone payments between clients and vendors with transparent release conditions.",
+    techStack: ["Solidity", "Ethereum", "Next.js", "Ethers.js", "IPFS"],
+    baseMilestones: [
+      "Escrow Contract Design",
+      "Milestone Approval Workflow",
+      "Payment Release Automation",
+      "Transaction History Dashboard",
+      "Dispute Resolution Logging"
+    ]
   }
 ];
 
