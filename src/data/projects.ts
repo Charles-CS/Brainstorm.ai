@@ -566,6 +566,21 @@ export const projects: Project[] = [
       "Transparency Dashboard",
       "Audit and Compliance Reports"
     ]
+  },
+  {
+    id: "38",
+    title: "Decentralized Insurance Claims Ledger",
+    category: "Blockchain",
+    baseComplexity: "High",
+    description: "A transparent claims processing platform that records insurance events on-chain and streamlines verification across stakeholders.",
+    techStack: ["Solidity", "Ethereum", "Next.js", "IPFS", "Ethers.js"],
+    baseMilestones: [
+      "Policy and Claim Schema Design",
+      "Claims Submission Workflow",
+      "Verification and Approval Contracts",
+      "Claims Tracking Portal",
+      "Audit Log and Reporting"
+    ]
   }
 ];
 
