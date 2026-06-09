@@ -2,6 +2,8 @@
 
 import { use, useMemo, useState, useEffect } from "react";
 import Link from "next/link";
+import { jsPDF } from "jspdf";
+import autoTable from "jspdf-autotable";
 import { 
   ArrowLeft, Calendar, Users, Cpu, Layers, CheckCircle2, 
   Rocket, Code2, ShieldCheck, Zap, Download, Share2, 
@@ -75,223 +77,326 @@ export default function ProjectDetailsPage({ params, searchParams }: ProjectDeta
   const handleExportPdf = () => {
     if (typeof window === "undefined") return;
 
-    const escapeHtml = (value: string) =>
-      value
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/\"/g, "&quot;")
-        .replace(/'/g, "&#39;");
+    const safeFileName = project.title
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "");
 
-    const roadmapRows = project.roadmap
-      .map(
-        (step, index) => `
-          <tr>
-            <td>${String(index + 1).padStart(2, "0")}</td>
-            <td>${escapeHtml(step.step)}</td>
-            <td>${escapeHtml(step.date)}</td>
-          </tr>
-        `
-      )
-      .join("");
+    const doc = new jsPDF({
+      orientation: "p",
+      unit: "mm",
+      format: "a4",
+    });
 
-    const moduleList = project.advancedModules?.length
-      ? `
-        <section>
-          <h2>Advanced Modules</h2>
-          <ul>
-            ${project.advancedModules.map((module) => `<li>${escapeHtml(module)}</li>`).join("")}
-          </ul>
-        </section>
-      `
-      : "";
+    const pageWidth = doc.internal.pageSize.getWidth();
+    const pageHeight = doc.internal.pageSize.getHeight();
+    const margin = 14;
+    const contentWidth = pageWidth - margin * 2;
+    let cursorY = margin;
 
-    const printWindow = window.open("", "_blank", "width=1200,height=900");
-    if (!printWindow) return;
+    const colors = {
+      ink: [17, 24, 39] as const,
+      muted: [75, 85, 99] as const,
+      indigo: [79, 70, 229] as const,
+      indigoSoft: [238, 242, 255] as const,
+      border: [229, 231, 235] as const,
+      soft: [249, 250, 251] as const,
+    };
 
-    printWindow.document.open();
-    printWindow.document.write(`
-      <!doctype html>
-      <html>
-        <head>
-          <title>${escapeHtml(project.title)} - Thesis Plan</title>
-          <style>
-            @page {
-              size: A4;
-              margin: 18mm;
-            }
+    const ensureSpace = (requiredHeight: number) => {
+      if (cursorY + requiredHeight > pageHeight - margin) {
+        doc.addPage();
+        cursorY = margin;
+      }
+    };
 
-            :root {
-              color-scheme: light;
-            }
+    const addHeading = (section: string, subtitle: string) => {
+      ensureSpace(24);
+      doc.setFillColor(...colors.indigo);
+      doc.roundedRect(margin, cursorY, 46, 8, 3, 3, "F");
+      doc.setTextColor(255, 255, 255);
+      doc.setFont("helvetica", "bold");
+      doc.setFontSize(9);
+      doc.text(section.toUpperCase(), margin + 3, cursorY + 5.4);
 
-            html, body {
-              margin: 0;
-              padding: 0;
-              background: #ffffff;
-              color: #111827;
-              font-family: Arial, Helvetica, sans-serif;
-              -webkit-print-color-adjust: exact;
-              print-color-adjust: exact;
-            }
+      cursorY += 14;
+      doc.setTextColor(...colors.ink);
+      doc.setFont("helvetica", "bold");
+      doc.setFontSize(18);
+      doc.text(section, margin, cursorY);
 
-            body {
-              padding: 24px;
-            }
+      cursorY += 6;
+      doc.setFont("helvetica", "normal");
+      doc.setFontSize(10.5);
+      doc.setTextColor(...colors.muted);
+      const subtitleLines = doc.splitTextToSize(subtitle, contentWidth);
+      doc.text(subtitleLines, margin, cursorY);
+      cursorY += subtitleLines.length * 5 + 4;
+    };
 
-            .page {
-              max-width: 800px;
-              margin: 0 auto;
-            }
+    const addCard = (title: string, value: string, width: number) => {
+      const height = 24;
+      ensureSpace(height + 2);
+      doc.setFillColor(...colors.soft);
+      doc.setDrawColor(...colors.border);
+      doc.roundedRect(margin, cursorY, width, height, 3, 3, "FD");
+      doc.setTextColor(...colors.muted);
+      doc.setFont("helvetica", "bold");
+      doc.setFontSize(8.5);
+      doc.text(title.toUpperCase(), margin + 4, cursorY + 7);
+      doc.setTextColor(...colors.ink);
+      doc.setFont("helvetica", "normal");
+      doc.setFontSize(11);
+      const lines = doc.splitTextToSize(value, width - 8);
+      doc.text(lines, margin + 4, cursorY + 13);
+    };
 
-            .eyebrow {
-              text-transform: uppercase;
-              letter-spacing: 0.18em;
-              font-size: 11px;
-              font-weight: 700;
-              color: #4f46e5;
-            }
+    const addParagraph = (text: string) => {
+      const lines = doc.splitTextToSize(text, contentWidth);
+      ensureSpace(lines.length * 5 + 4);
+      doc.setFont("helvetica", "normal");
+      doc.setFontSize(11);
+      doc.setTextColor(...colors.ink);
+      doc.text(lines, margin, cursorY);
+      cursorY += lines.length * 5 + 4;
+    };
 
-            h1 {
-              margin: 12px 0 16px;
-              font-size: 30px;
-              line-height: 1.15;
-            }
+    const addBullets = (items: string[], indent = 5) => {
+      items.forEach((item) => {
+        const lines = doc.splitTextToSize(item, contentWidth - indent - 4);
+        ensureSpace(lines.length * 5 + 4);
+        doc.setTextColor(...colors.indigo);
+        doc.setFont("helvetica", "bold");
+        doc.text("•", margin, cursorY);
+        doc.setTextColor(...colors.ink);
+        doc.setFont("helvetica", "normal");
+        doc.text(lines, margin + indent, cursorY);
+        cursorY += lines.length * 5 + 2;
+      });
+    };
 
-            .summary {
-              font-size: 13px;
-              line-height: 1.7;
-              color: #374151;
-              margin-bottom: 24px;
-            }
+    const getImplementationDetails = (step: string) => {
+      if (step.includes("Data") || step.includes("Collection")) {
+        return {
+          summary: "This foundational stage involves deep research into existing datasets and the creation of custom scrapers or sensor arrays. Personnel must focus on raw data sanitization, bias detection, and the architectural setup of high-throughput ingestion pipelines.",
+          actions: ["Scraping Setup", "Bias Mitigation", "Pipeline Stress-Test"],
+          roles: ["Data Scientist", "Lead Researcher"],
+        };
+      }
 
-            .meta {
-              display: grid;
-              grid-template-columns: repeat(2, minmax(0, 1fr));
-              gap: 12px;
-              margin-bottom: 28px;
-            }
+      if (step.includes("Architecture") || step.includes("Design")) {
+        return {
+          summary: "The logic core is defined here. Programmers and Architects must map out the internal microservices, define the communication protocols (gRPC/REST), and establish the schema for data persistence layers to ensure long-term scalability.",
+          actions: ["UML Modeling", "Service Discovery", "Schema Definition"],
+          roles: ["System Architect", "Backend Dev"],
+        };
+      }
 
-            .meta-card, section {
-              border: 1px solid #e5e7eb;
-              border-radius: 14px;
-              padding: 16px;
-              background: #fafafa;
-            }
+      if (step.includes("Training") || step.includes("Logic")) {
+        return {
+          summary: "Implementation of core algorithmic logic and performance optimization. Includes extensive stress testing under simulated high-load environments to ensure system stability and reliability.",
+          actions: ["Algorithm Tuning", "Load Testing", "Validation Checks"],
+          roles: ["ML Engineer", "QA Analyst"],
+        };
+      }
 
-            .meta-card h3, section h2 {
-              margin: 0 0 8px;
-              font-size: 12px;
-              text-transform: uppercase;
-              letter-spacing: 0.14em;
-              color: #6b7280;
-            }
+      if (step.includes("API") || step.includes("Integration")) {
+        return {
+          summary: "Building the interface layer that connects the logic core to the end-user. Designers and Front-end engineers must collaborate to ensure low-latency responses and intuitive state management across the application.",
+          actions: ["Route Guarding", "State Sync", "UI Polish"],
+          roles: ["UI Designer", "Frontend Dev"],
+        };
+      }
 
-            .meta-card p {
-              margin: 0;
-              font-size: 14px;
-              color: #111827;
-              line-height: 1.5;
-            }
+      return {
+        summary: "Comprehensive system validation, security auditing, and deployment. Researchers must conduct final user testing while DevOps engineers establish the CI/CD pipeline and monitor initial production traffic for anomalies.",
+        actions: ["Unit Testing", "Cloud Deployment", "Documentation"],
+        roles: ["DevOps Engineer", "QA Tester", "Researcher"],
+      };
+    };
 
-            table {
-              width: 100%;
-              border-collapse: collapse;
-              margin-top: 8px;
-            }
+    const researchObjectives = [
+      "System latency optimization in real-time environments",
+      "User friction reduction through AI-driven UX",
+      "Data integrity protocols in decentralized systems",
+    ];
 
-            th, td {
-              border-bottom: 1px solid #e5e7eb;
-              padding: 10px 8px;
-              font-size: 12px;
-              text-align: left;
-              vertical-align: top;
-            }
+    const userPersonas = [
+      {
+        title: "The Expert User",
+        accent: "indigo",
+        description: "Needs deep control and high-granularity data visualization for professional decision making.",
+      },
+      {
+        title: "The Novice User",
+        accent: "rose",
+        description: "Requires simplified workflows, clear feedback loops, and automated insight generation.",
+      },
+    ];
 
-            th {
-              color: #6b7280;
-              text-transform: uppercase;
-              letter-spacing: 0.1em;
-              font-size: 10px;
-            }
+    const methodology = ["Agile Scrum", "TDD", "CI/CD", "User Testing"];
 
-            ul {
-              margin: 0;
-              padding-left: 18px;
-            }
+    doc.setFillColor(10, 10, 10);
+    doc.rect(0, 0, pageWidth, pageHeight, "F");
 
-            li + li {
-              margin-top: 8px;
-            }
+    doc.setFillColor(...colors.indigo);
+    doc.roundedRect(margin, margin, contentWidth, 34, 5, 5, "F");
+    doc.setTextColor(255, 255, 255);
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(10);
+    doc.text("Thesis Title and Plan", margin + 5, margin + 10);
+    doc.setFontSize(22);
+    doc.text(doc.splitTextToSize(project.title, contentWidth - 10), margin + 5, margin + 20);
 
-            .section-grid {
-              display: grid;
-              gap: 16px;
-            }
+    cursorY = margin + 44;
+    doc.setTextColor(...colors.ink);
+    doc.setFillColor(...colors.soft);
+    doc.roundedRect(margin, cursorY, contentWidth, 22, 4, 4, "F");
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(10.5);
+    doc.setTextColor(...colors.muted);
+    const descriptionLines = doc.splitTextToSize(project.description, contentWidth - 10);
+    doc.text(descriptionLines, margin + 5, cursorY + 9);
+    cursorY += 30;
 
-            .no-break {
-              break-inside: avoid;
-              page-break-inside: avoid;
-            }
-          </style>
-        </head>
-        <body>
-          <div class="page">
-            <div class="eyebrow">Thesis Title and Plan</div>
-            <h1>${escapeHtml(project.title)}</h1>
-            <div class="summary">${escapeHtml(project.description)}</div>
+    const cardGap = 4;
+    const cardWidth = (contentWidth - cardGap) / 2;
+    addCard("Project ID", project.id.toUpperCase(), cardWidth);
+    addCard("Category", project.category, cardWidth);
+    cursorY += 28;
+    addCard("Team Size", `${project.recommendedMembers} Members`, cardWidth);
+    addCard("Complexity", project.complexityLabel, cardWidth);
+    cursorY += 30;
 
-            <div class="meta">
-              <div class="meta-card">
-                <h3>Project ID</h3>
-                <p>${escapeHtml(project.id.toUpperCase())}</p>
-              </div>
-              <div class="meta-card">
-                <h3>Category</h3>
-                <p>${escapeHtml(project.category)}</p>
-              </div>
-              <div class="meta-card">
-                <h3>Team Size</h3>
-                <p>${escapeHtml(`${project.recommendedMembers} Members`)}</p>
-              </div>
-              <div class="meta-card">
-                <h3>Complexity</h3>
-                <p>${escapeHtml(project.complexityLabel)}</p>
-              </div>
-            </div>
+    addHeading("Executive Summary", "A concise overview of the project scope, title, and academic direction.");
+    addParagraph(project.description);
+    addBullets([
+      `Project title: ${project.title}`,
+      `Category: ${project.category}`,
+      `Recommended team size: ${project.recommendedMembers} members`,
+      `Estimated complexity: ${project.complexityLabel}`,
+    ]);
 
-            <div class="section-grid">
-              <section class="no-break">
-                <h2>Project Plan</h2>
-                <table>
-                  <thead>
-                    <tr>
-                      <th>#</th>
-                      <th>Milestone</th>
-                      <th>Target Date</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    ${roadmapRows}
-                  </tbody>
-                </table>
-              </section>
+    addHeading("Implementation", "A milestone-by-milestone roadmap showing the full execution plan.");
+    autoTable(doc, {
+      startY: cursorY,
+      head: [["#", "Milestone", "Target Date"]],
+      body: project.roadmap.map((step, index) => [String(index + 1).padStart(2, "0"), step.step, step.date]),
+      theme: "grid",
+      margin: { left: margin, right: margin },
+      styles: {
+        font: "helvetica",
+        fontSize: 9,
+        cellPadding: 2.5,
+        textColor: colors.ink,
+        lineColor: colors.border,
+        lineWidth: 0.2,
+      },
+      headStyles: {
+        fillColor: colors.indigo,
+        textColor: 255,
+        fontStyle: "bold",
+      },
+      alternateRowStyles: {
+        fillColor: colors.soft,
+      },
+      columnStyles: {
+        0: { cellWidth: 14 },
+        2: { cellWidth: 34 },
+      },
+    });
 
-              ${moduleList}
-            </div>
-          </div>
-        </body>
-      </html>
-    `);
-    printWindow.document.close();
-    printWindow.focus();
+    cursorY = ((doc as unknown as { lastAutoTable?: { finalY?: number } }).lastAutoTable?.finalY ?? cursorY) + 8;
+    project.roadmap.forEach((step, index) => {
+      const details = getImplementationDetails(step.step);
+      ensureSpace(50);
+      doc.setFillColor(...colors.soft);
+      doc.setDrawColor(...colors.border);
+      doc.roundedRect(margin, cursorY, contentWidth, 40, 4, 4, "FD");
+      doc.setTextColor(...colors.indigo);
+      doc.setFont("helvetica", "bold");
+      doc.setFontSize(10);
+      doc.text(`Phase ${String(index + 1).padStart(2, "0")}: ${step.step}`, margin + 4, cursorY + 7);
+      doc.setTextColor(...colors.muted);
+      doc.setFont("helvetica", "normal");
+      doc.setFontSize(9.5);
+      const detailLines = doc.splitTextToSize(details.summary, contentWidth - 8);
+      doc.text(detailLines, margin + 4, cursorY + 13);
+      cursorY += 40 + 2;
+    });
 
-    setTimeout(() => {
-      printWindow.print();
-      printWindow.addEventListener("afterprint", () => {
-        printWindow.close();
-      }, { once: true });
-    }, 250);
+    addHeading("System Design", "Architecture, technology stack, and infrastructure choices for the solution.");
+    addParagraph("The system is organized into three layers: UI presentation, logic core, and persistent data storage. The downloadable PDF mirrors the core technical stack used to generate the thesis blueprint.");
+
+    ensureSpace(28);
+    doc.setFillColor(...colors.soft);
+    doc.roundedRect(margin, cursorY, contentWidth, 26, 4, 4, "F");
+    doc.setTextColor(...colors.ink);
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(10);
+    doc.text("Technical Stack", margin + 4, cursorY + 7);
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(9.5);
+    doc.text(doc.splitTextToSize(project.techStack.join("  •  "), contentWidth - 8), margin + 4, cursorY + 14);
+    cursorY += 32;
+
+    if (project.advancedModules?.length) {
+      addParagraph("Advanced modules included in this blueprint:");
+      addBullets(project.advancedModules);
+    }
+
+    ensureSpace(36);
+    doc.setFillColor(...colors.soft);
+    doc.roundedRect(margin, cursorY, contentWidth, 30, 4, 4, "F");
+    doc.setTextColor(...colors.ink);
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(10);
+    doc.text("System Infrastructure", margin + 4, cursorY + 7);
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(9.5);
+    doc.text("Memory Unit: 32GB High-Bandwidth RAM", margin + 4, cursorY + 14);
+    doc.text("Compute Engine: NVIDIA RTX 40-Series / M3 Max", margin + 4, cursorY + 19);
+    doc.text("Storage Layer: 2TB NVMe Gen4 SSD", margin + 4, cursorY + 24);
+    cursorY += 38;
+
+    addHeading("Research Frame", "Research objectives, user personas, and delivery methodology.");
+    addParagraph("The academic frame focuses on usability, system efficiency, and reliability in real-world deployment scenarios.");
+
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(11);
+    doc.setTextColor(...colors.ink);
+    doc.text("Research Objectives", margin, cursorY);
+    cursorY += 5;
+    addBullets(researchObjectives);
+
+    ensureSpace(32);
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(11);
+    doc.text("User Personas", margin, cursorY);
+    cursorY += 6;
+    userPersonas.forEach((persona) => {
+      ensureSpace(20);
+      doc.setFillColor(...colors.soft);
+      doc.setDrawColor(...colors.border);
+      doc.roundedRect(margin, cursorY, contentWidth, 22, 4, 4, "FD");
+      doc.setTextColor(...colors.indigo);
+      doc.setFontSize(9);
+      doc.text(persona.title, margin + 4, cursorY + 7);
+      doc.setTextColor(...colors.ink);
+      doc.setFont("helvetica", "normal");
+      doc.setFontSize(9.5);
+      doc.text(doc.splitTextToSize(persona.description, contentWidth - 8), margin + 4, cursorY + 13);
+      cursorY += 26;
+    });
+
+    ensureSpace(24);
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(11);
+    doc.text("Methodology", margin, cursorY);
+    cursorY += 6;
+    addBullets(methodology);
+
+    doc.save(`${safeFileName || "thesis-plan"}.pdf`);
   };
 
   return (
