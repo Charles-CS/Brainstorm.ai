@@ -761,6 +761,21 @@ export const projects: Project[] = [
       "Operations Dashboard and Alerts",
       "Pilot Testing and Performance Review"
     ]
+  },
+  {
+    id: "51",
+    title: "IoT-Driven Smart Parking and Occupancy Guidance System",
+    category: "Internet of Things",
+    baseComplexity: "Medium",
+    description: "A thesis-capstone project for a 4-5 member team that detects parking occupancy with connected sensors, publishes live availability updates, and guides drivers to open spaces through a centralized dashboard.",
+    techStack: ["ESP32", "MQTT", "React", "Node.js", "PostgreSQL"],
+    baseMilestones: [
+      "Parking Sensor Hardware Setup",
+      "Real-time Occupancy Data Pipeline",
+      "Availability Prediction Logic",
+      "Driver Guidance Dashboard",
+      "Simulation and Field Testing"
+    ]
   }
 ];
 
