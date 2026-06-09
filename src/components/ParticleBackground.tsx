@@ -7,18 +7,32 @@ import { loadSlim } from "@tsparticles/slim";
 
 export function ParticleBackground({ theme }: { theme: "light" | "dark" }) {
   const [init, setInit] = useState(false);
+  const [shouldRender, setShouldRender] = useState(false);
 
   useEffect(() => {
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const updateRenderState = () => {
+      setShouldRender(!mediaQuery.matches && window.innerWidth >= 1024);
+    };
+
+    updateRenderState();
+    mediaQuery.addEventListener("change", updateRenderState);
+    window.addEventListener("resize", updateRenderState);
+
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
     }).then(() => {
       setInit(true);
     });
+
+    return () => {
+      mediaQuery.removeEventListener("change", updateRenderState);
+      window.removeEventListener("resize", updateRenderState);
+    };
   }, []);
 
   const options: ISourceOptions = useMemo(() => {
     const isDark = theme === "dark";
-    // Kumpirma usually uses white/grey dots on dark background.
     const baseColor = isDark ? "#ffffff" : "#000000";
 
     return {
@@ -27,39 +41,15 @@ export function ParticleBackground({ theme }: { theme: "light" | "dark" }) {
           value: "transparent",
         },
       },
-      fpsLimit: 120,
-      interactivity: {
-        events: {
-          onClick: {
-            enable: true,
-            mode: "push",
-          },
-          onHover: {
-            enable: true,
-            mode: "grab",
-          },
-        },
-        modes: {
-          push: {
-            quantity: 3,
-          },
-          grab: {
-            distance: 140,
-            links: {
-              opacity: isDark ? 0.3 : 0.5,
-            },
-          },
-        },
-      },
       particles: {
         color: {
           value: baseColor,
         },
         links: {
           color: baseColor,
-          distance: 150,
+          distance: 140,
           enable: true,
-          opacity: isDark ? 0.15 : 0.25,
+          opacity: isDark ? 0.1 : 0.18,
           width: 1,
         },
         move: {
@@ -69,17 +59,17 @@ export function ParticleBackground({ theme }: { theme: "light" | "dark" }) {
             default: "bounce",
           },
           random: false,
-          speed: 1.2,
+          speed: 0.6,
           straight: false,
         },
         number: {
           density: {
             enable: true,
           },
-          value: 100, // Good density for constellation effect
+          value: 36,
         },
         opacity: {
-          value: isDark ? 0.3 : 0.5,
+          value: isDark ? 0.25 : 0.35,
         },
         shape: {
           type: "circle",
@@ -88,17 +78,15 @@ export function ParticleBackground({ theme }: { theme: "light" | "dark" }) {
           value: { min: 1, max: 2.5 },
         },
       },
-      detectRetina: true,
+      detectRetina: false,
+      fpsLimit: 45,
     };
   }, [theme]);
 
-  if (!init) return null;
+  if (!init || !shouldRender) return null;
 
   return (
     <div className="fixed inset-0 -z-0 pointer-events-none">
-      {/* We use pointer-events-none here if we want the particles to just be visual without blocking clicks. 
-          If we want interactivity, we need pointer-events-auto but absolute z-index. 
-          Actually, let's keep interactivity by omitting pointer-events-none and ensuring z-index is lowest. */}
       <Particles id="tsparticles" options={options} className="absolute inset-0 -z-10" />
     </div>
   );
