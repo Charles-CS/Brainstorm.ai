@@ -671,6 +671,21 @@ export const projects: Project[] = [
       "Version History and Rollback",
       "Advisor Dashboard and Notifications"
     ]
+  },
+  {
+    id: "45",
+    title: "Capstone Project Management and Defense Portal",
+    category: "Web Development",
+    baseComplexity: "High",
+    description: "A capstone-focused web application for coordinating proposals, milestone tracking, panel feedback, and final defense scheduling in one workflow.",
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Vercel"],
+    baseMilestones: [
+      "Proposal Submission Workflow",
+      "Milestone and Deadline Tracking",
+      "Reviewer Feedback System",
+      "Defense Scheduling Interface",
+      "Final Submission and Archive"
+    ]
   }
 ];
 
