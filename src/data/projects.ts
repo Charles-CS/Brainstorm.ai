@@ -716,6 +716,21 @@ export const projects: Project[] = [
       "Secure Records and Audit Logging",
       "Clinical Validation and Testing"
     ]
+  },
+  {
+    id: "48",
+    title: "Smart Crop Monitoring and Farm Advisory Platform",
+    category: "Web Development",
+    baseComplexity: "High",
+    description: "A web system for agriculture that combines sensor data, weather forecasts, and farm analytics to guide crop decisions and improve yield planning.",
+    techStack: ["Next.js", "TypeScript", "Python", "PostgreSQL", "IoT API"],
+    baseMilestones: [
+      "Farm Profile and Plot Mapping",
+      "Sensor Data Ingestion",
+      "Weather and Soil Analytics",
+      "Crop Advisory Recommendation Engine",
+      "Yield Forecast and Reporting"
+    ]
   }
 ];
 
