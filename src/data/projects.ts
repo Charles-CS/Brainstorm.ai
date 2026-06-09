@@ -701,6 +701,21 @@ export const projects: Project[] = [
       "Advisor Review and Approval Workflow",
       "Final Defense Preparation Dashboard"
     ]
+  },
+  {
+    id: "47",
+    title: "AI-Powered Medical Screening and Referral System",
+    category: "Web Development",
+    baseComplexity: "High",
+    description: "A thesis-grade web application that collects patient symptoms, analyzes risk patterns, and routes cases to appropriate medical specialists for early intervention.",
+    techStack: ["Next.js", "TypeScript", "FastAPI", "PostgreSQL", "Python"],
+    baseMilestones: [
+      "Patient Intake and Symptom Capture",
+      "Risk Scoring and Triage Logic",
+      "Specialist Referral Workflow",
+      "Secure Records and Audit Logging",
+      "Clinical Validation and Testing"
+    ]
   }
 ];
 
