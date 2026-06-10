@@ -957,5 +957,20 @@ export const projects: Project[] = [
       "Security Review and Patient Testing"
     ]
   }
+  ,{
+    id: "64",
+    title: "Thesis-Capstone Mobile Hospital Patient Flow and Appointment Coordination App",
+    category: "Mobile App",
+    baseComplexity: "High",
+    description: "A thesis-capstone mobile application for a 10-member team that manages patient check-ins, appointment scheduling, ward transfers, and clinician coordination to improve hospital workflow efficiency.",
+    techStack: ["React Native", "Firebase", "Expo", "TypeScript", "FastAPI"],
+    baseMilestones: [
+      "Patient Check-in and Registration Flow",
+      "Appointment Scheduling and Queue Management",
+      "Ward Transfer and Bed Allocation Logic",
+      "Clinician Coordination and Notification System",
+      "Hospital Workflow Testing and Validation"
+    ]
+  }
 ];
 
