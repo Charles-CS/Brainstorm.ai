@@ -852,5 +852,20 @@ export const projects: Project[] = [
       "Pilot Testing and Usability Review"
     ]
   }
+  ,{
+    id: "57",
+    title: "Thesis-Capstone Smart Student Attendance and Notification App",
+    category: "Mobile App",
+    baseComplexity: "Medium",
+    description: "A thesis-capstone mobile app that helps academic teams capture attendance, send class notifications, and track student participation across campus activities.",
+    techStack: ["React Native", "Firebase", "Expo", "TypeScript", "Node.js"],
+    baseMilestones: [
+      "Attendance Capture Workflow",
+      "Notification and Reminder Engine",
+      "Student Participation Dashboard",
+      "Offline Sync and Data Storage",
+      "Pilot Testing and Feedback Iteration"
+    ]
+  }
 ];
 
