@@ -776,6 +776,21 @@ export const projects: Project[] = [
       "Driver Guidance Dashboard",
       "Simulation and Field Testing"
     ]
+  },
+  {
+    id: "52",
+    title: "IoT-Based Smart Classroom Attendance and Environment Monitor",
+    category: "Internet of Things",
+    baseComplexity: "Medium",
+    description: "A thesis-capstone project for a 4-5 member team that combines RFID or BLE attendance tracking with classroom air-quality, temperature, and occupancy monitoring to support smarter learning spaces.",
+    techStack: ["ESP32", "RFID", "MQTT", "React", "PostgreSQL"],
+    baseMilestones: [
+      "Attendance Capture Module Design",
+      "Environment Sensor Integration",
+      "Data Sync and Storage Pipeline",
+      "Admin Dashboard and Reporting",
+      "Pilot Deployment and Evaluation"
+    ]
   }
 ];
 
