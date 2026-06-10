@@ -1016,6 +1016,21 @@ export const projects: Project[] = [
       "Non-Repudiation Audit Portal",
       "Security Testing and False-Match Validation"
     ]
+  },
+  {
+    id: "68",
+    title: "Thesis-Capstone Blockchain Tamper-Proof Document Notarization and Verification System",
+    category: "Blockchain",
+    baseComplexity: "High",
+    description: "A thesis-capstone blockchain platform for computer science and information technology students that notarizes academic documents, approval forms, and project records by storing authenticated hashes, version proofs, and verification receipts to detect tampering and prevent forged submissions.",
+    techStack: ["Solidity", "Polygon", "Next.js", "Ethers.js", "IPFS"],
+    baseMilestones: [
+      "Document Hashing and Notarization Flow",
+      "Version Tracking and Tamper Detection Logic",
+      "Smart Contract Receipt Registry",
+      "Verification Portal and Audit History",
+      "Adversarial Testing and Security Review"
+    ]
   }
 ];
 
