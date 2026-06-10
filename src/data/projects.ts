@@ -927,5 +927,20 @@ export const projects: Project[] = [
       "Field Testing and Model Tuning"
     ]
   }
+  ,{
+    id: "62",
+    title: "Thesis-Capstone Mobile Patient Triage and Care Pathway App",
+    category: "Mobile App",
+    baseComplexity: "High",
+    description: "A thesis-capstone mobile application for the medical field that captures patient symptoms, suggests care pathways, and helps clinics prioritize cases for faster review and referral.",
+    techStack: ["React Native", "Firebase", "Expo", "TypeScript", "FastAPI"],
+    baseMilestones: [
+      "Patient Intake and Symptom Capture",
+      "Triage Scoring and Pathway Logic",
+      "Clinic Queue and Referral Workflow",
+      "Notifications and Follow-up Tracking",
+      "Clinical Review and Validation"
+    ]
+  }
 ];
 
