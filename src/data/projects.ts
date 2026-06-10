@@ -791,6 +791,21 @@ export const projects: Project[] = [
       "Admin Dashboard and Reporting",
       "Pilot Deployment and Evaluation"
     ]
+  },
+  {
+    id: "53",
+    title: "IoT-Enabled Cold Chain Monitoring and Alert System",
+    category: "Internet of Things",
+    baseComplexity: "Medium",
+    description: "A thesis-capstone project for a 4-5 member team that tracks temperature-sensitive shipments in real time, triggers alerts for threshold breaches, and helps maintain product quality across the cold chain.",
+    techStack: ["ESP32", "MQTT", "React", "Node.js", "InfluxDB"],
+    baseMilestones: [
+      "Sensor and Device Integration",
+      "Shipment Telemetry Pipeline",
+      "Threshold Alert Engine",
+      "Monitoring Dashboard Development",
+      "Cold Chain Simulation and Testing"
+    ]
   }
 ];
 
