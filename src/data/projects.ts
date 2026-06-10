@@ -897,5 +897,20 @@ export const projects: Project[] = [
       "Stress Testing and Field Simulation"
     ]
   }
+  ,{
+    id: "60",
+    title: "Thesis-Capstone Mobile Precision Farming Advisory App",
+    category: "Mobile App",
+    baseComplexity: "High",
+    description: "A thesis-capstone mobile application for agriculture that helps farmers monitor crop conditions, receive irrigation and fertilization advice, and track field performance using sensor and weather data.",
+    techStack: ["React Native", "Firebase", "Expo", "TypeScript", "Weather API"],
+    baseMilestones: [
+      "Field and Crop Profile Setup",
+      "Sensor and Weather Data Integration",
+      "Irrigation and Fertilization Advisory Logic",
+      "Farmer Dashboard and Alert System",
+      "Pilot Testing and Agronomic Validation"
+    ]
+  }
 ];
 
