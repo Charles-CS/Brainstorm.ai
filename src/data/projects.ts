@@ -1031,6 +1031,21 @@ export const projects: Project[] = [
       "Verification Portal and Audit History",
       "Adversarial Testing and Security Review"
     ]
+  },
+  {
+    id: "69",
+    title: "Thesis-Capstone Blockchain Academic Transcript Integrity and Verification Ledger",
+    category: "Blockchain",
+    baseComplexity: "High",
+    description: "A thesis-capstone blockchain platform for computer science and information technology students that stores authenticated transcript fingerprints, course completion proofs, and grade-change audit records to prevent forgery, detect tampering, and simplify secure academic verification.",
+    techStack: ["Solidity", "Polygon", "Next.js", "Ethers.js", "IPFS"],
+    baseMilestones: [
+      "Transcript Fingerprint and Proof Schema",
+      "Course Completion Verification Logic",
+      "Grade Change Audit Trail Contracts",
+      "Verification Portal and Admin Review Dashboard",
+      "Security Hardening and Tamper Testing"
+    ]
   }
 ];
 
