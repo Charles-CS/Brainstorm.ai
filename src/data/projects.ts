@@ -806,6 +806,21 @@ export const projects: Project[] = [
       "Monitoring Dashboard Development",
       "Cold Chain Simulation and Testing"
     ]
+  },
+  {
+    id: "54",
+    title: "IoT-Based Smart Water Quality Monitoring Network",
+    category: "Internet of Things",
+    baseComplexity: "Medium",
+    description: "A thesis-capstone project for a 4-5 member team that uses distributed water sensors to measure pH, turbidity, and dissolved solids, then reports contamination risks through a live dashboard and alert pipeline.",
+    techStack: ["ESP32", "MQTT", "Node.js", "React", "InfluxDB"],
+    baseMilestones: [
+      "Sensor Calibration and Node Setup",
+      "Water Telemetry Ingestion Pipeline",
+      "Risk Scoring and Alert Logic",
+      "Dashboard and Reporting Interface",
+      "Deployment Testing and Validation"
+    ]
   }
 ];
 
