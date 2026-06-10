@@ -942,5 +942,20 @@ export const projects: Project[] = [
       "Clinical Review and Validation"
     ]
   }
+  ,{
+    id: "63",
+    title: "Thesis-Capstone Mobile Medication Adherence and Care Reminder App",
+    category: "Mobile App",
+    baseComplexity: "High",
+    description: "A thesis-capstone mobile application for healthcare that helps patients manage medication schedules, care reminders, and clinician follow-ups while supporting adherence tracking for better outcomes.",
+    techStack: ["React Native", "Firebase", "Expo", "TypeScript", "Node.js"],
+    baseMilestones: [
+      "Medication Schedule Setup",
+      "Reminder and Notification Engine",
+      "Adherence Tracking Dashboard",
+      "Clinician Follow-up Workflow",
+      "Security Review and Patient Testing"
+    ]
+  }
 ];
 
