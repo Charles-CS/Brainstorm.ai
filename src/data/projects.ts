@@ -821,6 +821,21 @@ export const projects: Project[] = [
       "Dashboard and Reporting Interface",
       "Deployment Testing and Validation"
     ]
+  },
+  {
+    id: "55",
+    title: "IoT-Powered Smart Street Lighting Control System",
+    category: "Internet of Things",
+    baseComplexity: "Medium",
+    description: "A thesis-capstone project for a 4-5 member team that adjusts streetlight brightness based on motion, ambient light, and traffic conditions to reduce energy use while improving safety.",
+    techStack: ["ESP32", "MQTT", "Node.js", "React", "PostgreSQL"],
+    baseMilestones: [
+      "Lighting Node Hardware Setup",
+      "Motion and Ambient Sensor Integration",
+      "Adaptive Brightness Control Logic",
+      "Admin Dashboard and Usage Analytics",
+      "Pilot Area Testing and Optimization"
+    ]
   }
 ];
 
