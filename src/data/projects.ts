@@ -972,5 +972,20 @@ export const projects: Project[] = [
       "Hospital Workflow Testing and Validation"
     ]
   }
+  ,{
+    id: "65",
+    title: "Thesis-Capstone Mobile Smart Logistics and Fleet Dispatch App",
+    category: "Mobile App",
+    baseComplexity: "High",
+    description: "A thesis-capstone mobile application for managing delivery orders, dispatching drivers, tracking vehicle locations, and optimizing route assignments in real time for logistics teams.",
+    techStack: ["React Native", "Firebase", "Expo", "TypeScript", "Mapbox"],
+    baseMilestones: [
+      "Order Intake and Dispatch Queue",
+      "Driver Assignment and Route Optimization",
+      "Live Vehicle Tracking and Status Updates",
+      "Delivery Proof and Exception Handling",
+      "Fleet Analytics and Performance Testing"
+    ]
+  }
 ];
 
