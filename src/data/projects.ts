@@ -987,5 +987,20 @@ export const projects: Project[] = [
       "Fleet Analytics and Performance Testing"
     ]
   }
+  ,{
+    id: "66",
+    title: "Thesis-Capstone Blockchain Zero-Knowledge Academic Credential Verification Network",
+    category: "Blockchain",
+    baseComplexity: "High",
+    description: "A thesis-capstone blockchain platform for computer science and information technology students that uses zero-knowledge proofs, decentralized identity, and tamper-evident audit trails to verify academic credentials, project ownership, and student achievement without exposing sensitive personal data.",
+    techStack: ["Solidity", "Polygon", "Next.js", "Ethers.js", "Circom"],
+    baseMilestones: [
+      "Credential and Identity Scheme Design",
+      "Zero-Knowledge Proof Circuit Development",
+      "Smart Contract and Registry Implementation",
+      "Verifier Portal and Audit Dashboard",
+      "Privacy Testing and Security Validation"
+    ]
+  }
 ];
 
