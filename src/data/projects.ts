@@ -882,5 +882,20 @@ export const projects: Project[] = [
       "Security Testing and Clinical Validation"
     ]
   }
+  ,{
+    id: "59",
+    title: "Thesis-Capstone Mobile Disaster Response Coordination App",
+    category: "Mobile App",
+    baseComplexity: "High",
+    description: "A thesis-capstone mobile application for coordinating emergency volunteers, reporting incidents, sharing live location updates, and dispatching response teams during disaster events.",
+    techStack: ["React Native", "Firebase", "Expo", "TypeScript", "Mapbox"],
+    baseMilestones: [
+      "Emergency Reporting and Incident Intake",
+      "Volunteer and Responder Matching",
+      "Live Location Sharing and Mapping",
+      "Dispatch Workflow and Notifications",
+      "Stress Testing and Field Simulation"
+    ]
+  }
 ];
 
