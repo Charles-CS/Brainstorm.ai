@@ -1046,6 +1046,21 @@ export const projects: Project[] = [
       "Verification Portal and Admin Review Dashboard",
       "Security Hardening and Tamper Testing"
     ]
+  },
+  {
+    id: "70",
+    title: "Thesis-Capstone Blockchain Decentralized Energy Trading and Smart Meter Settlement Platform",
+    category: "Blockchain",
+    baseComplexity: "High",
+    description: "A thesis-capstone blockchain platform for computer science and information technology students that enables peer-to-peer energy trading, smart meter settlement, automated billing, and auditable microgrid coordination using on-chain rules and off-chain meter data validation.",
+    techStack: ["Solidity", "Polygon", "Next.js", "Ethers.js", "Node.js"],
+    baseMilestones: [
+      "Smart Meter Data Model and Market Rules",
+      "Energy Trade Matching and Settlement Contracts",
+      "Buyer and Seller Dashboard Development",
+      "Automated Billing and Audit Trail",
+      "Load Testing and Market Simulation"
+    ]
   }
 ];
 
