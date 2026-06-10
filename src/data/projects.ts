@@ -837,5 +837,20 @@ export const projects: Project[] = [
       "Pilot Area Testing and Optimization"
     ]
   }
+  ,{
+    id: "56",
+    title: "Thesis-Capstone Mobile Campus Companion and Safety App",
+    category: "Mobile App",
+    baseComplexity: "High",
+    description: "A thesis-capstone mobile application that combines campus navigation, emergency alerts, class reminders, and student support services into one cross-platform experience.",
+    techStack: ["React Native", "Firebase", "Expo", "TypeScript", "Google Maps API"],
+    baseMilestones: [
+      "Campus Map and Navigation Flow",
+      "Emergency Alert and SOS Module",
+      "Schedule and Reminder System",
+      "Student Services Integration",
+      "Pilot Testing and Usability Review"
+    ]
+  }
 ];
 
