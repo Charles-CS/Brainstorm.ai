@@ -912,5 +912,20 @@ export const projects: Project[] = [
       "Pilot Testing and Agronomic Validation"
     ]
   }
+  ,{
+    id: "61",
+    title: "Thesis-Capstone Mobile Crop Disease Detection and Advisory App",
+    category: "Mobile App",
+    baseComplexity: "High",
+    description: "A thesis-capstone mobile application for agriculture that lets farmers capture leaf images, detect crop disease patterns, and receive treatment recommendations based on field conditions.",
+    techStack: ["React Native", "Firebase", "Expo", "TypeScript", "TensorFlow Lite"],
+    baseMilestones: [
+      "Image Capture and Upload Flow",
+      "Crop Disease Classification Model",
+      "Treatment Recommendation Engine",
+      "Farmer Notification and History Screen",
+      "Field Testing and Model Tuning"
+    ]
+  }
 ];
 
