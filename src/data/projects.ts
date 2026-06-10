@@ -867,5 +867,20 @@ export const projects: Project[] = [
       "Pilot Testing and Feedback Iteration"
     ]
   }
+  ,{
+    id: "58",
+    title: "Thesis-Capstone Mobile Telemedicine and Health Monitoring App",
+    category: "Mobile App",
+    baseComplexity: "High",
+    description: "A thesis-capstone mobile application that supports remote patient check-ins, symptom tracking, wearable data sync, and clinician notifications for faster health monitoring.",
+    techStack: ["React Native", "Firebase", "Expo", "TypeScript", "HealthKit"],
+    baseMilestones: [
+      "Patient Onboarding and Profile Setup",
+      "Symptom Logging and Trend Tracking",
+      "Wearable Data Synchronization",
+      "Clinician Alert and Review Dashboard",
+      "Security Testing and Clinical Validation"
+    ]
+  }
 ];
 
