@@ -1001,6 +1001,21 @@ export const projects: Project[] = [
       "Verifier Portal and Audit Dashboard",
       "Privacy Testing and Security Validation"
     ]
+  },
+  {
+    id: "67",
+    title: "Thesis-Capstone Blockchain Authenticated Signature Validation and Non-Repudiation Ledger",
+    category: "Blockchain",
+    baseComplexity: "High",
+    description: "A thesis-capstone blockchain platform for computer science and information technology students that verifies handwritten or digital signatures, stores only authenticated signature records and proof hashes, and provides tamper-proof non-repudiation for contracts, academic forms, and official approvals.",
+    techStack: ["Solidity", "Polygon", "Next.js", "Ethers.js", "OpenCV"],
+    baseMilestones: [
+      "Signature Capture and Verification Workflow",
+      "Feature Extraction and Authenticated Matching Engine",
+      "Proof Hashing and Smart Contract Registry",
+      "Non-Repudiation Audit Portal",
+      "Security Testing and False-Match Validation"
+    ]
   }
 ];
 
