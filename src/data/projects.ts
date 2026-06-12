@@ -1136,6 +1136,21 @@ export const projects: Project[] = [
       "Model Drift Monitoring Dashboard",
       "Distributed Testing and Stress Simulation"
     ]
+  },
+  {
+    id: "76",
+    title: "Thesis-Capstone Cloud Computing Quantum-Safe Key Management and Automated Rotation Platform",
+    category: "Cloud Computing",
+    baseComplexity: "High",
+    description: "A thesis-capstone cloud platform for computer science and information technology students that generates, rotates, inventories, and audits cryptographic keys across cloud services using quantum-safe policy controls and automated compliance workflows.",
+    techStack: ["Terraform", "Kubernetes", "Python", "HashiCorp Vault", "AWS"],
+    baseMilestones: [
+      "Key Inventory and Risk Classification",
+      "Quantum-Safe Rotation Policy Design",
+      "Automated Provisioning and Rotation Pipeline",
+      "Compliance Audit Dashboard",
+      "Load Testing and Failure Recovery Simulation"
+    ]
   }
 ];
 
