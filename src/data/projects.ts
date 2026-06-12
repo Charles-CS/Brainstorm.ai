@@ -1196,6 +1196,21 @@ export const projects: Project[] = [
       "Audit Dashboard and Access Review",
       "Privacy Testing and Adversarial Simulation"
     ]
+  },
+  {
+    id: "80",
+    title: "Thesis-Capstone Cloud Computing Digital Twin Orchestration and Simulation Scheduling Platform",
+    category: "Cloud Computing",
+    baseComplexity: "High",
+    description: "A thesis-capstone cloud platform for computer science and information technology students that orchestrates distributed digital twins, schedules simulation workloads, synchronizes state across cloud regions, and provides a unified control layer for complex systems modeling.",
+    techStack: ["Kubernetes", "Docker", "Python", "Terraform", "AWS"],
+    baseMilestones: [
+      "Digital Twin State Model Design",
+      "Simulation Scheduling and Queue Management",
+      "Multi-Region Synchronization Layer",
+      "Control Dashboard and Scenario Viewer",
+      "Performance Benchmarking and Stress Testing"
+    ]
   }
 ];
 
