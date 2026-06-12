@@ -1121,6 +1121,21 @@ export const projects: Project[] = [
       "Research Dashboard and Reporting",
       "Scalability and Cost Benchmarking"
     ]
+  },
+  {
+    id: "75",
+    title: "Thesis-Capstone Cloud Computing Federated Edge AI Observability and Policy Enforcement Platform",
+    category: "Cloud Computing",
+    baseComplexity: "High",
+    description: "A thesis-capstone cloud platform for computer science and information technology students that monitors federated edge AI workloads, enforces deployment policies, tracks model drift, and aggregates observability data across distributed cloud and edge environments.",
+    techStack: ["Kubernetes", "Python", "Grafana", "Prometheus", "Terraform"],
+    baseMilestones: [
+      "Federated Edge Topology and Policy Design",
+      "Observability Metrics Collection Pipeline",
+      "Deployment Policy and Access Control Engine",
+      "Model Drift Monitoring Dashboard",
+      "Distributed Testing and Stress Simulation"
+    ]
   }
 ];
 
