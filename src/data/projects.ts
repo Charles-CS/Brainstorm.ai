@@ -1106,6 +1106,21 @@ export const projects: Project[] = [
       "Secure Operations Dashboard",
       "Threat Modeling and Security Validation"
     ]
+  },
+  {
+    id: "74",
+    title: "Thesis-Capstone Cloud Computing Serverless Genomics Pipeline and Variant Analysis Platform",
+    category: "Cloud Computing",
+    baseComplexity: "High",
+    description: "A thesis-capstone cloud platform for computer science and information technology students that runs event-driven genomic data preprocessing, variant calling, distributed result aggregation, and secure research reporting on serverless cloud services.",
+    techStack: ["AWS Lambda", "Docker", "Python", "S3", "Step Functions"],
+    baseMilestones: [
+      "Genomic Data Ingestion and Chunking",
+      "Serverless Preprocessing Pipeline",
+      "Variant Analysis and Result Aggregation",
+      "Research Dashboard and Reporting",
+      "Scalability and Cost Benchmarking"
+    ]
   }
 ];
 
