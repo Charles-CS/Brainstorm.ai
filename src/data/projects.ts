@@ -1076,6 +1076,21 @@ export const projects: Project[] = [
       "Recovery Status Dashboard and Alerts",
       "Chaos Testing and Disaster Simulation"
     ]
+  },
+  {
+    id: "72",
+    title: "Thesis-Capstone Cloud Computing Edge-Cloud Video Analytics and Auto-Scaling Inference Platform",
+    category: "Cloud Computing",
+    baseComplexity: "High",
+    description: "A thesis-capstone cloud platform for computer science and information technology students that routes live video streams between edge nodes and cloud GPUs, auto-scales inference workloads, and manages low-latency analytics for safety, surveillance, or industrial monitoring systems.",
+    techStack: ["Kubernetes", "Docker", "Python", "AWS", "TensorFlow Serving"],
+    baseMilestones: [
+      "Edge Stream Routing and Ingestion Design",
+      "Cloud Inference Pipeline and Model Serving",
+      "Auto-Scaling and Load Balancing Logic",
+      "Analytics Dashboard and Alerting Layer",
+      "Latency Benchmarking and Stress Testing"
+    ]
   }
 ];
 
