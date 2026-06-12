@@ -1166,6 +1166,21 @@ export const projects: Project[] = [
       "Audit Trail and Usage Monitoring Dashboard",
       "Security Hardening and Abuse Simulation"
     ]
+  },
+  {
+    id: "78",
+    title: "Thesis-Capstone Cloud Computing Workload Cost Anomaly Detection and Auto-Mitigation Platform",
+    category: "Cloud Computing",
+    baseComplexity: "High",
+    description: "A thesis-capstone cloud platform for computer science and information technology students that monitors cloud spend, detects unusual workload cost spikes, correlates infrastructure events, and automatically triggers mitigation workflows across multi-account environments.",
+    techStack: ["Python", "Kubernetes", "Terraform", "Grafana", "AWS"],
+    baseMilestones: [
+      "Cloud Spend Telemetry Ingestion",
+      "Cost Anomaly Detection Model",
+      "Event Correlation and Root-Cause Mapping",
+      "Auto-Mitigation Workflow Engine",
+      "Cost Dashboard and Simulation Testing"
+    ]
   }
 ];
 
