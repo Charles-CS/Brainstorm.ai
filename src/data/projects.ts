@@ -1061,6 +1061,21 @@ export const projects: Project[] = [
       "Automated Billing and Audit Trail",
       "Load Testing and Market Simulation"
     ]
+  },
+  {
+    id: "71",
+    title: "Thesis-Capstone Cloud Computing Multi-Cloud Disaster Recovery and Policy-Aware Failover Orchestrator",
+    category: "Cloud Computing",
+    baseComplexity: "High",
+    description: "A thesis-capstone cloud platform for computer science and information technology students that coordinates multi-cloud backups, policy-driven failover, workload redeployment, and recovery testing to keep mission-critical applications available during regional outages or provider failures.",
+    techStack: ["Terraform", "Kubernetes", "AWS", "Azure", "Next.js"],
+    baseMilestones: [
+      "Workload Mapping and Recovery Policy Design",
+      "Multi-Cloud Backup and Replication Pipeline",
+      "Failover Automation and Redeployment Logic",
+      "Recovery Status Dashboard and Alerts",
+      "Chaos Testing and Disaster Simulation"
+    ]
   }
 ];
 
