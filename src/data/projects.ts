@@ -1091,6 +1091,21 @@ export const projects: Project[] = [
       "Analytics Dashboard and Alerting Layer",
       "Latency Benchmarking and Stress Testing"
     ]
+  },
+  {
+    id: "73",
+    title: "Thesis-Capstone Cloud Computing Confidential Computing and Remote Attestation Orchestrator",
+    category: "Cloud Computing",
+    baseComplexity: "High",
+    description: "A thesis-capstone cloud platform for computer science and information technology students that provisions confidential workloads inside secure enclaves, performs remote attestation, and enforces policy-based deployment for sensitive data processing across cloud environments.",
+    techStack: ["Kubernetes", "Docker", "Azure Confidential Computing", "Terraform", "Next.js"],
+    baseMilestones: [
+      "Confidential Workload Architecture Design",
+      "Remote Attestation and Trust Verification",
+      "Policy-Based Enclave Deployment Pipeline",
+      "Secure Operations Dashboard",
+      "Threat Modeling and Security Validation"
+    ]
   }
 ];
 
