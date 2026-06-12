@@ -1151,6 +1151,21 @@ export const projects: Project[] = [
       "Compliance Audit Dashboard",
       "Load Testing and Failure Recovery Simulation"
     ]
+  },
+  {
+    id: "77",
+    title: "Thesis-Capstone Cloud Computing Distributed Secrets Governance and Dynamic Access Brokering Platform",
+    category: "Cloud Computing",
+    baseComplexity: "High",
+    description: "A thesis-capstone cloud platform for computer science and information technology students that manages distributed secrets, issues time-bound access brokers, enforces least-privilege policies, and audits credential usage across multi-tenant cloud workloads.",
+    techStack: ["Kubernetes", "Terraform", "HashiCorp Vault", "Python", "AWS"],
+    baseMilestones: [
+      "Secrets Inventory and Tenant Segmentation",
+      "Dynamic Access Broker Design",
+      "Policy Engine and Lease Rotation Workflow",
+      "Audit Trail and Usage Monitoring Dashboard",
+      "Security Hardening and Abuse Simulation"
+    ]
   }
 ];
 
