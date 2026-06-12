@@ -1181,6 +1181,21 @@ export const projects: Project[] = [
       "Auto-Mitigation Workflow Engine",
       "Cost Dashboard and Simulation Testing"
     ]
+  },
+  {
+    id: "79",
+    title: "Thesis-Capstone Cloud Computing Confidential Data Clean Room Collaboration Platform",
+    category: "Cloud Computing",
+    baseComplexity: "High",
+    description: "A thesis-capstone cloud platform for computer science and information technology students that enables privacy-preserving collaboration on sensitive datasets through policy-controlled clean rooms, encrypted computation, and auditable access workflows.",
+    techStack: ["Kubernetes", "Terraform", "Python", "AWS", "PostgreSQL"],
+    baseMilestones: [
+      "Clean Room Architecture and Access Policy Design",
+      "Encrypted Dataset Ingestion Pipeline",
+      "Policy-Controlled Query and Collaboration Engine",
+      "Audit Dashboard and Access Review",
+      "Privacy Testing and Adversarial Simulation"
+    ]
   }
 ];
 
