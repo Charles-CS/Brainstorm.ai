@@ -1481,6 +1481,21 @@ export const projects: Project[] = [
       "Gateway Observability and Metrics Dashboard",
       "Load Testing and Connection Spike Simulation"
     ]
+  },
+  {
+    id: "99",
+    title: "Thesis-Capstone Cloud Computing Infrastructure-as-Code Drift Detection and Compliance Remediation Engine",
+    category: "Cloud Computing",
+    baseComplexity: "High",
+    description: "A thesis-capstone cloud platform for computer science and information technology students that scans cloud infrastructures, detects drift from Terraform configurations, evaluates security policies, and automatically applies auto-healing remediations.",
+    techStack: ["Terraform", "Kubernetes", "OPA Gatekeeper", "Python", "AWS"],
+    baseMilestones: [
+      "State Configuration Parsing and Ingestion",
+      "Real-Time Resource Drift Discovery Pipeline",
+      "Open Policy Agent (OPA) Evaluation Integration",
+      "Auto-Remediation and Healing Workflows",
+      "Compliance Auditing and Dashboard UI"
+    ]
   }
 ];
 
