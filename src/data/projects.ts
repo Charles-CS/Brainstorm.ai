@@ -1361,6 +1361,21 @@ export const projects: Project[] = [
       "Compliance Evidence and Audit Dashboard",
       "Misconfiguration Simulation and Hardening"
     ]
+  },
+  {
+    id: "91",
+    title: "Thesis-Capstone Cloud Computing Distributed Event Replay and Time-Travel Debugging Platform",
+    category: "Cloud Computing",
+    baseComplexity: "High",
+    description: "A thesis-capstone cloud platform for computer science and information technology students that captures distributed service events, reconstructs execution timelines, replays failures in isolated environments, and helps debug complex cloud-native incidents.",
+    techStack: ["Kubernetes", "Terraform", "Python", "OpenTelemetry", "AWS"],
+    baseMilestones: [
+      "Event Capture and Correlation Pipeline",
+      "Timeline Reconstruction Engine",
+      "Isolated Replay Environment Orchestration",
+      "Incident Analysis Dashboard",
+      "Failure Injection and Verification Testing"
+    ]
   }
 ];
 
