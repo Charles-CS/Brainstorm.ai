@@ -1376,6 +1376,21 @@ export const projects: Project[] = [
       "Incident Analysis Dashboard",
       "Failure Injection and Verification Testing"
     ]
+  },
+  {
+    id: "92",
+    title: "Thesis-Capstone Cloud Computing Sovereign Data Residency and Geo-Fenced Workload Routing Platform",
+    category: "Cloud Computing",
+    baseComplexity: "High",
+    description: "A thesis-capstone cloud platform for computer science and information technology students that enforces geographic data residency rules, routes workloads to approved regions, validates cross-border access policies, and maintains audit evidence for compliance-sensitive deployments.",
+    techStack: ["Kubernetes", "Terraform", "Python", "AWS", "PostgreSQL"],
+    baseMilestones: [
+      "Residency Policy and Region Classification",
+      "Geo-Fenced Routing and Placement Engine",
+      "Cross-Border Access Validation",
+      "Compliance Audit Dashboard and Logs",
+      "Policy Drift and Boundary Testing"
+    ]
   }
 ];
 
