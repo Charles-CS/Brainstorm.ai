@@ -1256,6 +1256,21 @@ export const projects: Project[] = [
       "Audit and Monitoring Dashboard",
       "Security Testing and Adversarial Simulation"
     ]
+  },
+  {
+    id: "84",
+    title: "Thesis-Capstone Cloud Computing Multi-Tenant AI Model Serving Governance and SLA Enforcement Platform",
+    category: "Cloud Computing",
+    baseComplexity: "High",
+    description: "A thesis-capstone cloud platform for computer science and information technology students that serves AI models for multiple tenants, enforces service-level guarantees, isolates workloads, and tracks inference usage, latency, and policy violations across cloud regions.",
+    techStack: ["Kubernetes", "Docker", "Python", "Prometheus", "AWS"],
+    baseMilestones: [
+      "Tenant Isolation and Routing Architecture",
+      "Model Serving and Version Governance",
+      "SLA Enforcement and Quota Management",
+      "Inference Observability Dashboard",
+      "Load Testing and Violation Simulation"
+    ]
   }
 ];
 
