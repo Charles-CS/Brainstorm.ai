@@ -1286,6 +1286,21 @@ export const projects: Project[] = [
       "Compliance Audit and Recovery Dashboard",
       "Disaster Recovery Drill and Validation"
     ]
+  },
+  {
+    id: "86",
+    title: "Thesis-Capstone Cloud Computing Cloud-Native Data Lake Governance and Lineage Automation Platform",
+    category: "Cloud Computing",
+    baseComplexity: "High",
+    description: "A thesis-capstone cloud platform for computer science and information technology students that governs a cloud-native data lake, automates lineage tracking, enforces access policies, and validates data quality across streaming and batch pipelines.",
+    techStack: ["Kubernetes", "Terraform", "Python", "AWS", "PostgreSQL"],
+    baseMilestones: [
+      "Data Lake Zone and Governance Model",
+      "Automated Lineage Capture Pipeline",
+      "Access Policy and Quality Rule Engine",
+      "Governance Dashboard and Alerting Layer",
+      "Pipeline Validation and Audit Simulation"
+    ]
   }
 ];
 
