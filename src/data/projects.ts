@@ -1496,6 +1496,21 @@ export const projects: Project[] = [
       "Auto-Remediation and Healing Workflows",
       "Compliance Auditing and Dashboard UI"
     ]
+  },
+  {
+    id: "100",
+    title: "Thesis-Capstone Cloud Computing Serverless Multi-Region Event Broker and Schema Registry Platform",
+    category: "Cloud Computing",
+    baseComplexity: "High",
+    description: "A thesis-capstone cloud platform for computer science and information technology students that acts as a multi-region, low-latency serverless event broker with automatic schema registration, evolution checks, and policy-driven routing rules.",
+    techStack: ["Apache Kafka", "Kubernetes", "Go", "Terraform", "AWS"],
+    baseMilestones: [
+      "Event Broker and Multi-Region Replicator",
+      "Schema Registry and Evolution Validator",
+      "Policy-Driven Event Routing Engine",
+      "Event Stream Monitoring & Audit Log",
+      "Load Testing and Latency Benchmarking"
+    ]
   }
 ];
 
