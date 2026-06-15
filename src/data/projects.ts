@@ -1451,6 +1451,21 @@ export const projects: Project[] = [
       "Cost and Storage Metrics Dashboard",
       "Performance Benchmarking and Failure Simulation"
     ]
+  },
+  {
+    id: "97",
+    title: "Thesis-Capstone Cloud Computing Deep Learning Workload Scheduler and Spot Instance Manager",
+    category: "Cloud Computing",
+    baseComplexity: "High",
+    description: "A thesis-capstone cloud platform for computer science and information technology students that schedules deep learning training workloads, manages spot instance lifecycle events, checkpoint-resumes models, and optimizes infrastructure cost on AWS.",
+    techStack: ["Kubernetes", "Ray", "Python", "Terraform", "AWS"],
+    baseMilestones: [
+      "Spot Instance Interruption Handling Engine",
+      "Workload Checkpoint and Resume Framework",
+      "GPU Scheduler and Queue Management",
+      "Cost and Spot Interruption Dashboard",
+      "Simulation and Spot Reclamation Testing"
+    ]
   }
 ];
 
