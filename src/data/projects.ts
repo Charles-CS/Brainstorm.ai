@@ -1466,6 +1466,21 @@ export const projects: Project[] = [
       "Cost and Spot Interruption Dashboard",
       "Simulation and Spot Reclamation Testing"
     ]
+  },
+  {
+    id: "98",
+    title: "Thesis-Capstone Cloud Computing Serverless Database Connection Pooler and Access Gateway",
+    category: "Cloud Computing",
+    baseComplexity: "High",
+    description: "A thesis-capstone cloud platform for computer science and information technology students that acts as a low-latency connection pooler and query routing gateway for serverless functions accessing relational databases across regions.",
+    techStack: ["Go", "Kubernetes", "PostgreSQL", "Terraform", "AWS"],
+    baseMilestones: [
+      "Connection Pooling and Session State Management",
+      "Multi-Region Query Routing and Cache Strategy",
+      "SQL Protocol Parsing and Execution Engine",
+      "Gateway Observability and Metrics Dashboard",
+      "Load Testing and Connection Spike Simulation"
+    ]
   }
 ];
 
