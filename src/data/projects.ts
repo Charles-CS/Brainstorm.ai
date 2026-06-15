@@ -1436,6 +1436,21 @@ export const projects: Project[] = [
       "Energy & Emissions Monitoring Dashboard",
       "Verification and Carbon Reduction Analysis"
     ]
+  },
+  {
+    id: "96",
+    title: "Thesis-Capstone Cloud Computing Multi-Cloud Object Storage Federation and Deduplication Gateway",
+    category: "Cloud Computing",
+    baseComplexity: "High",
+    description: "A thesis-capstone cloud platform for computer science and information technology students that federates object storage across multiple cloud providers, performs client-side and server-side deduplication to reduce cost, and secures files with distributed erasure coding.",
+    techStack: ["MinIO", "Kubernetes", "Rust", "Terraform", "AWS"],
+    baseMilestones: [
+      "Storage Federation and API Translation Layer",
+      "Data Deduplication and Hashing Engine",
+      "Distributed Erasure Coding Protocol",
+      "Cost and Storage Metrics Dashboard",
+      "Performance Benchmarking and Failure Simulation"
+    ]
   }
 ];
 
