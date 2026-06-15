@@ -1391,6 +1391,21 @@ export const projects: Project[] = [
       "Compliance Audit Dashboard and Logs",
       "Policy Drift and Boundary Testing"
     ]
+  },
+  {
+    id: "93",
+    title: "Thesis-Capstone Cloud Computing Distributed Backup Chain Verification and Restore Integrity Platform",
+    category: "Cloud Computing",
+    baseComplexity: "High",
+    description: "A thesis-capstone cloud platform for computer science and information technology students that verifies backup chain integrity across regions, audits restore points, detects tampering, and validates end-to-end recovery consistency for critical cloud data.",
+    techStack: ["Kubernetes", "Terraform", "Python", "AWS", "S3"],
+    baseMilestones: [
+      "Backup Chain and Retention Model",
+      "Cross-Region Integrity Verification",
+      "Restore Point Validation Workflow",
+      "Audit and Recovery Dashboard",
+      "Tamper Detection and Drill Testing"
+    ]
   }
 ];
 
