@@ -1331,6 +1331,21 @@ export const projects: Project[] = [
       "Reproducibility Dashboard and Audit Log",
       "Cleanup Automation and Stress Testing"
     ]
+  },
+  {
+    id: "89",
+    title: "Thesis-Capstone Cloud Computing HPC Burst Scheduling and Job Placement Orchestrator",
+    category: "Cloud Computing",
+    baseComplexity: "High",
+    description: "A thesis-capstone cloud platform for computer science and information technology students that bursts high-performance computing jobs from on-premises systems into cloud clusters, optimizes placement, tracks queue health, and balances cost against execution time.",
+    techStack: ["Kubernetes", "Terraform", "Python", "Slurm", "AWS"],
+    baseMilestones: [
+      "Workload Profiling and Burst Policy Design",
+      "Job Queue Federation and Placement Logic",
+      "Cloud Cluster Provisioning Pipeline",
+      "Cost and Performance Monitoring Dashboard",
+      "Load Testing and Burst Simulation"
+    ]
   }
 ];
 
