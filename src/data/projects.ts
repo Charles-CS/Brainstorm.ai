@@ -1421,6 +1421,21 @@ export const projects: Project[] = [
       "Resource Monitoring and Metrics Dashboard",
       "Load Testing and Performance Benchmarking"
     ]
+  },
+  {
+    id: "95",
+    title: "Thesis-Capstone Cloud Computing Green Cloud Workload Scheduler and Carbon-Aware Optimizer",
+    category: "Cloud Computing",
+    baseComplexity: "High",
+    description: "A thesis-capstone cloud platform for computer science and information technology students that schedules workloads across cloud regions based on real-time grid carbon intensity, optimizes resource allocation to minimize carbon footprint, and forecasts regional green energy availability.",
+    techStack: ["Kubernetes", "Prometheus", "Python", "Terraform", "AWS"],
+    baseMilestones: [
+      "Carbon Intensity Data Integration and Forecasting",
+      "Carbon-Aware Workload Scheduling Algorithm",
+      "Multi-Region Cluster Federation Setup",
+      "Energy & Emissions Monitoring Dashboard",
+      "Verification and Carbon Reduction Analysis"
+    ]
   }
 ];
 
