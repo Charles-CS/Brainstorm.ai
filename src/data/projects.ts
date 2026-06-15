@@ -1226,6 +1226,21 @@ export const projects: Project[] = [
       "Insight Visualization Dashboard",
       "Scalability and Performance Testing"
     ]
+  },
+  {
+    id: "82",
+    title: "Thesis-Capstone Cloud Computing Edge-Cloud Policy Orchestration for Industrial IoT Fleets",
+    category: "Cloud Computing",
+    baseComplexity: "High",
+    description: "A thesis-capstone cloud platform for computer science and information technology students that coordinates policy-driven deployments, telemetry routing, and fleet-wide configuration updates across industrial IoT edge nodes and cloud control planes.",
+    techStack: ["Kubernetes", "Terraform", "Python", "MQTT", "AWS"],
+    baseMilestones: [
+      "Fleet Policy Model and Device Registry",
+      "Edge Telemetry Routing Pipeline",
+      "Cloud Control Plane and Configuration Engine",
+      "Operations Dashboard and Alerting Layer",
+      "Resilience and Failure Simulation"
+    ]
   }
 ];
 
