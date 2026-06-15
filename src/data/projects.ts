@@ -1271,6 +1271,21 @@ export const projects: Project[] = [
       "Inference Observability Dashboard",
       "Load Testing and Violation Simulation"
     ]
+  },
+  {
+    id: "85",
+    title: "Thesis-Capstone Cloud Computing Regulated Data Disaster Recovery and Immutable Backup Compliance Platform",
+    category: "Cloud Computing",
+    baseComplexity: "High",
+    description: "A thesis-capstone cloud platform for computer science and information technology students that protects regulated data with immutable backups, geo-separated recovery workflows, retention policies, and compliance-aware restore validation across cloud regions.",
+    techStack: ["Kubernetes", "Terraform", "Python", "AWS", "S3"],
+    baseMilestones: [
+      "Regulated Data Classification and Retention Rules",
+      "Immutable Backup Pipeline Design",
+      "Geo-Separated Restore Orchestration",
+      "Compliance Audit and Recovery Dashboard",
+      "Disaster Recovery Drill and Validation"
+    ]
   }
 ];
 
