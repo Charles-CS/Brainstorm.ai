@@ -1346,6 +1346,21 @@ export const projects: Project[] = [
       "Cost and Performance Monitoring Dashboard",
       "Load Testing and Burst Simulation"
     ]
+  },
+  {
+    id: "90",
+    title: "Thesis-Capstone Cloud Computing Policy-Based Multi-Account Security Baseline Orchestration Platform",
+    category: "Cloud Computing",
+    baseComplexity: "High",
+    description: "A thesis-capstone cloud platform for computer science and information technology students that enforces security baselines across multiple cloud accounts, automates drift detection, remediates misconfigurations, and maintains compliance-ready audit evidence.",
+    techStack: ["Terraform", "Python", "AWS", "Kubernetes", "PostgreSQL"],
+    baseMilestones: [
+      "Security Baseline and Policy Definition",
+      "Multi-Account Drift Detection Pipeline",
+      "Automated Remediation Workflow",
+      "Compliance Evidence and Audit Dashboard",
+      "Misconfiguration Simulation and Hardening"
+    ]
   }
 ];
 
