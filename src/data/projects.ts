@@ -1241,6 +1241,21 @@ export const projects: Project[] = [
       "Operations Dashboard and Alerting Layer",
       "Resilience and Failure Simulation"
     ]
+  },
+  {
+    id: "83",
+    title: "Thesis-Capstone Cloud Computing Zero-Trust Data Brokerage and Cross-Organization Workflow Federation Platform",
+    category: "Cloud Computing",
+    baseComplexity: "High",
+    description: "A thesis-capstone cloud platform for computer science and information technology students that brokers secure data exchange between organizations, federates approval workflows, enforces zero-trust access policies, and audits every cross-tenant request in real time.",
+    techStack: ["Kubernetes", "Terraform", "Python", "PostgreSQL", "AWS"],
+    baseMilestones: [
+      "Cross-Organization Trust Model Design",
+      "Workflow Federation and Approval Routing",
+      "Zero-Trust Policy Engine Implementation",
+      "Audit and Monitoring Dashboard",
+      "Security Testing and Adversarial Simulation"
+    ]
   }
 ];
 
