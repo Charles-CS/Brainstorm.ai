@@ -1211,6 +1211,21 @@ export const projects: Project[] = [
       "Control Dashboard and Scenario Viewer",
       "Performance Benchmarking and Stress Testing"
     ]
+  },
+  {
+    id: "81",
+    title: "Thesis-Capstone Cloud Computing Cloud-Native Graph Analytics and Relationship Mining Platform",
+    category: "Cloud Computing",
+    baseComplexity: "High",
+    description: "A thesis-capstone cloud platform for computer science and information technology students that ingests large relationship datasets, runs distributed graph analytics jobs, discovers hidden network patterns, and visualizes insights across elastic cloud infrastructure.",
+    techStack: ["Kubernetes", "Python", "Neo4j", "Terraform", "AWS"],
+    baseMilestones: [
+      "Graph Data Ingestion and Schema Design",
+      "Distributed Analytics Pipeline Setup",
+      "Relationship Mining and Pattern Detection",
+      "Insight Visualization Dashboard",
+      "Scalability and Performance Testing"
+    ]
   }
 ];
 
