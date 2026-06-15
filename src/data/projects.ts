@@ -1406,6 +1406,21 @@ export const projects: Project[] = [
       "Audit and Recovery Dashboard",
       "Tamper Detection and Drill Testing"
     ]
+  },
+  {
+    id: "94",
+    title: "Thesis-Capstone Cloud Computing WebAssembly-Based Serverless Function Orchestrator and Cold-Start Optimizer",
+    category: "Cloud Computing",
+    baseComplexity: "High",
+    description: "A thesis-capstone cloud platform for computer science and information technology students that orchestrates lightweight WebAssembly-based serverless functions, minimizes cold-start latency through pre-warming policies, isolates workloads, and monitors resource consumption.",
+    techStack: ["Kubernetes", "WebAssembly", "Rust", "Prometheus", "AWS"],
+    baseMilestones: [
+      "WebAssembly Runtime and Isolation Model Design",
+      "Cold-Start Optimization and Pre-Warming Engine",
+      "Function Orchestration and Routing Pipeline",
+      "Resource Monitoring and Metrics Dashboard",
+      "Load Testing and Performance Benchmarking"
+    ]
   }
 ];
 
