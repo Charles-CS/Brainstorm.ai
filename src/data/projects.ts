@@ -1301,6 +1301,21 @@ export const projects: Project[] = [
       "Governance Dashboard and Alerting Layer",
       "Pipeline Validation and Audit Simulation"
     ]
+  },
+  {
+    id: "87",
+    title: "Thesis-Capstone Cloud Computing Multi-Cloud Service Mesh Traffic Shadowing and Progressive Delivery Controller",
+    category: "Cloud Computing",
+    baseComplexity: "High",
+    description: "A thesis-capstone cloud platform for computer science and information technology students that manages service mesh traffic shadowing, blue-green rollouts, canary analysis, and cross-cloud progressive delivery with policy-driven safety checks.",
+    techStack: ["Kubernetes", "Istio", "Terraform", "Prometheus", "AWS"],
+    baseMilestones: [
+      "Service Mesh Topology and Policy Design",
+      "Traffic Shadowing and Mirroring Pipeline",
+      "Canary Analysis and Rollout Automation",
+      "Delivery Control Dashboard and Alerts",
+      "Chaos Testing and Safety Validation"
+    ]
   }
 ];
 
