@@ -1316,6 +1316,21 @@ export const projects: Project[] = [
       "Delivery Control Dashboard and Alerts",
       "Chaos Testing and Safety Validation"
     ]
+  },
+  {
+    id: "88",
+    title: "Thesis-Capstone Cloud Computing Ephemeral Research Sandbox and Reproducibility Orchestration Platform",
+    category: "Cloud Computing",
+    baseComplexity: "High",
+    description: "A thesis-capstone cloud platform for computer science and information technology students that provisions short-lived research sandboxes, captures full execution provenance, snapshots environments, and replays experiments for reproducible computing workflows.",
+    techStack: ["Kubernetes", "Terraform", "Python", "Docker", "AWS"],
+    baseMilestones: [
+      "Sandbox Provisioning and Isolation Model",
+      "Execution Provenance Capture Pipeline",
+      "Environment Snapshot and Replay Workflow",
+      "Reproducibility Dashboard and Audit Log",
+      "Cleanup Automation and Stress Testing"
+    ]
   }
 ];
 
