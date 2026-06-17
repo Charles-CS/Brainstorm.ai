@@ -1571,6 +1571,21 @@ export const projects: Project[] = [
       "Real-Time Analytics Dashboard",
       "Scalability and Throughput Stress Testing"
     ]
+  },
+  {
+    id: "105",
+    title: "Thesis-Capstone Cloud Computing Multi-Tenant Cloud Cost Allocation and Optimization Dashboard",
+    category: "Cloud Computing",
+    baseComplexity: "Medium",
+    description: "A cost management dashboard that aggregates billing data across multi-tenant cloud environments, attributes usage costs to specific teams, and suggests optimization strategies for idle resources.",
+    techStack: ["AWS Cost Explorer API", "Next.js", "TypeScript", "PostgreSQL", "Tailwind CSS"],
+    baseMilestones: [
+      "Billing Data Ingestion and Normalization",
+      "Cost Allocation and Tagging Rules",
+      "Optimization Recommendation Engine",
+      "Interactive Financial Analytics UI",
+      "Report Generation and Export Tools"
+    ]
   }
 ];
 
