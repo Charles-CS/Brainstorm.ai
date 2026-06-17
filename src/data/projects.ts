@@ -1631,6 +1631,21 @@ export const projects: Project[] = [
       "SIEM Dashboard and Alerting Interface",
       "Incident Replay and Forensics Toolkit"
     ]
+  },
+  {
+    id: "109",
+    title: "Thesis-Capstone Cloud Computing Intelligent Cloud Resource Right-Sizing and Auto-Scaling Advisor",
+    category: "Cloud Computing",
+    baseComplexity: "High",
+    description: "A resource optimization platform that continuously profiles cloud workloads, identifies over-provisioned and under-utilized instances, recommends right-sizing actions, and dynamically adjusts auto-scaling policies based on predictive demand forecasting.",
+    techStack: ["AWS CloudWatch", "Kubernetes", "Python", "Grafana", "Terraform"],
+    baseMilestones: [
+      "Workload Profiling and Utilization Telemetry",
+      "Right-Sizing Recommendation Algorithm",
+      "Predictive Demand Forecasting Model",
+      "Dynamic Auto-Scaling Policy Engine",
+      "Savings Analysis Dashboard and Reporting"
+    ]
   }
 ];
 
