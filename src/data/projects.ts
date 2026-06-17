@@ -1616,6 +1616,21 @@ export const projects: Project[] = [
       "Escalation and On-Call Integration",
       "Chaos Engineering and Self-Healing Validation"
     ]
+  },
+  {
+    id: "108",
+    title: "Thesis-Capstone Cloud Computing Real-Time Multi-Cloud Log Aggregation and Threat Intelligence Platform",
+    category: "Cloud Computing",
+    baseComplexity: "High",
+    description: "A centralized log aggregation platform that collects, normalizes, and correlates security logs from multiple cloud providers, applies threat intelligence feeds, and surfaces actionable security insights through a unified SIEM dashboard.",
+    techStack: ["Elasticsearch", "Logstash", "Kibana", "AWS", "Python"],
+    baseMilestones: [
+      "Multi-Cloud Log Collection and Normalization",
+      "Threat Intelligence Feed Integration",
+      "Correlation Rules and Detection Logic",
+      "SIEM Dashboard and Alerting Interface",
+      "Incident Replay and Forensics Toolkit"
+    ]
   }
 ];
 
