@@ -1511,6 +1511,21 @@ export const projects: Project[] = [
       "Event Stream Monitoring & Audit Log",
       "Load Testing and Latency Benchmarking"
     ]
+  },
+  {
+    id: "101",
+    title: "Thesis-Capstone Cloud Computing Serverless Media Transcoding and Dynamic Content Delivery Platform",
+    category: "Cloud Computing",
+    baseComplexity: "High",
+    description: "A serverless cloud architecture that automatically transcodes uploaded video assets into multiple resolutions and formats, dynamically packages streams, and distributes content globally with low latency.",
+    techStack: ["AWS Lambda", "AWS Elemental MediaConvert", "S3", "CloudFront", "Python"],
+    baseMilestones: [
+      "Asset Ingestion and Trigger Setup",
+      "Transcoding Profile Configuration",
+      "Dynamic Packaging and DRM Integration",
+      "CDN Distribution and Edge Caching",
+      "Performance and Cost Optimization Analysis"
+    ]
   }
 ];
 
