@@ -1586,6 +1586,21 @@ export const projects: Project[] = [
       "Interactive Financial Analytics UI",
       "Report Generation and Export Tools"
     ]
+  },
+  {
+    id: "106",
+    title: "Thesis-Capstone Cloud Computing Hybrid Cloud Container Migration and Workload Portability Platform",
+    category: "Cloud Computing",
+    baseComplexity: "High",
+    description: "A cloud platform that automates the assessment, containerization, and live migration of legacy workloads between on-premises infrastructure and multiple public cloud providers while preserving data integrity and minimizing downtime.",
+    techStack: ["Kubernetes", "Docker", "Terraform", "AWS", "Azure"],
+    baseMilestones: [
+      "Legacy Workload Discovery and Assessment",
+      "Containerization and Dependency Mapping",
+      "Cross-Cloud Migration Pipeline Design",
+      "Live Migration Orchestration and Cutover",
+      "Post-Migration Validation and Rollback Testing"
+    ]
   }
 ];
 
