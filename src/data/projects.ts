@@ -1556,6 +1556,21 @@ export const projects: Project[] = [
       "Compliance Dashboard Development",
       "Real-Time Alert and Remediation Workflows"
     ]
+  },
+  {
+    id: "104",
+    title: "Thesis-Capstone Cloud Computing Serverless Event-Driven IoT Data Processing Pipeline",
+    category: "Cloud Computing",
+    baseComplexity: "High",
+    description: "An event-driven pipeline that ingests high-throughput IoT telemetry data, cleans and enriches the data stream in real-time, and stores aggregates in a time-series database for analytics.",
+    techStack: ["AWS IoT Core", "Kinesis", "AWS Lambda", "Timestream", "Node.js"],
+    baseMilestones: [
+      "IoT Device Connectivity and Ingestion Layer",
+      "Stream Processing and Enrichment Logic",
+      "Time-Series Database Schema Design",
+      "Real-Time Analytics Dashboard",
+      "Scalability and Throughput Stress Testing"
+    ]
   }
 ];
 
