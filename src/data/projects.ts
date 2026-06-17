@@ -1601,6 +1601,21 @@ export const projects: Project[] = [
       "Live Migration Orchestration and Cutover",
       "Post-Migration Validation and Rollback Testing"
     ]
+  },
+  {
+    id: "107",
+    title: "Thesis-Capstone Cloud Computing Autonomous Cloud Infrastructure Self-Healing and Incident Response Orchestrator",
+    category: "Cloud Computing",
+    baseComplexity: "High",
+    description: "A self-healing orchestrator that monitors cloud infrastructure health, detects anomalies across services, automatically executes runbook-driven remediation workflows, and escalates unresolved incidents to on-call teams.",
+    techStack: ["Kubernetes", "Prometheus", "PagerDuty API", "Terraform", "Python"],
+    baseMilestones: [
+      "Infrastructure Health Monitoring and Alerting",
+      "Anomaly Detection and Incident Classification",
+      "Automated Runbook Execution Engine",
+      "Escalation and On-Call Integration",
+      "Chaos Engineering and Self-Healing Validation"
+    ]
   }
 ];
 
