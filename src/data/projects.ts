@@ -1526,6 +1526,21 @@ export const projects: Project[] = [
       "CDN Distribution and Edge Caching",
       "Performance and Cost Optimization Analysis"
     ]
+  },
+  {
+    id: "102",
+    title: "Thesis-Capstone Cloud Computing Multi-Region Kubernetes Service Mesh Traffic Orchestrator",
+    category: "Cloud Computing",
+    baseComplexity: "Expert",
+    description: "A platform that deploys and configures a service mesh across multiple Kubernetes clusters in different cloud regions, managing global traffic routing, failover, and secure inter-cluster communications.",
+    techStack: ["Kubernetes", "Istio", "Terraform", "AWS", "Azure"],
+    baseMilestones: [
+      "Multi-Cluster Infrastructure Provisioning",
+      "Service Mesh Installation and Trust Federation",
+      "Global Load Balancing and Traffic Routing Policies",
+      "Automated Region Failover Testing",
+      "Observability and Telemetry Integration"
+    ]
   }
 ];
 
