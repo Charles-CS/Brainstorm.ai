@@ -1541,6 +1541,21 @@ export const projects: Project[] = [
       "Automated Region Failover Testing",
       "Observability and Telemetry Integration"
     ]
+  },
+  {
+    id: "103",
+    title: "Thesis-Capstone Cloud Computing Cloud-Native Microservices Security Auditing and Compliance Engine",
+    category: "Cloud Computing",
+    baseComplexity: "High",
+    description: "A compliance engine that continuously audits cloud resources, scans running containers for vulnerabilities, checks IAM configurations against security baselines, and reports drift in real-time.",
+    techStack: ["Kubernetes", "Trivy", "OPA Gatekeeper", "AWS", "Next.js"],
+    baseMilestones: [
+      "Security Policy and Audit Schema Definition",
+      "Container Image Vulnerability Scanning Pipeline",
+      "IAM and Infrastructure Drift Auditing",
+      "Compliance Dashboard Development",
+      "Real-Time Alert and Remediation Workflows"
+    ]
   }
 ];
 
