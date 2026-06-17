@@ -1646,6 +1646,21 @@ export const projects: Project[] = [
       "Dynamic Auto-Scaling Policy Engine",
       "Savings Analysis Dashboard and Reporting"
     ]
+  },
+  {
+    id: "110",
+    title: "Thesis-Capstone Cloud Computing Distributed API Gateway with Rate Limiting and Usage Metering Platform",
+    category: "Cloud Computing",
+    baseComplexity: "High",
+    description: "A distributed API gateway platform that enforces rate limiting, authentication, and usage metering across microservices deployed in multiple cloud regions, providing real-time analytics and billing integration for API consumers.",
+    techStack: ["Kong", "Kubernetes", "Redis", "Prometheus", "Next.js"],
+    baseMilestones: [
+      "API Gateway Cluster and Routing Configuration",
+      "Rate Limiting and Throttling Policy Engine",
+      "Authentication and API Key Management",
+      "Usage Metering and Billing Integration",
+      "Real-Time Analytics Dashboard and Alerting"
+    ]
   }
 ];
 
