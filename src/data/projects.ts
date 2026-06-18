@@ -1691,6 +1691,21 @@ export const projects: Project[] = [
       "End-to-End Encryption and HIPAA Compliance Layer",
       "Connectivity Recovery and Conflict Resolution Testing"
     ]
+  },
+  {
+    id: "113",
+    title: "Thesis-Capstone Mobile AI-Powered Sign Language Interpreter and Communication Bridge App",
+    category: "Mobile App",
+    baseComplexity: "High",
+    description: "A thesis-capstone mobile application for a 4-10 member team that uses on-device computer vision to recognize sign language gestures in real time, converts them to spoken text, and translates spoken language back into sign language animations for accessible two-way communication.",
+    techStack: ["React Native", "TensorFlow Lite", "Expo", "TypeScript", "MediaPipe"],
+    baseMilestones: [
+      "Hand and Pose Landmark Detection Pipeline",
+      "Sign Language Gesture Classification Model",
+      "Real-Time Sign-to-Text Conversion Engine",
+      "Text-to-Sign Animation Renderer",
+      "Accessibility Testing and Model Accuracy Validation"
+    ]
   }
 ];
 
