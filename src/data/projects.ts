@@ -1676,6 +1676,21 @@ export const projects: Project[] = [
       "Speaker Identification and Meeting Notes",
       "Performance Optimization and Cross-Platform Testing"
     ]
+  },
+  {
+    id: "112",
+    title: "Thesis-Capstone Mobile Offline-First Emergency Medical Records and Field Triage App",
+    category: "Mobile App",
+    baseComplexity: "High",
+    description: "A thesis-capstone mobile application for a 4-10 member team that enables paramedics and field responders to capture patient vitals, perform triage scoring, store encrypted medical records offline, and sync seamlessly when connectivity resumes in disaster or remote settings.",
+    techStack: ["React Native", "WatermelonDB", "Firebase", "TypeScript", "Expo"],
+    baseMilestones: [
+      "Offline-First Database Architecture and Sync Engine",
+      "Patient Intake and Vitals Capture Module",
+      "Triage Scoring Algorithm and Priority Queue",
+      "End-to-End Encryption and HIPAA Compliance Layer",
+      "Connectivity Recovery and Conflict Resolution Testing"
+    ]
   }
 ];
 
