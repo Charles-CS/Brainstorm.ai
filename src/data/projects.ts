@@ -1706,6 +1706,21 @@ export const projects: Project[] = [
       "Text-to-Sign Animation Renderer",
       "Accessibility Testing and Model Accuracy Validation"
     ]
+  },
+  {
+    id: "114",
+    title: "Thesis-Capstone Mobile Blockchain-Verified Digital Evidence Collection and Chain-of-Custody App",
+    category: "Mobile App",
+    baseComplexity: "High",
+    description: "A thesis-capstone mobile application for a 4-10 member team that captures photos, videos, and audio with tamper-proof metadata, anchors evidence hashes on-chain for chain-of-custody integrity, and provides a secure review portal for legal and forensic workflows.",
+    techStack: ["React Native", "Expo", "Ethers.js", "Firebase", "TypeScript"],
+    baseMilestones: [
+      "Tamper-Proof Media Capture and Metadata Stamping",
+      "On-Chain Evidence Hash Registration",
+      "Chain-of-Custody Transfer and Audit Trail",
+      "Secure Evidence Review and Export Portal",
+      "Forensic Integrity Testing and Legal Compliance Validation"
+    ]
   }
 ];
 
