@@ -1751,6 +1751,21 @@ export const projects: Project[] = [
       "Haptic Feedback and Voice-Guided Turn-by-Turn Directions",
       "Multi-Floor Campus Pilot Testing and Calibration"
     ]
+  },
+  {
+    id: "117",
+    title: "Thesis-Capstone Mobile Multi-Sensor Environmental Pollution Tracker and Community Reporting App",
+    category: "Mobile App",
+    baseComplexity: "High",
+    description: "A thesis-capstone mobile application for a 4-10 member team that connects to portable air quality and noise sensors via Bluetooth, aggregates pollution data with GPS coordinates, generates heatmaps, and enables citizens to file community reports to local authorities.",
+    techStack: ["React Native", "Expo", "Firebase", "TypeScript", "Mapbox"],
+    baseMilestones: [
+      "Bluetooth Sensor Pairing and Data Ingestion",
+      "Geo-Tagged Pollution Data Aggregation Pipeline",
+      "Real-Time Heatmap Visualization and Trend Analytics",
+      "Community Incident Reporting and Authority Notification",
+      "Sensor Calibration and Field Deployment Validation"
+    ]
   }
 ];
 
