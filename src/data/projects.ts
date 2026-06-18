@@ -1781,6 +1781,21 @@ export const projects: Project[] = [
       "Health Event Timeline and Clinical Report Export",
       "Real-World Fall Simulation and Accuracy Benchmarking"
     ]
+  },
+  {
+    id: "119",
+    title: "Thesis-Capstone Mobile Collaborative AR Campus Tour and Interactive Learning Experience App",
+    category: "Mobile App",
+    baseComplexity: "High",
+    description: "A thesis-capstone mobile application for a 4-10 member team that overlays augmented reality content on campus landmarks, enables collaborative group tours with shared AR annotations, embeds interactive quizzes and historical timelines, and supports multi-user sessions via real-time sync.",
+    techStack: ["React Native", "Expo", "ARCore", "Firebase", "TypeScript"],
+    baseMilestones: [
+      "AR Scene Anchoring and Landmark Registration",
+      "Interactive Content Overlay and Quiz Engine",
+      "Multi-User Session Sync and Shared Annotations",
+      "Tour Route Builder and Progress Tracking",
+      "Campus Pilot Deployment and User Experience Testing"
+    ]
   }
 ];
 
