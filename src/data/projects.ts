@@ -1736,6 +1736,21 @@ export const projects: Project[] = [
       "SOS Broadcast and Emergency Beacon Module",
       "Network Resilience and Range Testing"
     ]
+  },
+  {
+    id: "116",
+    title: "Thesis-Capstone Mobile Intelligent Indoor Navigation and Accessibility Wayfinding App",
+    category: "Mobile App",
+    baseComplexity: "High",
+    description: "A thesis-capstone mobile application for a 4-10 member team that provides turn-by-turn indoor navigation using BLE beacons and visual positioning, with dedicated accessibility features for visually impaired users including haptic feedback, voice guidance, and obstacle alerts.",
+    techStack: ["React Native", "Expo", "Firebase", "TypeScript", "ARCore"],
+    baseMilestones: [
+      "BLE Beacon Mapping and Indoor Positioning Engine",
+      "Visual Positioning and AR Overlay Navigation",
+      "Accessible Route Planning with Elevator and Ramp Priority",
+      "Haptic Feedback and Voice-Guided Turn-by-Turn Directions",
+      "Multi-Floor Campus Pilot Testing and Calibration"
+    ]
   }
 ];
 
