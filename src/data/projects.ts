@@ -1721,6 +1721,21 @@ export const projects: Project[] = [
       "Secure Evidence Review and Export Portal",
       "Forensic Integrity Testing and Legal Compliance Validation"
     ]
+  },
+  {
+    id: "115",
+    title: "Thesis-Capstone Mobile Peer-to-Peer Encrypted Mesh Communication and Emergency Relay App",
+    category: "Mobile App",
+    baseComplexity: "High",
+    description: "A thesis-capstone mobile application for a 4-10 member team that creates an ad-hoc mesh network between nearby devices using Bluetooth and Wi-Fi Direct, enabling encrypted messaging, file sharing, and SOS relay when cellular and internet connectivity is unavailable.",
+    techStack: ["React Native", "Bridgefy SDK", "Expo", "TypeScript", "SQLite"],
+    baseMilestones: [
+      "Mesh Network Discovery and Peer Connection Layer",
+      "End-to-End Encrypted Messaging Protocol",
+      "Multi-Hop Message Relay and Routing Algorithm",
+      "SOS Broadcast and Emergency Beacon Module",
+      "Network Resilience and Range Testing"
+    ]
   }
 ];
 
