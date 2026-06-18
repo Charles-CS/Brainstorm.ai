@@ -1796,6 +1796,21 @@ export const projects: Project[] = [
       "Tour Route Builder and Progress Tracking",
       "Campus Pilot Deployment and User Experience Testing"
     ]
+  },
+  {
+    id: "120",
+    title: "Thesis-Capstone Mobile Smart City Transit Planner and Multimodal Route Optimization App",
+    category: "Mobile App",
+    baseComplexity: "High",
+    description: "A thesis-capstone mobile application for a 4-10 member team that aggregates real-time transit feeds, ride-share availability, bike-share stations, and pedestrian routes to compute optimal multimodal journeys, predict delays using machine learning, and provide dynamic rerouting with accessibility-aware options.",
+    techStack: ["React Native", "Expo", "Firebase", "TypeScript", "Google Maps API"],
+    baseMilestones: [
+      "Transit Feed Aggregation and Real-Time Data Pipeline",
+      "Multimodal Route Computation and Optimization Algorithm",
+      "Delay Prediction Model and Dynamic Rerouting Engine",
+      "Accessibility-Aware Journey Planner and UI",
+      "City-Scale Load Testing and Commuter Usability Validation"
+    ]
   }
 ];
 
