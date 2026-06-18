@@ -1766,6 +1766,21 @@ export const projects: Project[] = [
       "Community Incident Reporting and Authority Notification",
       "Sensor Calibration and Field Deployment Validation"
     ]
+  },
+  {
+    id: "118",
+    title: "Thesis-Capstone Mobile Wearable-Integrated Elderly Fall Detection and Caregiver Alert App",
+    category: "Mobile App",
+    baseComplexity: "High",
+    description: "A thesis-capstone mobile application for a 4-10 member team that integrates with smartwatch accelerometer and gyroscope data to detect falls in real time, sends automatic alerts to designated caregivers with GPS location, and maintains a health event timeline for clinical review.",
+    techStack: ["React Native", "Expo", "Firebase", "TypeScript", "HealthKit"],
+    baseMilestones: [
+      "Wearable Sensor Data Stream and Pairing Module",
+      "Fall Detection Algorithm with False-Positive Filtering",
+      "Automated Caregiver Alert and GPS Location Sharing",
+      "Health Event Timeline and Clinical Report Export",
+      "Real-World Fall Simulation and Accuracy Benchmarking"
+    ]
   }
 ];
 
