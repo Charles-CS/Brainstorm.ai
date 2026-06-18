@@ -1661,6 +1661,21 @@ export const projects: Project[] = [
       "Usage Metering and Billing Integration",
       "Real-Time Analytics Dashboard and Alerting"
     ]
+  },
+  {
+    id: "111",
+    title: "Thesis-Capstone Mobile Real-Time Multi-Language Video Conferencing and Translation App",
+    category: "Mobile App",
+    baseComplexity: "High",
+    description: "A thesis-capstone mobile application for a 4-10 member team that enables real-time video conferencing with live speech-to-text translation across multiple languages, speaker identification, and meeting summarization powered by on-device and cloud AI models.",
+    techStack: ["React Native", "WebRTC", "Firebase", "TypeScript", "Whisper API"],
+    baseMilestones: [
+      "WebRTC Video and Audio Pipeline Setup",
+      "Real-Time Speech-to-Text Integration",
+      "Multi-Language Translation Engine",
+      "Speaker Identification and Meeting Notes",
+      "Performance Optimization and Cross-Platform Testing"
+    ]
   }
 ];
 
