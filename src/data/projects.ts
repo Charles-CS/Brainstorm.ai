@@ -2378,5 +2378,26 @@ export const projects: Project[] = [
       "Energy Consumption Dashboard",
       "Live Actuation and Safety Override Logic"
     ]
+  },
+  {
+    id: "148",
+    title: "IoT Enabled Smart Prosthetic Exoskeleton with Adaptive Gait Analysis",
+    category: "Internet of Things",
+    baseComplexity: "Expert",
+    description: "A connected exoskeleton suite that uses edge computing to analyze ground feedback and user intent, dynamically adjusting joint resistance and gait assistance.",
+    techStack: [
+      "C++",
+      "Python",
+      "TensorFlow Lite",
+      "MQTT",
+      "React Native"
+    ],
+    baseMilestones: [
+      "Ground Feedback Sensor Integration",
+      "User Intent Prediction Model",
+      "Dynamic Joint Resistance Actuation",
+      "OTA Firmware Update Mechanism",
+      "Patient Safety and Usability Testing"
+    ]
   }
 ];
