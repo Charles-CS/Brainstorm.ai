@@ -2021,5 +2021,26 @@ export const projects: Project[] = [
       "Path Planning in Unmapped Terrain",
       "Hardware Reliability and Drop Testing"
     ]
+  },
+  {
+    id: "131",
+    title: "IoT Mesh Network for Deep-Mine Tracking and Safety Orchestration",
+    category: "Internet of Things",
+    baseComplexity: "Expert",
+    description: "A resilient subterranean IoT mesh network providing real-time tracking of miners, air quality monitoring, and automated ventilation control in environments without GPS or standard RF.",
+    techStack: [
+      "C",
+      "Zephyr RTOS",
+      "Ultra-Wideband (UWB)",
+      "Python",
+      "React"
+    ],
+    baseMilestones: [
+      "UWB Positioning and Mesh Architecture",
+      "Air Quality and Gas Sensor Integration",
+      "Automated Ventilation Actuation",
+      "Real-Time Subterranean Dashboard",
+      "System Resilience and Node-Failure Testing"
+    ]
   }
 ];
