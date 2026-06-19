@@ -2084,5 +2084,26 @@ export const projects: Project[] = [
       "Clinician Analytics Dashboard",
       "Patient Trial and Feedback Loop"
     ]
+  },
+  {
+    id: "134",
+    title: "Real-Time AI-Driven Water Distribution and Leak Detection Network",
+    category: "Internet of Things",
+    baseComplexity: "High",
+    description: "A city-scale IoT network utilizing acoustic sensors and smart valves to detect leaks in water pipelines, isolate bursts autonomously, and optimize pump pressure.",
+    techStack: [
+      "Go",
+      "Python",
+      "InfluxDB",
+      "LoRaWAN",
+      "React"
+    ],
+    baseMilestones: [
+      "Acoustic Leak Detection Algorithms",
+      "Smart Valve Actuation Protocol",
+      "Pump Pressure Optimization Logic",
+      "City-Wide Telemetry Dashboard",
+      "Hydraulic Simulation and Testing"
+    ]
   }
 ];
