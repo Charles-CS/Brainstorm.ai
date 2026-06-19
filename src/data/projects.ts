@@ -2105,5 +2105,26 @@ export const projects: Project[] = [
       "City-Wide Telemetry Dashboard",
       "Hydraulic Simulation and Testing"
     ]
+  },
+  {
+    id: "135",
+    title: "Cognitive IoT System for Dynamic Urban Traffic Flow Orchestration",
+    category: "Internet of Things",
+    baseComplexity: "Expert",
+    description: "An intelligent traffic management system that integrates data from connected vehicles (V2I), smart traffic lights, and pedestrian sensors to reduce congestion using reinforcement learning.",
+    techStack: [
+      "Python",
+      "Ray RLlib",
+      "Apache Flink",
+      "C++",
+      "PostgreSQL"
+    ],
+    baseMilestones: [
+      "V2I (Vehicle-to-Infrastructure) Integration",
+      "Real-Time Stream Processing Pipeline",
+      "Reinforcement Learning Traffic Optimizer",
+      "Dynamic Traffic Light Actuation",
+      "City-Scale Traffic Simulation"
+    ]
   }
 ];
