@@ -2357,5 +2357,26 @@ export const projects: Project[] = [
       "Marine Biodiversity Dashboard",
       "Deep Sea Pressure Chamber Testing"
     ]
+  },
+  {
+    id: "147",
+    title: "Digital Twin for Commercial Real Estate HVAC and Energy Optimization",
+    category: "Internet of Things",
+    baseComplexity: "High",
+    description: "A virtual replica of commercial skyscrapers integrated with thousands of IoT sensors, using AI to dynamically optimize HVAC systems based on building occupancy and external weather.",
+    techStack: [
+      "Node.js",
+      "Python",
+      "React",
+      "TimescaleDB",
+      "GraphQL"
+    ],
+    baseMilestones: [
+      "BIM (Building Information Modeling) Import",
+      "Occupancy and Weather Sensor Fusion",
+      "HVAC Optimization AI Engine",
+      "Energy Consumption Dashboard",
+      "Live Actuation and Safety Override Logic"
+    ]
   }
 ];
