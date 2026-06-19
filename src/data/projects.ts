@@ -2420,5 +2420,26 @@ export const projects: Project[] = [
       "Residential Energy Dashboard",
       "Grid Stability and Security Audit"
     ]
+  },
+  {
+    id: "150",
+    title: "Autonomous IoT Swarm for Deep Space Habitat Maintenance",
+    category: "Internet of Things",
+    baseComplexity: "Expert",
+    description: "A constellation of micro-robots utilizing IoT protocols to communicate, sharing diagnostics and collaborating to repair breaches and maintain life support in off-world habitats.",
+    techStack: [
+      "C",
+      "RTOS",
+      "Python",
+      "ROS 2",
+      "Mesh Networking"
+    ],
+    baseMilestones: [
+      "Micro-Robot Hardware Interface Design",
+      "Swarm Collaboration and Task Allocation",
+      "Hull Breach Detection Sensors",
+      "Life Support Telemetry Dashboard",
+      "Zero-Gravity Dynamics Simulation"
+    ]
   }
 ];
