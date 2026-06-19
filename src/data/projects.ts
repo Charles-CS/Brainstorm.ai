@@ -2252,5 +2252,26 @@ export const projects: Project[] = [
       "Suppression Liquid Payload Release Logic",
       "System Scale Simulation"
     ]
+  },
+  {
+    id: "142",
+    title: "Smart City IoT Waste Optimization and Autonomous Collection Routing",
+    category: "Internet of Things",
+    baseComplexity: "High",
+    description: "A city-wide deployment of smart waste bins equipped with ultrasonic fill-level sensors that dynamically optimize routing for autonomous collection vehicles.",
+    techStack: [
+      "Node.js",
+      "Python",
+      "MQTT",
+      "React",
+      "PostgreSQL"
+    ],
+    baseMilestones: [
+      "Ultrasonic Sensor Integration",
+      "Dynamic Route Optimization Algorithm",
+      "Fleet Management Dashboard",
+      "Automated Dispatch Logic",
+      "Cost and Emission Reduction Analysis"
+    ]
   }
 ];
