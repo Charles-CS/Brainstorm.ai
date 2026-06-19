@@ -2231,5 +2231,26 @@ export const projects: Project[] = [
       "Intrusion Detection and Prevention Logic",
       "Penetration Testing and Security Audit"
     ]
+  },
+  {
+    id: "141",
+    title: "IoT-Enabled Wildfire Prediction and Automated Drone Suppression Network",
+    category: "Internet of Things",
+    baseComplexity: "Expert",
+    description: "A comprehensive IoT network combining thermal satellite feeds with ground-based humidity sensors to predict wildfires and dispatch automated drone swarms for early suppression.",
+    techStack: [
+      "Python",
+      "C++",
+      "ROS 2",
+      "AWS IoT Core",
+      "TensorFlow"
+    ],
+    baseMilestones: [
+      "Thermal and Humidity Sensor Fusion",
+      "Predictive Fire Spread Modeling",
+      "Drone Dispatch Orchestration Engine",
+      "Suppression Liquid Payload Release Logic",
+      "System Scale Simulation"
+    ]
   }
 ];
