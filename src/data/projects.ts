@@ -1832,5 +1832,26 @@ export const projects: Project[] = [
       "Real-Time Telemetry Dashboard",
       "Field Testing and Hardware Calibration"
     ]
+  },
+  {
+    id: "122",
+    title: "Edge-AI Enabled Predictive Maintenance for Industrial Turbines",
+    category: "Internet of Things",
+    baseComplexity: "High",
+    description: "An industrial IoT platform that aggregates high-frequency vibration and acoustic data from gas turbines, running localized deep learning models to predict catastrophic failures.",
+    techStack: [
+      "C++",
+      "TensorFlow Lite",
+      "Apache Kafka",
+      "Go",
+      "InfluxDB"
+    ],
+    baseMilestones: [
+      "High-Frequency Sensor Integration",
+      "Edge Model Training and Quantization",
+      "Data Ingestion and Stream Processing",
+      "Anomaly Alerting Engine",
+      "System Scalability and Stress Testing"
+    ]
   }
 ];
