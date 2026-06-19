@@ -2042,5 +2042,26 @@ export const projects: Project[] = [
       "Real-Time Subterranean Dashboard",
       "System Resilience and Node-Failure Testing"
     ]
+  },
+  {
+    id: "132",
+    title: "Smart Port Automation using IoT, Digital Twins, and 5G",
+    category: "Internet of Things",
+    baseComplexity: "Expert",
+    description: "An orchestration platform for shipping ports that integrates IoT data from autonomous cranes, container tracking sensors, and automated guided vehicles (AGVs) for optimized logistics.",
+    techStack: [
+      "Java",
+      "Spring Boot",
+      "Kafka",
+      "Python",
+      "Vue.js"
+    ],
+    baseMilestones: [
+      "AGV and Crane Telemetry Ingestion",
+      "Container Tracking using RFID/IoT",
+      "Port Logistics Optimization Engine",
+      "3D Digital Twin Command Center",
+      "End-to-End Port Simulation"
+    ]
   }
 ];
