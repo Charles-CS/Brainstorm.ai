@@ -1937,5 +1937,26 @@ export const projects: Project[] = [
       "Sensor Fusion (Sonar and Optical)",
       "Deep Water Pressure and Navigation Simulation"
     ]
+  },
+  {
+    id: "127",
+    title: "Federated Learning on Edge IoT Devices for Predictive Healthcare",
+    category: "Internet of Things",
+    baseComplexity: "High",
+    description: "A privacy-preserving IoT network of wearable health monitors that collaboratively train anomaly detection models without transmitting raw patient data to the cloud.",
+    techStack: [
+      "Python",
+      "PySyft",
+      "TensorFlow Federated",
+      "C++",
+      "React Native"
+    ],
+    baseMilestones: [
+      "Wearable Sensor Integration",
+      "Federated Learning Architecture Design",
+      "Local Model Training and Weight Aggregation",
+      "Privacy and Security Hardening",
+      "Clinical Accuracy Validation"
+    ]
   }
 ];
