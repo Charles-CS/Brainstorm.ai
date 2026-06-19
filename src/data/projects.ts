@@ -1811,6 +1811,26 @@ export const projects: Project[] = [
       "Accessibility-Aware Journey Planner and UI",
       "City-Scale Load Testing and Commuter Usability Validation"
     ]
+  },
+  {
+    id: "121",
+    title: "IoT-Driven Autonomous Swarm Robotics for Precision Agriculture",
+    category: "Internet of Things",
+    baseComplexity: "Expert",
+    description: "A coordinated swarm of IoT-enabled terrestrial and aerial robots for targeted pesticide application, soil analysis, and real-time crop health monitoring using edge computing.",
+    techStack: [
+      "ROS 2",
+      "Python",
+      "MQTT",
+      "C++",
+      "NVIDIA Jetson"
+    ],
+    baseMilestones: [
+      "Swarm Communication Protocol Design",
+      "Edge-AI Crop Analysis Integration",
+      "Autonomous Path Planning and Obstacle Avoidance",
+      "Real-Time Telemetry Dashboard",
+      "Field Testing and Hardware Calibration"
+    ]
   }
 ];
-
