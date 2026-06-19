@@ -1979,5 +1979,26 @@ export const projects: Project[] = [
       "Simulation and What-If Analysis Tools",
       "Latency and Synchronization Stress Testing"
     ]
+  },
+  {
+    id: "129",
+    title: "IoT-Driven Early Warning System for Seismic and Volcanic Activity",
+    category: "Internet of Things",
+    baseComplexity: "High",
+    description: "A distributed network of deep-earth sensors and gas analyzers that use edge computing to detect pre-seismic micro-fractures and volcanic gas emissions.",
+    techStack: [
+      "C++",
+      "Python",
+      "LoRaWAN",
+      "AWS IoT",
+      "Grafana"
+    ],
+    baseMilestones: [
+      "Sensor Array Deployment and Calibration",
+      "Edge Anomaly Detection Algorithms",
+      "Long-Range Telemetry (LoRaWAN) Setup",
+      "Early Warning Alert Orchestrator",
+      "False Positive Reduction and Tuning"
+    ]
   }
 ];
