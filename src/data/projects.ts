@@ -2399,5 +2399,26 @@ export const projects: Project[] = [
       "OTA Firmware Update Mechanism",
       "Patient Safety and Usability Testing"
     ]
+  },
+  {
+    id: "149",
+    title: "Decentralized Micro-Grid IoT Controller with P2P Energy Trading",
+    category: "Internet of Things",
+    baseComplexity: "Expert",
+    description: "An IoT gateway installed in residential homes that manages solar generation and battery storage, while communicating with neighbors to automate peer-to-peer energy trading via smart contracts.",
+    techStack: [
+      "Solidity",
+      "Rust",
+      "Go",
+      "Ethereum",
+      "InfluxDB"
+    ],
+    baseMilestones: [
+      "Inverter and Battery Telemetry Interface",
+      "Automated P2P Trading Logic",
+      "Smart Contract Settlement Engine",
+      "Residential Energy Dashboard",
+      "Grid Stability and Security Audit"
+    ]
   }
 ];
