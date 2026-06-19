@@ -2147,5 +2147,26 @@ export const projects: Project[] = [
       "Farm Operations Dashboard",
       "Yield Optimization and Tuning"
     ]
+  },
+  {
+    id: "137",
+    title: "Space-Based IoT Constellation for Global Asset Tracking",
+    category: "Internet of Things",
+    baseComplexity: "Expert",
+    description: "A low-earth orbit (LEO) satellite IoT platform that connects remote terrestrial sensors (e.g., maritime containers, wildlife trackers) in areas without cellular coverage.",
+    techStack: [
+      "C",
+      "Python",
+      "Kubernetes",
+      "PostgreSQL",
+      "Go"
+    ],
+    baseMilestones: [
+      "Satellite Communication Protocol",
+      "Low-Power Ground Sensor Design",
+      "Cloud Telemetry Ingestion Pipeline",
+      "Global Tracking and Analytics Dashboard",
+      "Latency and Constellation Pass Simulation"
+    ]
   }
 ];
