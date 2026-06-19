@@ -2126,5 +2126,26 @@ export const projects: Project[] = [
       "Dynamic Traffic Light Actuation",
       "City-Scale Traffic Simulation"
     ]
+  },
+  {
+    id: "136",
+    title: "IoT-Powered Automated Hydroponic Vertical Farming Infrastructure",
+    category: "Internet of Things",
+    baseComplexity: "High",
+    description: "An industrial-scale vertical farm orchestration system that manages nutrient dosing, climate control, and lighting spectrums dynamically based on plant growth stage computer vision.",
+    techStack: [
+      "Python",
+      "C++",
+      "OpenCV",
+      "GraphQL",
+      "React"
+    ],
+    baseMilestones: [
+      "Climate and Nutrient Sensor Integration",
+      "Computer Vision for Growth Tracking",
+      "Automated Dosing and Control Logic",
+      "Farm Operations Dashboard",
+      "Yield Optimization and Tuning"
+    ]
   }
 ];
