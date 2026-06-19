@@ -2315,5 +2315,26 @@ export const projects: Project[] = [
       "Real-Time 3D Form Visualization",
       "Clinical Trial and Calibration"
     ]
+  },
+  {
+    id: "145",
+    title: "Edge-AI Powered Smart Traffic Camera Network for Incident Detection",
+    category: "Internet of Things",
+    baseComplexity: "High",
+    description: "A decentralized network of traffic cameras running on-device computer vision to detect accidents, stalled vehicles, and wrong-way drivers, instantly alerting emergency services.",
+    techStack: [
+      "C++",
+      "OpenCV",
+      "TensorFlow Lite",
+      "MQTT",
+      "Go"
+    ],
+    baseMilestones: [
+      "Edge-AI Video Stream Processing",
+      "Incident Classification Models",
+      "Low-Bandwidth Alerting Protocol",
+      "Emergency Dispatch Integration",
+      "False Positive Tuning and Day/Night Testing"
+    ]
   }
 ];
