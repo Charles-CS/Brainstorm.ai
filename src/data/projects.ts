@@ -1874,5 +1874,26 @@ export const projects: Project[] = [
       "Provenance Tracking Dashboard",
       "End-to-End Cryptographic Audit"
     ]
+  },
+  {
+    id: "124",
+    title: "Smart Grid Demand Response and Virtual Power Plant Orchestrator",
+    category: "Internet of Things",
+    baseComplexity: "Expert",
+    description: "An IoT orchestrator that aggregates distributed energy resources (solar, batteries, EVs) into a Virtual Power Plant, responding to grid load dynamically in real-time.",
+    techStack: [
+      "Python",
+      "Kubernetes",
+      "PostgreSQL",
+      "React",
+      "OpenADR"
+    ],
+    baseMilestones: [
+      "DER (Distributed Energy Resource) Protocol Integration",
+      "Demand Response Logic Engine",
+      "Grid Load Forecasting Model",
+      "VPP Control Dashboard",
+      "Grid Simulation and Load Testing"
+    ]
   }
 ];
