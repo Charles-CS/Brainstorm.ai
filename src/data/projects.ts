@@ -2294,5 +2294,26 @@ export const projects: Project[] = [
       "Structural Wear Cost Function Design",
       "Wind Farm Analytics Dashboard"
     ]
+  },
+  {
+    id: "144",
+    title: "Wearable IoT Ecosystem for Professional Athlete Bio-Mechanical Analytics",
+    category: "Internet of Things",
+    baseComplexity: "Expert",
+    description: "A full-body mesh of low-latency IMU (Inertial Measurement Unit) sensors communicating via BLE to analyze an athlete's biomechanics, preventing injuries and optimizing form.",
+    techStack: [
+      "C",
+      "Zephyr RTOS",
+      "Python",
+      "Bluetooth LE",
+      "Unity"
+    ],
+    baseMilestones: [
+      "IMU Sensor Fusion (Accelerometer/Gyroscope)",
+      "Low-Latency BLE Mesh Networking",
+      "Biomechanics Analysis Algorithm",
+      "Real-Time 3D Form Visualization",
+      "Clinical Trial and Calibration"
+    ]
   }
 ];
