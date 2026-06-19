@@ -1895,5 +1895,26 @@ export const projects: Project[] = [
       "VPP Control Dashboard",
       "Grid Simulation and Load Testing"
     ]
+  },
+  {
+    id: "125",
+    title: "5G-Enabled Remote Robotic Surgery Telemetry Pipeline",
+    category: "Internet of Things",
+    baseComplexity: "Expert",
+    description: "An ultra-low latency IoT pipeline over 5G networks, transmitting high-fidelity haptic feedback and 4K video streams to enable remote robotic surgery safely.",
+    techStack: [
+      "C++",
+      "WebRTC",
+      "Rust",
+      "5G Core",
+      "Kubernetes"
+    ],
+    baseMilestones: [
+      "Ultra-Low Latency Protocol Optimization",
+      "Haptic Feedback Telemetry Engine",
+      "Real-Time Video Encoding Pipeline",
+      "Failover and Safety Subsystems",
+      "Network Jitter and Packet Loss Simulation"
+    ]
   }
 ];
