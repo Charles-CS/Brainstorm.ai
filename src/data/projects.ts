@@ -2336,5 +2336,26 @@ export const projects: Project[] = [
       "Emergency Dispatch Integration",
       "False Positive Tuning and Day/Night Testing"
     ]
+  },
+  {
+    id: "146",
+    title: "IoT Based Continuous Environmental DNA (eDNA) Monitoring Submersibles",
+    category: "Internet of Things",
+    baseComplexity: "Expert",
+    description: "Autonomous underwater IoT nodes that sample seawater for eDNA, running localized sequencing to track biodiversity and detect invasive species in real-time.",
+    techStack: [
+      "C++",
+      "Python",
+      "ROS 2",
+      "PostgreSQL",
+      "React"
+    ],
+    baseMilestones: [
+      "Automated Water Sampling Mechanism",
+      "On-Board eDNA Sequencing Integration",
+      "Acoustic Telemetry Data Transmission",
+      "Marine Biodiversity Dashboard",
+      "Deep Sea Pressure Chamber Testing"
+    ]
   }
 ];
