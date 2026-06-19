@@ -2273,5 +2273,26 @@ export const projects: Project[] = [
       "Automated Dispatch Logic",
       "Cost and Emission Reduction Analysis"
     ]
+  },
+  {
+    id: "143",
+    title: "IoT-Driven Predictive Modeling for Wind Turbine Array Yields",
+    category: "Internet of Things",
+    baseComplexity: "High",
+    description: "An array of IoT sensors capturing anemometer and blade pitch data across wind farms to train predictive models that maximize energy yield while minimizing structural wear.",
+    techStack: [
+      "Python",
+      "Apache Kafka",
+      "Scikit-Learn",
+      "TimescaleDB",
+      "Grafana"
+    ],
+    baseMilestones: [
+      "High-Frequency Anemometer Data Ingestion",
+      "Blade Pitch Optimization Algorithm",
+      "Yield Prediction Model Training",
+      "Structural Wear Cost Function Design",
+      "Wind Farm Analytics Dashboard"
+    ]
   }
 ];
