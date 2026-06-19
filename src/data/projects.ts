@@ -2168,5 +2168,26 @@ export const projects: Project[] = [
       "Global Tracking and Analytics Dashboard",
       "Latency and Constellation Pass Simulation"
     ]
+  },
+  {
+    id: "138",
+    title: "Hyper-Connected Smart Hospital Ecosystem with Edge-AI Analytics",
+    category: "Internet of Things",
+    baseComplexity: "Expert",
+    description: "A hospital-wide IoT deployment tracking patient beds, medical equipment, and staff locations, integrating with edge AI to predict patient flow and optimize resource allocation.",
+    techStack: [
+      "Java",
+      "Python",
+      "MQTT",
+      "Apache Kafka",
+      "Next.js"
+    ],
+    baseMilestones: [
+      "Indoor Asset Tracking (BLE/UWB)",
+      "Medical Equipment Telemetry Integration",
+      "Patient Flow Prediction Engine",
+      "Hospital Command Center UI",
+      "Load Testing and Security Hardening"
+    ]
   }
 ];
