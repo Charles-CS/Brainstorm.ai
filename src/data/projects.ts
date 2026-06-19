@@ -1916,5 +1916,26 @@ export const projects: Project[] = [
       "Failover and Safety Subsystems",
       "Network Jitter and Packet Loss Simulation"
     ]
+  },
+  {
+    id: "126",
+    title: "IoT-Based Autonomous Underwater Vehicle for Pipeline Inspection",
+    category: "Internet of Things",
+    baseComplexity: "Expert",
+    description: "An untethered AUV that utilizes acoustic IoT modems and edge computer vision to autonomously inspect subsea oil and gas pipelines for leaks and structural integrity.",
+    techStack: [
+      "C++",
+      "ROS 2",
+      "Python",
+      "OpenCV",
+      "Acoustic Modems"
+    ],
+    baseMilestones: [
+      "Acoustic Communication Protocol Setup",
+      "Computer Vision Defect Detection",
+      "Autonomous Subsea Navigation",
+      "Sensor Fusion (Sonar and Optical)",
+      "Deep Water Pressure and Navigation Simulation"
+    ]
   }
 ];
