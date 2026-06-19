@@ -2210,5 +2210,26 @@ export const projects: Project[] = [
       "Centralized Operations Dashboard",
       "Harsh Environment Hardware Testing"
     ]
+  },
+  {
+    id: "140",
+    title: "Zero-Trust Security Overlay for Industrial Control Systems (ICS) IoT",
+    category: "Internet of Things",
+    baseComplexity: "Expert",
+    description: "A specialized security platform that wraps legacy SCADA systems and modern IoT sensors in a zero-trust architecture, preventing lateral movement and unauthorized actuation.",
+    techStack: [
+      "Go",
+      "Rust",
+      "eBPF",
+      "Python",
+      "Kubernetes"
+    ],
+    baseMilestones: [
+      "Zero-Trust Proxy Architecture Design",
+      "Legacy SCADA Protocol Parsing",
+      "eBPF-Based Network Monitoring",
+      "Intrusion Detection and Prevention Logic",
+      "Penetration Testing and Security Audit"
+    ]
   }
 ];
