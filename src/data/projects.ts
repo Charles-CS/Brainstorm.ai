@@ -2063,5 +2063,26 @@ export const projects: Project[] = [
       "3D Digital Twin Command Center",
       "End-to-End Port Simulation"
     ]
+  },
+  {
+    id: "133",
+    title: "IoT-Enabled Bionic Prosthetics with Edge-Based Neural Interface",
+    category: "Internet of Things",
+    baseComplexity: "Expert",
+    description: "A highly advanced prosthetic limb that uses edge AI to decode myoelectric signals, adjusting grip and movement in real-time while streaming performance data to clinicians via IoT.",
+    techStack: [
+      "C++",
+      "TensorFlow Lite",
+      "Bluetooth LE",
+      "Python",
+      "Next.js"
+    ],
+    baseMilestones: [
+      "Myoelectric Sensor Data Acquisition",
+      "Edge-AI Signal Decoding and Motor Control",
+      "BLE Telemetry and OTA Updates",
+      "Clinician Analytics Dashboard",
+      "Patient Trial and Feedback Loop"
+    ]
   }
 ];
