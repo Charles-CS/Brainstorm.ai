@@ -1853,5 +1853,26 @@ export const projects: Project[] = [
       "Anomaly Alerting Engine",
       "System Scalability and Stress Testing"
     ]
+  },
+  {
+    id: "123",
+    title: "Blockchain-Secured IoT Supply Chain Provenance Network",
+    category: "Internet of Things",
+    baseComplexity: "Expert",
+    description: "A secure supply chain network utilizing tamper-proof IoT sensors with hardware roots of trust, anchoring temperature and location data directly to a distributed ledger.",
+    techStack: [
+      "Solidity",
+      "Rust",
+      "Hyperledger Fabric",
+      "Node.js",
+      "ESP32"
+    ],
+    baseMilestones: [
+      "Hardware Root-of-Trust Integration",
+      "Smart Contract Oracle Development",
+      "Secure Sensor Telemetry Pipeline",
+      "Provenance Tracking Dashboard",
+      "End-to-End Cryptographic Audit"
+    ]
   }
 ];
