@@ -2189,5 +2189,26 @@ export const projects: Project[] = [
       "Hospital Command Center UI",
       "Load Testing and Security Hardening"
     ]
+  },
+  {
+    id: "139",
+    title: "IoT-Driven Automated Construction Site with Heavy Machinery Telematics",
+    category: "Internet of Things",
+    baseComplexity: "High",
+    description: "A comprehensive IoT system for large construction sites, connecting excavators, cranes, and workers to monitor safety, fuel efficiency, and structural progression in real-time.",
+    techStack: [
+      "C++",
+      "Python",
+      "AWS IoT",
+      "TimescaleDB",
+      "React"
+    ],
+    baseMilestones: [
+      "Heavy Machinery Telematics Integration",
+      "Worker Safety Wearable Setup",
+      "Site Progression Tracking Logic",
+      "Centralized Operations Dashboard",
+      "Harsh Environment Hardware Testing"
+    ]
   }
 ];
