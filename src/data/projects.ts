@@ -2000,5 +2000,26 @@ export const projects: Project[] = [
       "Early Warning Alert Orchestrator",
       "False Positive Reduction and Tuning"
     ]
+  },
+  {
+    id: "130",
+    title: "Autonomous Drone-Based IoT Sensor Deployment System",
+    category: "Internet of Things",
+    baseComplexity: "High",
+    description: "A drone-based system capable of autonomously navigating hazardous environments (e.g., post-wildfire zones) to airdrop and activate mesh-networked environmental sensors.",
+    techStack: [
+      "ROS 2",
+      "PX4",
+      "Python",
+      "C++",
+      "Mesh Networking"
+    ],
+    baseMilestones: [
+      "Drone Flight Controller Integration",
+      "Sensor Drop Mechanism and Activation",
+      "Mesh Network Auto-Configuration",
+      "Path Planning in Unmapped Terrain",
+      "Hardware Reliability and Drop Testing"
+    ]
   }
 ];
