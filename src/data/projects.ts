@@ -1958,5 +1958,26 @@ export const projects: Project[] = [
       "Privacy and Security Hardening",
       "Clinical Accuracy Validation"
     ]
+  },
+  {
+    id: "128",
+    title: "Digital Twin for Smart Manufacturing and Real-Time IoT Telemetry",
+    category: "Internet of Things",
+    baseComplexity: "Expert",
+    description: "A highly complex digital twin platform that mirrors an entire factory floor in 3D, synchronized with sub-second latency IoT data for simulation and predictive maintenance.",
+    techStack: [
+      "Unity",
+      "C#",
+      "Node.js",
+      "MQTT",
+      "TimescaleDB"
+    ],
+    baseMilestones: [
+      "3D Factory Floor Modeling",
+      "IoT Telemetry Ingestion Engine",
+      "Digital Twin Synchronization Logic",
+      "Simulation and What-If Analysis Tools",
+      "Latency and Synchronization Stress Testing"
+    ]
   }
 ];
