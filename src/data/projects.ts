@@ -2819,5 +2819,26 @@ export const projects: Project[] = [
       "Dynamic Peer Discovery and Fallback",
       "Large-Scale Network Churn Simulation"
     ]
+  },
+  {
+    id: "169",
+    title: "Server-Driven UI Framework for Dynamic Financial Dashboards",
+    category: "Web Development",
+    baseComplexity: "High",
+    description: "A highly complex architecture where the backend API dictates the entire component structure and layout of the frontend web application, allowing instantaneous product changes without client updates.",
+    techStack: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "GraphQL",
+      "PostgreSQL"
+    ],
+    baseMilestones: [
+      "Server-Driven UI JSON Schema Design",
+      "React Component Registry and Dynamic Rendering",
+      "Backend Layout Engine Logic",
+      "Real-Time Schema Polling / WebSockets",
+      "UI Rendering Benchmarks and Error Boundaries"
+    ]
   }
 ];
