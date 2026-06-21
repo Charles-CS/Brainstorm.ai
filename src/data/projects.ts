@@ -2882,5 +2882,26 @@ export const projects: Project[] = [
       "Dynamic Route Overlay UI",
       "Battery and Thermal Optimization Profiling"
     ]
+  },
+  {
+    id: "172",
+    title: "Cross-Platform Encrypted Mesh Messaging App for Activists",
+    category: "Mobile App",
+    baseComplexity: "Expert",
+    description: "A secure messaging application capable of forming ad-hoc Bluetooth and Wi-Fi Direct mesh networks to bypass internet shutdowns, featuring end-to-end encryption.",
+    techStack: [
+      "React Native",
+      "Rust",
+      "C++",
+      "Bridgefy SDK",
+      "Signal Protocol"
+    ],
+    baseMilestones: [
+      "Peer-to-Peer Mesh Network Discovery",
+      "Signal Protocol Cryptographic Integration",
+      "Multi-Hop Message Routing Logic",
+      "Local Encrypted Data Vault",
+      "Large-Scale Network Churn Simulation"
+    ]
   }
 ];
