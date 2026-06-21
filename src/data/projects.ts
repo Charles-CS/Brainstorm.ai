@@ -2609,5 +2609,26 @@ export const projects: Project[] = [
       "End-to-End Payload Encryption",
       "Offline Capability Field Testing"
     ]
+  },
+  {
+    id: "159",
+    title: "GraphQL-Federated Content Management System for Global Publishers",
+    category: "Web Development",
+    baseComplexity: "Expert",
+    description: "A deeply complex CMS backend combining multiple discrete GraphQL APIs (users, articles, media) into a single federated graph for a unified, high-performance editorial portal.",
+    techStack: [
+      "Apollo Federation",
+      "Node.js",
+      "GraphQL",
+      "PostgreSQL",
+      "React"
+    ],
+    baseMilestones: [
+      "Subgraph API Architecture Design",
+      "Apollo Gateway Federation Setup",
+      "Role-Based Access Control at Graph Level",
+      "Editorial Workflow UI Implementation",
+      "Query Caching and Performance Auditing"
+    ]
   }
 ];
