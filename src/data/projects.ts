@@ -2861,5 +2861,26 @@ export const projects: Project[] = [
       "AST-Based Code Generation and Export",
       "User Workspace and Component Saving"
     ]
+  },
+  {
+    id: "171",
+    title: "On-Device Deep Learning Augmented Reality Navigation App",
+    category: "Mobile App",
+    baseComplexity: "Expert",
+    description: "An advanced mobile app that uses on-device computer vision and ARKit/ARCore to overlay precise navigational paths and point-of-interest data onto the live camera feed.",
+    techStack: [
+      "React Native",
+      "Swift",
+      "Kotlin",
+      "ARKit/ARCore",
+      "TensorFlow Lite"
+    ],
+    baseMilestones: [
+      "Native AR Module Bridging",
+      "On-Device Object Detection Pipeline",
+      "Real-Time Spatial Coordinate Mapping",
+      "Dynamic Route Overlay UI",
+      "Battery and Thermal Optimization Profiling"
+    ]
   }
 ];
