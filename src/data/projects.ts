@@ -2756,5 +2756,26 @@ export const projects: Project[] = [
       "Draggable/Resizable Dashboard Layout",
       "Memory Leak and Rendering Optimization"
     ]
+  },
+  {
+    id: "166",
+    title: "Web-Based Multiplayer Physics Sandbox Engine",
+    category: "Web Development",
+    baseComplexity: "Expert",
+    description: "An entirely browser-based game engine utilizing WebGL and WebAssembly to sync complex rigid-body physics simulations across multiple clients simultaneously via authoritative servers.",
+    techStack: [
+      "TypeScript",
+      "WebGL",
+      "Rapier Physics",
+      "Node.js",
+      "WebRTC"
+    ],
+    baseMilestones: [
+      "Wasm Physics Engine Integration",
+      "Authoritative Server State Architecture",
+      "Client-Side Prediction and Interpolation",
+      "WebRTC Peer-to-Peer Data Channels",
+      "Multiplayer Synchronization Testing"
+    ]
   }
 ];
