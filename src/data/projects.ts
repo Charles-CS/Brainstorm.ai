@@ -2483,5 +2483,26 @@ export const projects: Project[] = [
       "Multi-Tenant Workspace Segregation",
       "Latency and High-Concurrency Load Testing"
     ]
+  },
+  {
+    id: "153",
+    title: "AI-Powered Headless E-Commerce Storefront with Personalization",
+    category: "Web Development",
+    baseComplexity: "High",
+    description: "A blazing-fast headless e-commerce frontend that tracks user behavior to dynamically render personalized product recommendations and localized pricing using edge computing.",
+    techStack: [
+      "Next.js",
+      "GraphQL",
+      "Vercel Edge Functions",
+      "Shopify Storefront API",
+      "Redis"
+    ],
+    baseMilestones: [
+      "Headless CMS and Storefront GraphQL Integration",
+      "Edge-Based Geo-Targeting and Localization",
+      "User Behavior Tracking Pipeline",
+      "AI Recommendation Engine Display",
+      "Core Web Vitals Performance Tuning"
+    ]
   }
 ];
