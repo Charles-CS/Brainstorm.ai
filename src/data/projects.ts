@@ -2840,5 +2840,26 @@ export const projects: Project[] = [
       "Real-Time Schema Polling / WebSockets",
       "UI Rendering Benchmarks and Error Boundaries"
     ]
+  },
+  {
+    id: "170",
+    title: "No-Code Website Builder with Drag-and-Drop Canvas and Export",
+    category: "Web Development",
+    baseComplexity: "Expert",
+    description: "A full-featured visual website builder allowing users to drag components onto a canvas, edit CSS properties visually, and export the final result as clean, semantic HTML/React code.",
+    techStack: [
+      "React",
+      "Redux Toolkit",
+      "Craft.js",
+      "Node.js",
+      "AWS Lambda"
+    ],
+    baseMilestones: [
+      "Drag-and-Drop Canvas Engine Integration",
+      "Visual CSS Property Editor UI",
+      "Complex State Management for Undo/Redo",
+      "AST-Based Code Generation and Export",
+      "User Workspace and Component Saving"
+    ]
   }
 ];
