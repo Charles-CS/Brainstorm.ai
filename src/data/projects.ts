@@ -2567,5 +2567,26 @@ export const projects: Project[] = [
       "Local Video Rendering Pipeline",
       "Cross-Browser Wasm Performance Benchmarking"
     ]
+  },
+  {
+    id: "157",
+    title: "Real-Time Edge-Rendered Streaming Analytics Dashboard",
+    category: "Web Development",
+    baseComplexity: "High",
+    description: "A low-latency analytics dashboard built for high-frequency data streams (e.g., stock tickers or live traffic), leveraging server-sent events (SSE) and edge rendering.",
+    techStack: [
+      "SvelteKit",
+      "Cloudflare Workers",
+      "D3.js",
+      "Redis",
+      "TypeScript"
+    ],
+    baseMilestones: [
+      "Server-Sent Events (SSE) Stream Implementation",
+      "Edge Computing Rendering Pipeline",
+      "D3.js Real-Time Data Visualization",
+      "Time-Series Data Aggregation Engine",
+      "Dashboard UI and Responsiveness Tuning"
+    ]
   }
 ];
