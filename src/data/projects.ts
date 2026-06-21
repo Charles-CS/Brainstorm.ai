@@ -3029,5 +3029,26 @@ export const projects: Project[] = [
       "Decentralized Escrow and Payment Engine",
       "Network Latency and Gas Optimization"
     ]
+  },
+  {
+    id: "179",
+    title: "Mobile Computer Vision App for Defect Detection in Manufacturing",
+    category: "Mobile App",
+    baseComplexity: "High",
+    description: "An industrial app enabling factory workers to scan parts with their smartphone cameras, using edge AI to instantly highlight manufacturing defects and log them to an ERP.",
+    techStack: [
+      "React Native",
+      "OpenCV",
+      "TensorFlow Lite",
+      "Node.js",
+      "MongoDB"
+    ],
+    baseMilestones: [
+      "Custom Camera Viewfinder and Frame Extraction",
+      "Defect Detection Model Inference",
+      "Bounding Box Annotation UI",
+      "ERP System API Integration",
+      "Low-Light and High-Speed Scanning Optimization"
+    ]
   }
 ];
