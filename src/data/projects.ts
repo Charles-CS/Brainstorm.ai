@@ -2735,5 +2735,26 @@ export const projects: Project[] = [
       "Mobile-First Responsive Layouts",
       "Cross-Browser Rendering Optimization"
     ]
+  },
+  {
+    id: "165",
+    title: "High-Frequency Cryptocurrency Trading Dashboard with WebSocket Streams",
+    category: "Web Development",
+    baseComplexity: "High",
+    description: "A professional-grade crypto trading terminal featuring modular layouts, order book depth charts, and live trade histories, all powered by multiplexed WebSocket streams.",
+    techStack: [
+      "React",
+      "TypeScript",
+      "RxJS",
+      "Lightweight Charts",
+      "Node.js"
+    ],
+    baseMilestones: [
+      "WebSocket Stream Multiplexing",
+      "RxJS Event State Management",
+      "Order Book UI and Depth Chart Rendering",
+      "Draggable/Resizable Dashboard Layout",
+      "Memory Leak and Rendering Optimization"
+    ]
   }
 ];
