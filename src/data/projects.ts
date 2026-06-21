@@ -2693,5 +2693,26 @@ export const projects: Project[] = [
       "Search Engine Optimization (SEO) Auditing",
       "High-Traffic Load Testing"
     ]
+  },
+  {
+    id: "163",
+    title: "Cloud-Native IDE with Containerized Dev Environments",
+    category: "Web Development",
+    baseComplexity: "Expert",
+    description: "A browser-based Integrated Development Environment that spawns isolated, containerized Linux environments per user, featuring a built-in terminal and real-time file syncing.",
+    techStack: [
+      "React",
+      "Xterm.js",
+      "Docker",
+      "Kubernetes",
+      "WebSockets"
+    ],
+    baseMilestones: [
+      "Kubernetes Pod Spawning Engine",
+      "Browser Terminal (Xterm.js) Integration",
+      "Real-Time File System Synchronization",
+      "Monaco Editor Setup and Syntax Highlighting",
+      "Container Resource Quota Management"
+    ]
   }
 ];
