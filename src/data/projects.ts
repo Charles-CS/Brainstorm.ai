@@ -2504,5 +2504,26 @@ export const projects: Project[] = [
       "AI Recommendation Engine Display",
       "Core Web Vitals Performance Tuning"
     ]
+  },
+  {
+    id: "154",
+    title: "Browser-Based 3D Architectural Visualization Engine",
+    category: "Web Development",
+    baseComplexity: "Expert",
+    description: "A WebGL-powered 3D engine enabling architects to upload CAD models, apply real-time lighting and textures, and walk clients through buildings entirely within the web browser.",
+    techStack: [
+      "React",
+      "Three.js",
+      "WebGL",
+      "Node.js",
+      "AWS S3"
+    ],
+    baseMilestones: [
+      "3D Model Parsing and Compression Pipeline",
+      "Real-Time Raycasting and Lighting Engine",
+      "First-Person Camera Navigation Logic",
+      "Texture and Material Mapping UI",
+      "GPU Memory Leak Profiling and Optimization"
+    ]
   }
 ];
