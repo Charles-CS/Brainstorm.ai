@@ -2966,5 +2966,26 @@ export const projects: Project[] = [
       "Cross-Platform SDK Wrapper (React Native/Flutter)",
       "Penetration Testing and Reverse Engineering Audit"
     ]
+  },
+  {
+    id: "176",
+    title: "Multi-Camera Streaming and Broadcasting Studio for Mobile",
+    category: "Mobile App",
+    baseComplexity: "High",
+    description: "A mobile broadcasting application allowing users to connect multiple external cameras via Wi-Fi/USB-C, acting as a live switcher studio with graphics overlays and RTMP streaming.",
+    techStack: [
+      "Swift",
+      "Kotlin",
+      "FFmpeg",
+      "RTMP",
+      "WebRTC"
+    ],
+    baseMilestones: [
+      "External Camera Feed Ingestion",
+      "Hardware-Accelerated Video Encoding",
+      "Real-Time Video Switching UI",
+      "Dynamic Graphic Overlay Rendering",
+      "RTMP Stream Publishing Pipeline"
+    ]
   }
 ];
