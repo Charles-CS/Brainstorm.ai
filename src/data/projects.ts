@@ -3050,5 +3050,26 @@ export const projects: Project[] = [
       "ERP System API Integration",
       "Low-Light and High-Speed Scanning Optimization"
     ]
+  },
+  {
+    id: "180",
+    title: "Web3 Mobile Wallet with Integrated Zero-Knowledge Rollups",
+    category: "Mobile App",
+    baseComplexity: "Expert",
+    description: "A highly secure, self-custodial mobile cryptocurrency wallet supporting Layer 2 scaling (zk-Rollups) to offer instantaneous, near-zero fee transactions directly from the device.",
+    techStack: [
+      "React Native",
+      "Rust",
+      "Ethers.js",
+      "zkSync/StarkNet SDK",
+      "Secure Enclave"
+    ],
+    baseMilestones: [
+      "Mnemonic Generation and Secure Storage",
+      "Layer 2 zk-Rollup Network Integration",
+      "Transaction Signing and Gas Estimation",
+      "Fiat On-Ramp API Integration",
+      "Smart Contract Security Audit"
+    ]
   }
 ];
