@@ -2441,5 +2441,26 @@ export const projects: Project[] = [
       "Life Support Telemetry Dashboard",
       "Zero-Gravity Dynamics Simulation"
     ]
+  },
+  {
+    id: "151",
+    title: "Serverless Web3 Decentralized Exchange Interface",
+    category: "Web Development",
+    baseComplexity: "Expert",
+    description: "A highly resilient React-based decentralized exchange frontend utilizing serverless functions to index blockchain events, aggregate liquidity pools, and execute smart contracts securely.",
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "Ethers.js",
+      "AWS Lambda",
+      "Tailwind CSS"
+    ],
+    baseMilestones: [
+      "Web3 Wallet Connection Integration",
+      "Real-Time Liquidity Pool Indexing",
+      "Smart Contract Execution Logic",
+      "Gas Estimation and Slippage Engine",
+      "Security Auditing and Penetration Testing"
+    ]
   }
 ];
