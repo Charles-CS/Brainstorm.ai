@@ -2462,5 +2462,26 @@ export const projects: Project[] = [
       "Gas Estimation and Slippage Engine",
       "Security Auditing and Penetration Testing"
     ]
+  },
+  {
+    id: "152",
+    title: "Real-Time Multi-Tenant Collaborative Whiteboard Platform",
+    category: "Web Development",
+    baseComplexity: "High",
+    description: "An interactive, browser-based collaborative canvas supporting hundreds of simultaneous users per room, leveraging WebSockets and Conflict-Free Replicated Data Types (CRDTs).",
+    techStack: [
+      "Vue 3",
+      "Node.js",
+      "Socket.io",
+      "Yjs",
+      "Canvas API"
+    ],
+    baseMilestones: [
+      "CRDT Algorithm Integration for State Sync",
+      "WebSocket Sub-Pub Architecture Setup",
+      "Canvas Rendering Optimization",
+      "Multi-Tenant Workspace Segregation",
+      "Latency and High-Concurrency Load Testing"
+    ]
   }
 ];
