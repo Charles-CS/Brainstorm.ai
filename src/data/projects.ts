@@ -2924,5 +2924,26 @@ export const projects: Project[] = [
       "Text-to-Speech Audio Generation",
       "Latency Reduction and Frame Dropping Analysis"
     ]
+  },
+  {
+    id: "174",
+    title: "Offline-First Mobile ERP for Remote Agriculture Supply Chains",
+    category: "Mobile App",
+    baseComplexity: "High",
+    description: "A robust enterprise app for rural farmers and supply chain managers that operates fully offline, capturing inventory and harvest data with complex eventual consistency sync.",
+    techStack: [
+      "React Native",
+      "WatermelonDB",
+      "GraphQL",
+      "Node.js",
+      "PostgreSQL"
+    ],
+    baseMilestones: [
+      "Local Database Schema and Synchronization Logic",
+      "Conflict-Free Replicated Data Type (CRDT) Sync",
+      "Offline Image and Barcode Capture",
+      "Background Sync Queue Management",
+      "Edge-Case Connectivity Testing"
+    ]
   }
 ];
