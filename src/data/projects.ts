@@ -2714,5 +2714,26 @@ export const projects: Project[] = [
       "Monaco Editor Setup and Syntax Highlighting",
       "Container Resource Quota Management"
     ]
+  },
+  {
+    id: "164",
+    title: "Interactive Web-Based Data Journalism Storytelling Engine",
+    category: "Web Development",
+    baseComplexity: "High",
+    description: "A highly dynamic scrolling narrative web framework for journalists, connecting text blocks to interactive data visualizations and maps that animate based on scroll position.",
+    techStack: [
+      "React",
+      "GSAP",
+      "Mapbox GL JS",
+      "D3.js",
+      "Tailwind CSS"
+    ],
+    baseMilestones: [
+      "Scroll-Triggered Animation Engine",
+      "Mapbox Interactive Journey Plotting",
+      "Dynamic D3.js Chart Morphing",
+      "Mobile-First Responsive Layouts",
+      "Cross-Browser Rendering Optimization"
+    ]
   }
 ];
