@@ -2798,5 +2798,26 @@ export const projects: Project[] = [
       "Inline Code Diff Annotation UI",
       "Automated Security Vulnerability Scanning"
     ]
+  },
+  {
+    id: "168",
+    title: "Peer-to-Peer WebRTC Video Broadcasting Network",
+    category: "Web Development",
+    baseComplexity: "Expert",
+    description: "A decentralized video streaming platform where viewers automatically form WebRTC mesh networks to relay video segments to each other, drastically reducing central server bandwidth costs.",
+    techStack: [
+      "Vanilla JavaScript",
+      "WebRTC",
+      "Socket.io",
+      "Node.js",
+      "HLS.js"
+    ],
+    baseMilestones: [
+      "WebRTC Mesh Topology Design",
+      "Signaling Server Implementation",
+      "HLS Stream Interception and Peer Relaying",
+      "Dynamic Peer Discovery and Fallback",
+      "Large-Scale Network Churn Simulation"
+    ]
   }
 ];
