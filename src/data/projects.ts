@@ -2588,5 +2588,26 @@ export const projects: Project[] = [
       "Time-Series Data Aggregation Engine",
       "Dashboard UI and Responsiveness Tuning"
     ]
+  },
+  {
+    id: "158",
+    title: "Offline-First Progressive Web App for Remote Medical Triage",
+    category: "Web Development",
+    baseComplexity: "High",
+    description: "A life-saving PWA designed for remote clinics with spotty internet, enabling doctors to input patient vitals offline and automatically sync encrypted records when connectivity returns.",
+    techStack: [
+      "React",
+      "IndexedDB",
+      "Service Workers",
+      "Workbox",
+      "Node.js"
+    ],
+    baseMilestones: [
+      "Service Worker and Cache Strategy Implementation",
+      "IndexedDB Local Storage Integration",
+      "Background Sync and Conflict Resolution",
+      "End-to-End Payload Encryption",
+      "Offline Capability Field Testing"
+    ]
   }
 ];
