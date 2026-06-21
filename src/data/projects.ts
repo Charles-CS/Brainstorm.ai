@@ -2546,5 +2546,26 @@ export const projects: Project[] = [
       "Independent CI/CD Deployment Pipelines",
       "End-to-End Integration Testing Strategy"
     ]
+  },
+  {
+    id: "156",
+    title: "Full-Stack WebAssembly Video Transcoding and Editing Suite",
+    category: "Web Development",
+    baseComplexity: "Expert",
+    description: "A powerful in-browser video editor that uses WebAssembly to run FFmpeg locally, allowing users to cut, trim, and transcode large video files without server uploads.",
+    techStack: [
+      "WebAssembly (Wasm)",
+      "FFmpeg",
+      "React",
+      "Rust",
+      "Web Workers"
+    ],
+    baseMilestones: [
+      "Wasm Module Compilation and Integration",
+      "Web Worker Multithreading Setup",
+      "Timeline UI and Scrubbing Engine",
+      "Local Video Rendering Pipeline",
+      "Cross-Browser Wasm Performance Benchmarking"
+    ]
   }
 ];
