@@ -2987,5 +2987,26 @@ export const projects: Project[] = [
       "Dynamic Graphic Overlay Rendering",
       "RTMP Stream Publishing Pipeline"
     ]
+  },
+  {
+    id: "177",
+    title: "Machine Learning Powered Mobile ECG/EKG Analysis Tool",
+    category: "Mobile App",
+    baseComplexity: "High",
+    description: "A medical companion app that pairs with portable Bluetooth ECG sensors, processing waveforms on-device to detect arrhythmias and atrial fibrillation with clinical-grade accuracy.",
+    techStack: [
+      "Flutter",
+      "Python",
+      "CoreBluetooth/RxAndroidBle",
+      "TensorFlow Lite",
+      "SQLite"
+    ],
+    baseMilestones: [
+      "Bluetooth LE Medical Device Pairing",
+      "High-Frequency Waveform Rendering UI",
+      "Arrhythmia Detection Edge Model",
+      "HL7/FHIR Health Record Export",
+      "Clinical Accuracy and False-Positive Tuning"
+    ]
   }
 ];
