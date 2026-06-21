@@ -2651,5 +2651,26 @@ export const projects: Project[] = [
       "Secure Email Protocol Binding (IMAP/SMTP)",
       "Cryptographic Security Auditing"
     ]
+  },
+  {
+    id: "161",
+    title: "Distributed Web Scraper and Search Indexer Interface",
+    category: "Web Development",
+    baseComplexity: "High",
+    description: "A full-stack application for managing a distributed fleet of headless browsers that scrape target domains, parse text, and feed it into a searchable UI with advanced query syntax.",
+    techStack: [
+      "Next.js",
+      "Puppeteer",
+      "Elasticsearch",
+      "RabbitMQ",
+      "TypeScript"
+    ],
+    baseMilestones: [
+      "Headless Scraper Worker Integration",
+      "RabbitMQ Job Queue Management",
+      "Elasticsearch Indexing Pipeline",
+      "Advanced Search Syntax UI",
+      "Anti-Bot Mitigation Strategies"
+    ]
   }
 ];
