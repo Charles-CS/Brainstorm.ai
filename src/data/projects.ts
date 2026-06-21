@@ -2672,5 +2672,26 @@ export const projects: Project[] = [
       "Advanced Search Syntax UI",
       "Anti-Bot Mitigation Strategies"
     ]
+  },
+  {
+    id: "162",
+    title: "Server-Side Rendered SEO-Optimized Dynamic Travel Booking Platform",
+    category: "Web Development",
+    baseComplexity: "High",
+    description: "A complex travel booking web app utilizing robust Server-Side Rendering (SSR) to ensure maximum SEO indexing for millions of dynamic hotel and flight pages.",
+    techStack: [
+      "Nuxt.js",
+      "Vue 3",
+      "Node.js",
+      "Redis Cache",
+      "PostgreSQL"
+    ],
+    baseMilestones: [
+      "Dynamic Routing and SSR Implementation",
+      "Multi-Tier Caching Strategy",
+      "Aggregated Third-Party Booking API Integration",
+      "Search Engine Optimization (SEO) Auditing",
+      "High-Traffic Load Testing"
+    ]
   }
 ];
