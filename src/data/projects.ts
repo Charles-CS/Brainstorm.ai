@@ -3008,5 +3008,26 @@ export const projects: Project[] = [
       "HL7/FHIR Health Record Export",
       "Clinical Accuracy and False-Positive Tuning"
     ]
+  },
+  {
+    id: "178",
+    title: "Decentralized Peer-to-Peer Ride-Sharing App using IPFS",
+    category: "Mobile App",
+    baseComplexity: "Expert",
+    description: "A completely decentralized ride-sharing app where drivers and riders connect directly via smart contracts, storing trip data and reputation scores on IPFS.",
+    techStack: [
+      "React Native",
+      "Ethers.js",
+      "Solidity",
+      "IPFS",
+      "Mapbox"
+    ],
+    baseMilestones: [
+      "Smart Contract Trip Matchmaking Logic",
+      "IPFS Node Integration for Mobile",
+      "Real-Time Geo-Location Broadcasting",
+      "Decentralized Escrow and Payment Engine",
+      "Network Latency and Gas Optimization"
+    ]
   }
 ];
