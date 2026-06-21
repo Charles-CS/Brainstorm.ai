@@ -2630,5 +2630,26 @@ export const projects: Project[] = [
       "Editorial Workflow UI Implementation",
       "Query Caching and Performance Auditing"
     ]
+  },
+  {
+    id: "160",
+    title: "End-to-End Encrypted Secure Webmail Client with Zero-Knowledge Search",
+    category: "Web Development",
+    baseComplexity: "Expert",
+    description: "A highly secure, browser-based email client utilizing client-side PGP encryption to ensure the server never reads messages, complete with a zero-knowledge local search index.",
+    techStack: [
+      "Angular",
+      "OpenPGP.js",
+      "IndexedDB",
+      "Node.js",
+      "Web Crypto API"
+    ],
+    baseMilestones: [
+      "Client-Side Key Generation and Management",
+      "OpenPGP Encryption/Decryption Pipeline",
+      "Zero-Knowledge Local Search Indexing",
+      "Secure Email Protocol Binding (IMAP/SMTP)",
+      "Cryptographic Security Auditing"
+    ]
   }
 ];
