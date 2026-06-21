@@ -2777,5 +2777,26 @@ export const projects: Project[] = [
       "WebRTC Peer-to-Peer Data Channels",
       "Multiplayer Synchronization Testing"
     ]
+  },
+  {
+    id: "167",
+    title: "AI Code Review Assistant Web Portal with AST Parsing",
+    category: "Web Development",
+    baseComplexity: "High",
+    description: "A web portal that connects to GitHub repositories, parses Abstract Syntax Trees (AST) of commits, and utilizes LLMs to generate context-aware code reviews and security warnings.",
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "Babel AST",
+      "OpenAI API",
+      "PostgreSQL"
+    ],
+    baseMilestones: [
+      "GitHub OAuth and Webhook Integration",
+      "AST (Abstract Syntax Tree) Parsing Logic",
+      "LLM Prompt Engineering Engine",
+      "Inline Code Diff Annotation UI",
+      "Automated Security Vulnerability Scanning"
+    ]
   }
 ];
