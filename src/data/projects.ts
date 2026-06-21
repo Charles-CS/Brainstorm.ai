@@ -2525,5 +2525,26 @@ export const projects: Project[] = [
       "Texture and Material Mapping UI",
       "GPU Memory Leak Profiling and Optimization"
     ]
+  },
+  {
+    id: "155",
+    title: "Enterprise-Grade Micro-Frontend Architecture for SaaS",
+    category: "Web Development",
+    baseComplexity: "Expert",
+    description: "A large-scale web application split into independently deployable micro-frontends via Module Federation, allowing isolated team development without monolithic coupling.",
+    techStack: [
+      "React",
+      "Webpack 5 Module Federation",
+      "TypeScript",
+      "Nx Monorepo",
+      "Docker"
+    ],
+    baseMilestones: [
+      "Monorepo and Module Federation Setup",
+      "Shared UI Component Library Architecture",
+      "Cross-Micro-Frontend State Management",
+      "Independent CI/CD Deployment Pipelines",
+      "End-to-End Integration Testing Strategy"
+    ]
   }
 ];
