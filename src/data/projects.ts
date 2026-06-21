@@ -2945,5 +2945,26 @@ export const projects: Project[] = [
       "Background Sync Queue Management",
       "Edge-Case Connectivity Testing"
     ]
+  },
+  {
+    id: "175",
+    title: "Native Biometric Authentication and Credential Vault SDK",
+    category: "Mobile App",
+    baseComplexity: "Expert",
+    description: "A secure mobile wallet SDK that leverages secure enclaves (iOS Keychain / Android Keystore) and biometric APIs to store enterprise credentials with anti-tamper protections.",
+    techStack: [
+      "Swift",
+      "Kotlin",
+      "C++",
+      "JNI/JNA",
+      "Objective-C"
+    ],
+    baseMilestones: [
+      "Hardware-Backed Keystore Integration",
+      "Biometric Prompts and Fallback Logic",
+      "Anti-Debugging and Jailbreak Detection",
+      "Cross-Platform SDK Wrapper (React Native/Flutter)",
+      "Penetration Testing and Reverse Engineering Audit"
+    ]
   }
 ];
