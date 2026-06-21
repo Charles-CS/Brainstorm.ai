@@ -2903,5 +2903,26 @@ export const projects: Project[] = [
       "Local Encrypted Data Vault",
       "Large-Scale Network Churn Simulation"
     ]
+  },
+  {
+    id: "173",
+    title: "AI-Powered Real-Time Sign Language Translation App",
+    category: "Mobile App",
+    baseComplexity: "High",
+    description: "A mobile application utilizing the front-facing camera to process hand gestures via a neural network, translating sign language into spoken audio and text in real-time.",
+    techStack: [
+      "Flutter",
+      "Dart",
+      "MediaPipe",
+      "TensorFlow Lite",
+      "Text-to-Speech API"
+    ],
+    baseMilestones: [
+      "MediaPipe Hand Tracking Integration",
+      "Gesture Recognition Model Training",
+      "Continuous Stream Processing Pipeline",
+      "Text-to-Speech Audio Generation",
+      "Latency Reduction and Frame Dropping Analysis"
+    ]
   }
 ];
