@@ -3344,5 +3344,26 @@ export const projects: Project[] = [
       "TCR Frontend Dashboard",
       "Game Theory and Economic Exploit Analysis"
     ]
+  },
+  {
+    id: "194",
+    title: "Decentralized Web3 Gaming Metaverse with Play-to-Earn Economics",
+    category: "Blockchain",
+    baseComplexity: "High",
+    description: "A 3D browser-based metaverse where all in-game assets (land, avatars, items) are represented as NFTs, featuring a sustainable dual-token Play-to-Earn (P2E) economic model.",
+    techStack: [
+      "Unity",
+      "C#",
+      "Solidity",
+      "Web3.js",
+      "Polygon"
+    ],
+    baseMilestones: [
+      "ERC-1155 and ERC-721 Asset Contracts",
+      "Dual-Token Economic Model Design",
+      "Unity WebGL to Web3 Bridge",
+      "In-Game Marketplace Implementation",
+      "Multiplayer Synchronization Testing"
+    ]
   }
 ];
