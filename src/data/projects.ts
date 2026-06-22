@@ -3155,5 +3155,26 @@ export const projects: Project[] = [
       "Liquidation Engine for Under-Collateralized Positions",
       "Economic Simulation and Stress Testing"
     ]
+  },
+  {
+    id: "185",
+    title: "Decentralized Physical Infrastructure Network (DePIN) for Cloud Storage",
+    category: "Blockchain",
+    baseComplexity: "High",
+    description: "A decentralized storage network incentivizing node operators with tokens to provide hard drive space, featuring file sharding, end-to-end encryption, and proof-of-retrievability.",
+    techStack: [
+      "Rust",
+      "Solidity",
+      "IPFS",
+      "Next.js",
+      "WebRTC"
+    ],
+    baseMilestones: [
+      "File Sharding and Encryption Pipeline",
+      "Proof-of-Retrievability Consensus Mechanism",
+      "Token Reward Distribution Contracts",
+      "Client UI for File Upload and Retrieval",
+      "P2P Node Discovery and Networking"
+    ]
   }
 ];
