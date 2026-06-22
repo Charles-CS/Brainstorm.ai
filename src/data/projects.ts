@@ -3302,5 +3302,26 @@ export const projects: Project[] = [
       "On-Chain Data Consumer Contracts",
       "Network Resilience and Attack Simulation"
     ]
+  },
+  {
+    id: "192",
+    title: "Smart Contract Auditing AI Tool utilizing Symbolic Execution",
+    category: "Blockchain",
+    baseComplexity: "Expert",
+    description: "A comprehensive developer tool that uses symbolic execution and machine learning to automatically analyze Solidity smart contracts for common vulnerabilities like reentrancy and integer overflow.",
+    techStack: [
+      "Python",
+      "Mythril",
+      "Slither",
+      "React",
+      "Machine Learning"
+    ],
+    baseMilestones: [
+      "Symbolic Execution Engine Integration",
+      "Vulnerability Signature Database",
+      "AST (Abstract Syntax Tree) Analysis",
+      "Web Dashboard for Audit Reports",
+      "False Positive Tuning and Model Training"
+    ]
   }
 ];
