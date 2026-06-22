@@ -3218,5 +3218,26 @@ export const projects: Project[] = [
       "Flashbots/MEV-Share Protection Integration",
       "Live Mainnet Deployment and Gas Optimization"
     ]
+  },
+  {
+    id: "188",
+    title: "Privacy-Preserving Decentralized Identity (DID) Verification SDK",
+    category: "Blockchain",
+    baseComplexity: "High",
+    description: "An SDK enabling applications to verify user identity attributes (e.g., age, residency) without exposing personal data, utilizing W3C Verifiable Credentials and zero-knowledge proofs.",
+    techStack: [
+      "TypeScript",
+      "Solidity",
+      "Circom",
+      "React Native",
+      "IPFS"
+    ],
+    baseMilestones: [
+      "W3C Verifiable Credential Issuance Flow",
+      "Zero-Knowledge Proof Generation for Attributes",
+      "On-Chain DID Registry Contract",
+      "Client SDK for Verification Integration",
+      "Mobile App Wallet Demonstration"
+    ]
   }
 ];
