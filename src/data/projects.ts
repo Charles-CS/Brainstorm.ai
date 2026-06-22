@@ -3239,5 +3239,26 @@ export const projects: Project[] = [
       "Client SDK for Verification Integration",
       "Mobile App Wallet Demonstration"
     ]
+  },
+  {
+    id: "189",
+    title: "Non-Fungible Token (NFT) Fractionalization and Lending Protocol",
+    category: "Blockchain",
+    baseComplexity: "High",
+    description: "A DeFi protocol that locks high-value NFTs into a vault, issuing fractional ERC-20 tokens representing ownership, and enables permissionless borrowing against the NFT collateral.",
+    techStack: [
+      "Solidity",
+      "Hardhat",
+      "Next.js",
+      "The Graph",
+      "Ethers.js"
+    ],
+    baseMilestones: [
+      "NFT Vault and Fractional Token Minting",
+      "Lending Pool and Interest Rate Math",
+      "Liquidation Trigger and Auction Mechanism",
+      "Subgraph Indexing for Vault Metrics",
+      "User Interface for Borrowing and Lending"
+    ]
   }
 ];
