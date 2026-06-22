@@ -3407,5 +3407,26 @@ export const projects: Project[] = [
       "Regulatory Compliance and Privacy Controls",
       "Marketplace Frontend Dashboard"
     ]
+  },
+  {
+    id: "197",
+    title: "Multi-Signature Wallet with Social Recovery and Time-Locks",
+    category: "Blockchain",
+    baseComplexity: "High",
+    description: "A smart contract wallet offering advanced security features including N-of-M multi-signature approvals, time-locked transactions, and a social recovery mechanism via trusted guardians.",
+    techStack: [
+      "Solidity",
+      "Next.js",
+      "Ethers.js",
+      "Hardhat",
+      "TypeScript"
+    ],
+    baseMilestones: [
+      "Multi-Signature Authorization Logic",
+      "Time-Lock Execution Mechanism",
+      "Social Recovery via Guardian Addresses",
+      "Wallet UI and Transaction Builder",
+      "Extensive Smart Contract Testing"
+    ]
   }
 ];
