@@ -3449,5 +3449,26 @@ export const projects: Project[] = [
       "Decentralized Vote Tallying Protocol",
       "End-to-End Cryptographic Security Audit"
     ]
+  },
+  {
+    id: "199",
+    title: "Decentralized Insurance Protocol with Automated Payouts via Oracles",
+    category: "Blockchain",
+    baseComplexity: "High",
+    description: "A parametric insurance platform specifically for agricultural crop yields, automatically triggering instant payouts to farmers via smart contracts based on weather data from decentralized oracles.",
+    techStack: [
+      "Solidity",
+      "Chainlink",
+      "React",
+      "Node.js",
+      "The Graph"
+    ],
+    baseMilestones: [
+      "Policy Issuance and Premium Pool Contracts",
+      "Chainlink Weather Oracle Integration",
+      "Parametric Trigger Logic",
+      "Risk Pool Capital Management",
+      "Farmer Dashboard for Policy Management"
+    ]
   }
 ];
