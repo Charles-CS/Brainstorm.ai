@@ -3113,5 +3113,26 @@ export const projects: Project[] = [
       "Subgraph Indexing for UI Synchronization",
       "Front-End Governance Dashboard"
     ]
+  },
+  {
+    id: "183",
+    title: "Cross-Chain Asset Bridge with Threshold Signature Scheme (TSS)",
+    category: "Blockchain",
+    baseComplexity: "Expert",
+    description: "A decentralized bridge allowing seamless asset transfers between EVM-compatible chains, secured by a decentralized network of relayers using multi-party computation (MPC) and TSS.",
+    techStack: [
+      "Go",
+      "Solidity",
+      "Ethers.js",
+      "Docker",
+      "PostgreSQL"
+    ],
+    baseMilestones: [
+      "Relayer Node Architecture and P2P Networking",
+      "Threshold Signature Scheme (TSS) Integration",
+      "Lock-and-Mint / Burn-and-Release Contracts",
+      "Cross-Chain Transaction Verification Logic",
+      "Bridge Security and Exploit Mitigation Testing"
+    ]
   }
 ];
