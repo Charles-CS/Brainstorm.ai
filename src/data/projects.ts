@@ -3092,5 +3092,26 @@ export const projects: Project[] = [
       "zk-Proof Generation and Submission Engine",
       "Load Testing and Security Auditing"
     ]
+  },
+  {
+    id: "182",
+    title: "Decentralized Autonomous Organization (DAO) Governance Engine",
+    category: "Blockchain",
+    baseComplexity: "High",
+    description: "A highly customizable DAO framework enabling quadratic voting, delegation, and automated on-chain treasury execution based on decentralized community proposals.",
+    techStack: [
+      "Solidity",
+      "Next.js",
+      "GraphQL",
+      "Hardhat",
+      "The Graph"
+    ],
+    baseMilestones: [
+      "Governance Token and Voting Logic",
+      "Quadratic Voting Algorithm Integration",
+      "Proposal Lifecycle and Timelock Execution",
+      "Subgraph Indexing for UI Synchronization",
+      "Front-End Governance Dashboard"
+    ]
   }
 ];
