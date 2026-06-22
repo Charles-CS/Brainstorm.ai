@@ -3428,5 +3428,26 @@ export const projects: Project[] = [
       "Wallet UI and Transaction Builder",
       "Extensive Smart Contract Testing"
     ]
+  },
+  {
+    id: "198",
+    title: "Blockchain-Based Voting System with Homomorphic Encryption",
+    category: "Blockchain",
+    baseComplexity: "Expert",
+    description: "An unhackable digital voting system recording votes on-chain, utilizing homomorphic encryption to allow the blockchain to tally the final result without decrypting individual voter choices.",
+    techStack: [
+      "Python",
+      "Solidity",
+      "C++",
+      "React",
+      "Ethereum"
+    ],
+    baseMilestones: [
+      "Homomorphic Encryption Algorithm Integration",
+      "Zero-Knowledge Voter Eligibility Proofs",
+      "Encrypted Vote On-Chain Submission",
+      "Decentralized Vote Tallying Protocol",
+      "End-to-End Cryptographic Security Audit"
+    ]
   }
 ];
