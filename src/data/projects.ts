@@ -3323,5 +3323,26 @@ export const projects: Project[] = [
       "Web Dashboard for Audit Reports",
       "False Positive Tuning and Model Training"
     ]
+  },
+  {
+    id: "193",
+    title: "Token-Curated Registry (TCR) for Decentralized Content Moderation",
+    category: "Blockchain",
+    baseComplexity: "High",
+    description: "A platform utilizing crypto-economic incentives where token holders vote to curate lists of high-quality content or reliable services, discouraging spam through staking and challenges.",
+    techStack: [
+      "Solidity",
+      "Next.js",
+      "GraphQL",
+      "Hardhat",
+      "TypeScript"
+    ],
+    baseMilestones: [
+      "Registry, Staking, and Challenge Contracts",
+      "Voting and Commit-Reveal Scheme",
+      "Incentive Distribution Logic",
+      "TCR Frontend Dashboard",
+      "Game Theory and Economic Exploit Analysis"
+    ]
   }
 ];
