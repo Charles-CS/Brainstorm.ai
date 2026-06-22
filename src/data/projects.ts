@@ -3134,5 +3134,26 @@ export const projects: Project[] = [
       "Cross-Chain Transaction Verification Logic",
       "Bridge Security and Exploit Mitigation Testing"
     ]
+  },
+  {
+    id: "184",
+    title: "Algorithmic Stablecoin Protocol with Dynamic Supply Adjustment",
+    category: "Blockchain",
+    baseComplexity: "Expert",
+    description: "A decentralized, crypto-collateralized algorithmic stablecoin pegged to the US Dollar, utilizing dynamic rebasing and incentive mechanisms to maintain the peg during market volatility.",
+    techStack: [
+      "Solidity",
+      "Truffle",
+      "Chainlink Oracles",
+      "React",
+      "TypeScript"
+    ],
+    baseMilestones: [
+      "Collateralization and Debt Position Logic",
+      "Chainlink Oracle Price Feed Integration",
+      "Dynamic Supply Rebasing Algorithm",
+      "Liquidation Engine for Under-Collateralized Positions",
+      "Economic Simulation and Stress Testing"
+    ]
   }
 ];
