@@ -3281,5 +3281,26 @@ export const projects: Project[] = [
       "Fast Oracle Price Feed Integration",
       "Institutional-Grade Trading UI"
     ]
+  },
+  {
+    id: "191",
+    title: "Decentralized Oracle Network for Real-World Data Feeds",
+    category: "Blockchain",
+    baseComplexity: "Expert",
+    description: "A custom decentralized oracle network that aggregates data from off-chain APIs (weather, sports, stocks), using an economic staking model to penalize malicious nodes reporting false data.",
+    techStack: [
+      "Go",
+      "Solidity",
+      "Node.js",
+      "Docker",
+      "PostgreSQL"
+    ],
+    baseMilestones: [
+      "Oracle Node Client Development",
+      "Data Aggregation and Consensus Algorithm",
+      "Staking and Slashing Economic Model",
+      "On-Chain Data Consumer Contracts",
+      "Network Resilience and Attack Simulation"
+    ]
   }
 ];
