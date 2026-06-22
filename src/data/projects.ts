@@ -3470,5 +3470,26 @@ export const projects: Project[] = [
       "Risk Pool Capital Management",
       "Farmer Dashboard for Policy Management"
     ]
+  },
+  {
+    id: "200",
+    title: "Layer 1 Blockchain Built from Scratch using Rust and Substrate",
+    category: "Blockchain",
+    baseComplexity: "Expert",
+    description: "A completely custom, high-throughput Layer 1 blockchain network utilizing the Substrate framework, featuring a novel Proof-of-Authority (PoA) consensus mechanism and custom tokenomics.",
+    techStack: [
+      "Rust",
+      "Substrate",
+      "Polkadot.js",
+      "Docker",
+      "Node.js"
+    ],
+    baseMilestones: [
+      "Substrate Runtime and Pallet Development",
+      "Proof-of-Authority Consensus Integration",
+      "Custom Tokenomics and Genesis Block Configuration",
+      "P2P Network Bootstrapping",
+      "Blockchain Explorer and Wallet UI"
+    ]
   }
 ];
