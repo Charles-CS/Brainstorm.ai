@@ -3386,5 +3386,26 @@ export const projects: Project[] = [
       "Anti-Slashing Database Configuration",
       "Monitoring and Alerting Dashboard"
     ]
+  },
+  {
+    id: "196",
+    title: "Decentralized Energy Trading Marketplace on a Private Consortium Chain",
+    category: "Blockchain",
+    baseComplexity: "High",
+    description: "An enterprise blockchain solution utilizing Hyperledger Fabric to allow residential micro-grids to trade excess solar energy peer-to-peer within a regulated consortium.",
+    techStack: [
+      "Hyperledger Fabric",
+      "Go",
+      "Node.js",
+      "React",
+      "Docker"
+    ],
+    baseMilestones: [
+      "Consortium Network and Channel Setup",
+      "Energy Trading Chaincode Development",
+      "IoT Smart Meter Integration",
+      "Regulatory Compliance and Privacy Controls",
+      "Marketplace Frontend Dashboard"
+    ]
   }
 ];
