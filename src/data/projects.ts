@@ -3260,5 +3260,26 @@ export const projects: Project[] = [
       "Subgraph Indexing for Vault Metrics",
       "User Interface for Borrowing and Lending"
     ]
+  },
+  {
+    id: "190",
+    title: "On-Chain Derivative and Perpetual Futures Trading Platform",
+    category: "Blockchain",
+    baseComplexity: "Expert",
+    description: "A fully decentralized trading platform offering up to 50x leverage on crypto assets via perpetual futures, managed entirely by smart contracts with an off-chain order matching engine.",
+    techStack: [
+      "Solidity",
+      "Rust",
+      "Node.js",
+      "React",
+      "Chainlink"
+    ],
+    baseMilestones: [
+      "Perpetual Futures Math and Funding Rates",
+      "High-Performance Off-Chain Matching Engine",
+      "On-Chain Settlement and Margin Management",
+      "Fast Oracle Price Feed Integration",
+      "Institutional-Grade Trading UI"
+    ]
   }
 ];
