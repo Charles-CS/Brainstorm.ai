@@ -3176,5 +3176,26 @@ export const projects: Project[] = [
       "Client UI for File Upload and Retrieval",
       "P2P Node Discovery and Networking"
     ]
+  },
+  {
+    id: "186",
+    title: "Automated Market Maker (AMM) with Concentrated Liquidity",
+    category: "Blockchain",
+    baseComplexity: "Expert",
+    description: "A sophisticated decentralized exchange (DEX) modeled after Uniswap V3, allowing liquidity providers to allocate capital within custom price ranges to maximize fee generation.",
+    techStack: [
+      "Solidity",
+      "Foundry",
+      "TypeScript",
+      "React",
+      "Ethers.js"
+    ],
+    baseMilestones: [
+      "Concentrated Liquidity Math Implementation",
+      "Tick Mapping and Position Management",
+      "Swap Routing and Execution Logic",
+      "DEX Frontend Interface",
+      "Smart Contract Security Audit"
+    ]
   }
 ];
