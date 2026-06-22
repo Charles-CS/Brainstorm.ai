@@ -3071,5 +3071,26 @@ export const projects: Project[] = [
       "Fiat On-Ramp API Integration",
       "Smart Contract Security Audit"
     ]
+  },
+  {
+    id: "181",
+    title: "Zero-Knowledge Rollup (zk-Rollup) Layer 2 Scaling Solution",
+    category: "Blockchain",
+    baseComplexity: "Expert",
+    description: "A custom Layer 2 scaling solution utilizing zk-SNARKs to bundle thousands of transactions off-chain, verifying them on-chain with minimal gas fees while maintaining mainnet security.",
+    techStack: [
+      "Solidity",
+      "Rust",
+      "Circom",
+      "Ethers.js",
+      "Node.js"
+    ],
+    baseMilestones: [
+      "Cryptographic Circuit Design (Circom)",
+      "Off-Chain Transaction Sequencer Setup",
+      "On-Chain Verifier Smart Contract",
+      "zk-Proof Generation and Submission Engine",
+      "Load Testing and Security Auditing"
+    ]
   }
 ];
