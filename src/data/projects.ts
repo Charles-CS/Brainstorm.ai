@@ -3197,5 +3197,26 @@ export const projects: Project[] = [
       "DEX Frontend Interface",
       "Smart Contract Security Audit"
     ]
+  },
+  {
+    id: "187",
+    title: "Flash Loan Arbitrage Bot with MEV (Maximal Extractable Value) Protection",
+    category: "Blockchain",
+    baseComplexity: "Expert",
+    description: "An automated trading bot that scans mempools for arbitrage opportunities across multiple DEXs, executing atomic flash loans while utilizing private RPCs to prevent front-running.",
+    techStack: [
+      "Python",
+      "Solidity",
+      "Web3.py",
+      "Flashbots API",
+      "Node.js"
+    ],
+    baseMilestones: [
+      "Mempool Transaction Scanning Engine",
+      "Cross-DEX Arbitrage Pathfinding Algorithm",
+      "Flash Loan Integration (e.g., Aave)",
+      "Flashbots/MEV-Share Protection Integration",
+      "Live Mainnet Deployment and Gas Optimization"
+    ]
   }
 ];
