@@ -3365,5 +3365,26 @@ export const projects: Project[] = [
       "In-Game Marketplace Implementation",
       "Multiplayer Synchronization Testing"
     ]
+  },
+  {
+    id: "195",
+    title: "Proof-of-Stake (PoS) Validator Node with Slashing Protection",
+    category: "Blockchain",
+    baseComplexity: "Expert",
+    description: "A robust infrastructure deployment of an Ethereum 2.0 validator node, featuring highly available failover mechanisms, hardware security module (HSM) key management, and anti-slashing databases.",
+    techStack: [
+      "Go",
+      "Docker",
+      "Kubernetes",
+      "AWS KMS",
+      "Prometheus"
+    ],
+    baseMilestones: [
+      "Validator and Beacon Node Architecture",
+      "Secure Key Management (HSM/KMS)",
+      "High Availability and Failover Setup",
+      "Anti-Slashing Database Configuration",
+      "Monitoring and Alerting Dashboard"
+    ]
   }
 ];
